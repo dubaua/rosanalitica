@@ -1,0 +1,57 @@
+@import '~@/styles/shared/_globals.scss';
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $--color-background;
+
+  padding: 124px $--page-padding-x $--page-padding-x;
+  height: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  &__navigation {
+  }
+  &__bottom {
+    font-size: 18px;
+    letter-spacing: $--letter-spacing;
+    @include from('lg') {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+  &__bottom-title {
+    color: $--color-brand;
+    margin-bottom: 20px;
+    margin-right: 66px;
+  }
+  &__bottom-content {
+  }
+
+  &__link {
+    color: $--color-text;
+    display: block;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $--color-brand;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+  &__contact-person {
+    color: $--color-text--muted;
+  }
+  &__name {
+  }
+  &__position {
+  }
+}

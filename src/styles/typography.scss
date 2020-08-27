@@ -1,0 +1,58 @@
+@import '~@/styles/shared/_globals.scss';
+
+// p,
+// .p {
+//   margin: 0;
+//   font-size: $--font-size-80;
+//   line-height: 1;
+//   @include from('lg') {
+//     font-size: $--font-size-120;
+//   }
+
+//   * + & {
+//     margin-top: 1em;
+//   }
+// }
+
+// h1,
+// .h1 {
+//   margin: 1.5em 0 1em;
+//   font-size: $--font-size-180;
+//   line-height: 1;
+//   font-weight: normal;
+//   @include from('lg') {
+//     margin: 2.5em 0 2em;
+//     font-size: $--font-size-200;
+//   }
+// }
+
+// h2,
+// .h2 {
+//   margin: 0;
+//   font-size: $--font-size-100;
+//   line-height: 1;
+//   font-weight: normal;
+//   @include from('lg') {
+//     font-size: $--font-size-200;
+//   }
+// }
+
+// small,
+// .small {
+//   font-size: $--font-size-80;
+//   line-height: 1;
+// }
+
+// .color-brand {
+//   color: $--color-brand;
+// }
+
+// a,
+// .link {
+//   color: inherit;
+//   text-decoration: none;
+//   cursor: pointer;
+//   &:hover {
+//     color: $--color-brand;
+//   }
+// }

@@ -1,0 +1,137 @@
+$--letter-spacing: 0.015em;
+
+$--breakpoint-xs: 0;
+$--breakpoint-sm: 576px;
+$--breakpoint-md: 768px;
+$--breakpoint-lg: 992px;
+$--breakpoint-xl: 1200px;
+$--breakpoint-2xl: 1600px;
+$--breakpoint-3xl: 1920px;
+
+$--grid: 'grid';
+$--row: 'row';
+$--column: 'col';
+$--offset: 'offset';
+
+$--page-padding-x: 2vmax;
+$--page-padding-y-xs: 40px;
+$--page-padding-y-lg: 80px;
+$--gutter: 1.5vmax;
+
+$--gutter-xs: 1.5vmax;
+$--gutter-sm: 1.5vmax;
+$--gutter-md: 1.5vmax;
+$--gutter-lg: 1.5vmax;
+$--gutter-xl: 1.5vmax;
+$--gutter-2xl: 1.5vmax;
+$--gutter-3xl: 1.5vmax;
+
+$--column-count-xs: 2;
+$--column-count-sm: 4;
+$--column-count-md: 4;
+$--column-count-lg: 4;
+$--column-count-xl: 12;
+$--column-count-xxl: 12;
+$--column-count-2xl: 12;
+$--column-count-3xl: 12;
+
+$--font-size-25: 10px;
+$--font-size-50: 11px;
+$--font-size-75: 12px;
+$--font-size-100: 14px;
+$--font-size-150: 15px;
+$--font-size-200: 16px;
+$--font-size-300: 18px;
+$--font-size-400: 20px;
+$--font-size-500: 22px;
+$--font-size-600: 25px;
+$--font-size-700: 28px;
+$--font-size-750: 30px;
+$--font-size-800: 32px;
+$--font-size-900: 36px;
+$--font-size-1000: 40px;
+$--font-size-1100: 45px;
+$--font-size-1200: 50px;
+$--font-size-1300: 60px;
+
+$--font-weight-thin: 100;
+$--font-weight-ultra-light: 200;
+$--font-weight-light: 300;
+$--font-weight-regular: 400;
+$--font-weight-medium: 500;
+$--font-weight-semi-bold: 600;
+$--font-weight-bold: 700;
+$--font-weight-extra-bold: 800;
+$--font-weight-black: 900;
+$--font-style-regular: normal;
+$--font-style-italic: italic;
+$--font-letter-spacing-none: 0;
+$--font-letter-spacing-small: 0.0125em;
+$--font-letter-spacing-han: 0.05em;
+$--font-letter-spacing-medium: 0.06em;
+$--font-line-height-large: 1.7;
+$--font-line-height-medium: 1.5;
+$--font-line-height-small: 1.3;
+$--font-line-height-xs: 1.1;
+
+$--font-multiplier-25: 0.25em;
+$--font-multiplier-75: 0.75em;
+
+$--color-brand: #ee2625;
+$--color-gray-50: #ffffff;
+$--color-gray-75: #fafafa;
+$--color-gray-100: #f5f5f5;
+$--color-gray-200: #eaeaea;
+$--color-gray-300: #e1e1e1;
+$--color-gray-400: #c3c3c3;
+$--color-gray-500: #b3b3b3;
+$--color-gray-600: #8e8e8e;
+$--color-gray-700: #6e6e6e;
+$--color-gray-800: #4b4b4b;
+$--color-gray-900: #2c2c2c;
+
+$--color-text: #000003;
+$--color-text--muted: $--color-gray-600;
+$--color-text--contrast: $--color-gray-50;
+$--color-text--contrast-muted: #f9e198;
+$--color-background: $--color-gray-50;
+$--color-background--contrast: $--color-text;
+
+$--timing-in-out-cubic: cubic-bezier(0.62, 0, 0.38, 1);
+$--timing-in-circ: cubic-bezier(0, 1, 1, 1);
+$--timing-out-circ: cubic-bezier(0, 0, 0, 1);
+$--timing-in-out-spring: cubic-bezier(0.25, 0.1, 0.25, 1);
+$--duration-0: 0ms;
+$--duration-100: 130ms;
+$--duration-200: 160ms;
+$--duration-300: 190ms;
+$--duration-400: 220ms;
+$--duration-500: 250ms;
+$--duration-600: 300ms;
+$--duration-700: 350ms;
+$--duration-800: 400ms;
+$--duration-900: 450ms;
+$--duration-1000: 500ms;
+$--duration-1500: 750ms;
+$--duration-2000: 1000ms;
+$--duration-4000: 2000ms;
+$--delay-0: 0ms;
+$--delay-100: 130ms;
+$--delay-200: 160ms;
+$--delay-300: 190ms;
+$--delay-400: 220ms;
+$--delay-500: 250ms;
+$--delay-600: 300ms;
+$--delay-700: 350ms;
+$--delay-800: 400ms;
+$--delay-900: 450ms;
+$--delay-1000: 500ms;
+$--delay-1500: 750ms;
+$--delay-2000: 1000ms;
+$--delay-4000: 2000ms;
+$--delay: 50ms;
+
+$--color-background: $--color-text--contrast;
+$--color-background--contrast: $--color-text;
+
+$--header-height: 75px;

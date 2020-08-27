@@ -1,0 +1,58 @@
+@import 'shared/globals.scss';
+@import '~@/styles/grid.scss';
+@import '~@/styles/container.scss';
+@import '~@/styles/blocks/body.scss';
+@import '~@/styles/blocks/companies.scss';
+@import '~@/styles/blocks/newsfeed.scss';
+@import '~@/styles/blocks/arrow-button.scss';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans');
+
+// @import '~@/styles/typography.scss';
+// @import '~@/styles/button.scss';
+// @import '~@/styles/hamburger.scss';
+// @import '~@/styles/mobile-menu.scss';
+
+
+body,
+html {
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: $--letter-spacing;
+  color: $--color-text;
+  margin: 0;
+  background-color: #DAE3E7;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+*::selection {
+  color: $--color-text--contrast;
+  background: $--color-brand;
+}
+
+.loading {
+  animation: loading 1s ease-in-out infinite;
+  background: #ccc;
+}
+
+@keyframes loading {
+  50% {
+    opacity: 0.62;
+  }
+}
