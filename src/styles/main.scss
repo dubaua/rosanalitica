@@ -42,8 +42,8 @@ ul {
 }
 
 *::selection {
-  color: $--color-text--contrast;
-  background: $--color-brand;
+  color: $--color-text-contrast-600;
+  background: $--color-background-brand;
 }
 
 .loading {
