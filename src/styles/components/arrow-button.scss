@@ -1,0 +1,32 @@
+@import '~@/styles/shared/globals.scss';
+
+.arrow-button {
+  @include from(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 3px;
+    background: #36b0db;
+    color: #ffffff;
+    @include from(lg) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__label {
+    display: none;
+    @include from(lg) {
+      display: block;
+      text-transform: lowercase;
+      margin-left: 11px;
+      color: #1d1d1b;
+      font-size: $--font-size-200;
+      line-height: $--font-line-height-small;
+      letter-spacing: $--letter-spacing;
+    }
+  }
+}

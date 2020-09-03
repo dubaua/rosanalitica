@@ -1,9 +1,10 @@
 @import 'shared/globals.scss';
-@import '~@/styles/grid.scss';
+// запушь сетку
+// @import '~@/styles/grid.scss';
 @import '~@/styles/container.scss';
-@import '~@/styles/blocks/companies.scss';
-@import '~@/styles/blocks/newsfeed.scss';
-@import '~@/styles/blocks/arrow-button.scss';
+@import '~@/styles/components/companies.scss';
+@import '~@/styles/components/newsfeed.scss';
+@import '~@/styles/components/arrow-button.scss';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans');
 
 // @import '~@/styles/typography.scss';
