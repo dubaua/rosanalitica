@@ -49,6 +49,13 @@ const webpackConfig = {
         ],
       },
       {
+        test: /\.css$/,
+        use: [
+          { loader: MiniCSSExtractPlugin.loader, options: { hmr: isDev } },
+          { loader: 'css-loader', options: { sourceMap: isDev } },
+        ],
+      },
+      {
         test: /\.(ttf|eot|woff|woff2)$/,
         loader: 'file-loader',
         include: [helpers.root('src')],

@@ -1,17 +1,17 @@
 @import 'shared/globals.scss';
-// запушь сетку
-// @import '~@/styles/grid.scss';
+
+@import '~@/styles/grid.scss';
 @import '~@/styles/container.scss';
+@import '~@/styles/hamburger.scss';
+
 @import '~@/styles/components/companies.scss';
 @import '~@/styles/components/newsfeed.scss';
 @import '~@/styles/components/arrow-button.scss';
+@import '~@/styles/components/header.scss';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans');
 
 // @import '~@/styles/typography.scss';
 // @import '~@/styles/button.scss';
-// @import '~@/styles/hamburger.scss';
-// @import '~@/styles/mobile-menu.scss';
-
 
 body,
 html {

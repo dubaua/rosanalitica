@@ -1,0 +1,108 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <img
+          src="http://rosanalitica.dubaua.ru/images/logo.png"
+          alt="Росаналитика"
+          class="header__logo-desktop"
+        />
+        <img
+          src="http://rosanalitica.dubaua.ru/images/logo-mobile.png"
+          alt="Росаналитика"
+          class="header__logo-mobile"
+        />
+      </div>
+
+      <div class="header__main">
+        <div class="header__contacts">
+          <a
+            href=""
+            class="header__contact header__contact--city"
+            data-choose-city
+            >Санкт-Петербург</a
+          >
+          <a href="tel:+78124673474" class="header__contact"
+            >+7 812 467-34-74</a
+          >
+          <a href="mailto:info@spectranalit.ru" class="header__contact"></a>
+        </div>
+
+        <nav class="header__navigation">
+          <a
+            href=""
+            class="header__navigation-item header__navigation-item--active"
+            data-catalog-toggler
+            >Каталог</a
+          >
+          <a href="" class="header__navigation-item">О компании</a>
+          <a href="" class="header__navigation-item">Партнеры</a>
+          <a href="" class="header__navigation-item">Контакты</a>
+        </nav>
+      </div>
+
+      <div
+        class="header__burger hamburger hamburger--slider"
+        id="hamburger"
+        data-hamburger
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"> </span>
+        </span>
+      </div>
+    </div>
+
+    <!-- <%= require('html-loader!@/partials/catalog-menu.html') %> -->
+
+    <div class="header__hamburger-menu hamburger-menu" data-hamburger-menu data-simplebar>
+      <div class="hamburger-menu__inner">
+        <div class="hamburger-menu__search">
+          <input type="text" class="hamburger-menu__search-input" placeholder="Найти товар в каталоге"/>
+          <button class="hamburger-menu__search-button">
+            <svg class="hamburger-menu__search-icon">
+              <use xlink:href="#search" />
+            </svg>
+          </button>
+        </div>
+  
+        <nav class="hamburger-menu__navigation">
+          <a
+            href=""
+            class="hamburger-menu__navigation-item"
+            data-catalog-mobile-toggler
+            data-number="01"
+            >Каталог</a
+          >
+          <!-- <%= require('html-loader!@/partials/catalog-menu.html') %> -->
+          <a href="" class="hamburger-menu__navigation-item" data-number="02">О компании</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="03">Контакты</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="04">Вакансии</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="05">Акции</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="06">Новости</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="07">Статьи</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="08">Партнеры</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="09">Клиенты</a>
+          <a href="" class="hamburger-menu__navigation-item" data-number="10">Отзывы</a>
+        </nav>
+  
+        <div class="hamburger-menu__contacts">
+          <div class="hamburger-menu__contact">
+            <a href="" class="hamburger-menu__contact-link hamburger-menu__contact-link--city" data-choose-city
+              >Санкт-Петербург</a
+            >
+          </div>
+          <div class="hamburger-menu__contact">
+            <a href="tel:+78124673474" class="hamburger-menu__contact-link"
+              >+7 812 467-34-74</a
+            >
+          </div>
+          <div class="hamburger-menu__contact">
+            <a href="mailto:info@spectranalit.ru" class="hamburger-menu__contact-link"
+              >info@spectranalit.ru</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

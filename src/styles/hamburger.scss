@@ -1,12 +1,5 @@
 @import '~@/styles/shared/_globals.scss';
 
-// $hamburger-layer-width: 37px;
-// $hamburger-layer-height: 0px;
-// $hamburger-layer-spacing: 9px;
-// $hamburger-layer-color: $--color-text;
-
-// $hamburger-types: (slider);
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -15,14 +8,14 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 
-$hamburger-padding-x: 15px;
-$hamburger-padding-y: 15px;
-$hamburger-layer-width: 37px;
-$hamburger-layer-height: 3px;
-$hamburger-layer-spacing: 8px;
-$hamburger-layer-color: $--color-text;
-$hamburger-layer-border-radius: 4px;
-$hamburger-hover-opacity: 0.7;
+$hamburger-padding-x: 11px;
+$hamburger-padding-y: 14px;
+$hamburger-layer-width: 28px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 7px;
+$hamburger-layer-color: $--color-gray-50;
+$hamburger-layer-border-radius: 2px;
+$hamburger-hover-opacity: 1;
 $hamburger-active-layer-color: $hamburger-layer-color;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 

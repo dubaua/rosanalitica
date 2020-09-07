@@ -94,6 +94,7 @@ $--color-background-500: #e6edef;
 $--color-background-600: #f6f9fa;
 $--color-background-700: #ffffff;
 
+$--color-background-contrast-300: #36B0DB;
 $--color-background-contrast-400: #619ab8;
 $--color-background-contrast-500: #3A6D87;
 $--color-background-contrast-600: #25536A;
@@ -155,4 +156,4 @@ $--delay: 50ms;
 $--color-background: $--color-text--contrast;
 $--color-background--contrast: $--color-text;
 
-$--header-height: 75px;
+$--header-height: calc(6vmax + 50px);

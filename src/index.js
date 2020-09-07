@@ -1,3 +1,8 @@
 import '@/styles/main.scss';
 import '@/sprite/index.js';
-console.log("Test!");
+
+import 'simplebar';
+import 'simplebar/dist/simplebar.css';
+import 'normalize.css';
+
+import '@/js/menu.js';

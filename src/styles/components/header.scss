@@ -1,0 +1,245 @@
+@import '~@/styles/shared/globals.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  height: $--header-height;
+  box-sizing: border-box;
+
+  background-color: $--color-background-contrast-700;
+
+  @include from('xl') {
+    height: auto;
+    background-color: $--color-background-700;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 3vmax 0;
+
+    @include from('xl') {
+      padding: 0.5vmax 0;
+    }
+  }
+
+  &__logo {
+    @include from('xl') {
+      margin-right: 60px;
+    }
+  }
+  &__logo-desktop {
+    display: none;
+
+    @include from('xl') {
+      display: block;
+    }
+  }
+  &__logo-mobile {
+    display: block;
+
+    @include from('xl') {
+      display: none;
+    }
+  }
+  &__main {
+    @include from('xl') {
+      flex-grow: 1;
+    }
+  }
+  &__contacts {
+    display: none;
+
+    @include from('xl') {
+      display: block;
+      background-color: $--color-background-500;
+    }
+  }
+  &__contact {
+    @include from('xl') {
+      color: $--color-text;
+    }
+  }
+  &__contact--city {
+  }
+  &__navigation {
+    display: none;
+
+    @include from('xl') {
+      display: block;
+      background-color: $--color-background-contrast-700;
+    }
+  }
+  &__navigation-item {
+    @include from('xl') {
+      color: $--color-text-contrast-600;
+    }
+  }
+  &__navigation-item--active {
+  }
+  &__burger {
+    background-color: $--color-background-contrast-300;
+    border-radius: 50%;
+
+    &.is-active {
+      background-color: $--color-background-contrast-400;
+    }
+  }
+  &__catalog-menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    position: fixed;
+
+    top: $--header-height;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $--color-background-contrast-700;
+    color: $--color-text-contrast-600;
+
+    transition-property: transform;
+    transition-duration: $--duration-800;
+    transition-timing-function: $--timing-in-out-spring;
+
+    transform: translateX(100%);
+
+    &.is-active {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .simplebar-wrapper,
+    .simplebar-content {
+      height: 100%;
+    }
+
+    &__inner {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+
+      box-sizing: border-box;
+      padding: 0 22px 34px 20px;
+    }
+
+    &__search {
+      position: relative;
+      width: 100%;
+    }
+    &__search-input {
+      width: 100%;
+      color: $--color-text-contrast-400;
+      background-color: transparent;
+      padding: 8px 0;
+      border: none;
+
+      font-weight: 300;
+      font-size: 3vmax;
+      line-height: 1.3;
+      border-bottom: 1px solid $--color-background-contrast-300;
+    }
+    &__search-button {
+      position: absolute;
+      right: 0;
+      bottom: 8px;
+
+      border: none;
+      background: transparent;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+
+      color: $--color-text-brand;
+    }
+    &__search-icon {
+      width: 23px;
+      height: 23px;
+    }
+    &__navigation {
+      flex-grow: 1;
+      margin-left: 5vmax;
+      margin-top: 10px;
+    }
+    &__navigation-item {
+      position: relative;
+      display: block;
+      padding: 6px 0;
+
+      font-weight: 300;
+      font-size: 3vmax;
+      line-height: 1.3;
+      color: $--color-text-contrast-600;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        right: calc(100% + 8px);
+
+        content: attr(data-number);
+
+        font-weight: 300;
+        font-size: 2vmax;
+        line-height: 1.3;
+        color: $--color-text-brand;
+
+        transform: translateY(-50%);
+      }
+    }
+    &__contacts {
+      margin-left: 1.5vmax;
+    }
+    &__contact {
+      margin-top: 8px;
+
+      font-size: 3.5vmax;
+      font-weight: normal;
+      color: $--color-text-brand;
+    }
+    &__contact-link {
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+
+      &--city {
+        border-bottom: 2px solid $--color-text-brand;
+      }
+    }
+  }
+
+  .catalog-menu {
+    display: none;
+
+    @include from('xl') {
+      position: fixed;
+
+      // top: $--header-height;
+      // right: 0;
+      // bottom: 0;
+      // left: 0;
+    }
+
+    &.is-active {
+      display: block;
+    }
+
+    &__item {
+    }
+    &__category {
+    }
+    &__toggle {
+    }
+    &__list {
+    }
+  }
+}
