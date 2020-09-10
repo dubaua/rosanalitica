@@ -1,6 +1,11 @@
 @import '~@/styles/shared/_globals.scss';
 
 .container {
-  padding-right: $--page-padding-x;
-  padding-left: $--page-padding-x;
+  padding-right: $--page-padding-x-xs;
+  padding-left: $--page-padding-x-xs;
+  
+  @include from('lg') {
+    padding-right: $--page-padding-x-lg;
+    padding-left: $--page-padding-x-lg;
+  }
 }
