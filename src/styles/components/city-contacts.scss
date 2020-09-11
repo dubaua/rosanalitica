@@ -1,0 +1,116 @@
+@import '~@/styles/shared/globals.scss';
+
+.city-contacts {
+  $contacts: &;
+
+  margin: 0;
+  list-style: none;
+
+  &--header {
+    display: none;
+
+    @include from('xl') {
+      height: 50px;
+
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      background-color: $--color-background-500;
+    }
+
+    #{$contacts}__contact {
+      @include from('xl') {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 15px 43px;
+
+        color: $--color-text;
+
+        &:first-of-type {
+          padding-left: 50px;
+        }
+
+        a {
+          &:hover {
+            border-bottom: 1px solid $--color-text;
+          }
+        }
+
+        &--city {
+          a {
+            border-bottom: 1px solid $--color-text;
+
+            &:hover {
+              border-bottom-width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--hamburger-menu {
+    margin-left: 1.5vmax;
+
+    @include from('xl') {
+      margin-left: 0;
+      margin-top: 50px;
+      width: 25%;
+    }
+
+    #{$contacts}__contact {
+      margin-top: 8px;
+
+      font-size: 3.5vmax;
+      font-weight: normal;
+      color: $--color-text-brand;
+
+      @include from('xl') {
+        font-size: 21px;
+        margin-bottom: 58px;
+        white-space: nowrap;
+      }
+    }
+
+    #{$contacts}__contact-icon {
+      display: none;
+
+      @include from('xl') {
+        display: inline-block;
+        color: $--color-background-700;
+        vertical-align: middle;
+        margin-right: 14px;
+
+        &--pin {
+          width: 18px;
+          height: 25px;
+        }
+        &--phone {
+          width: 22px;
+          height: 22px;
+        }
+        &--email {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    #{$contacts}__contact-link {
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+
+      &--city {
+        a {
+          border-bottom: 2px solid $--color-text-brand;
+
+          @include from('xl') {
+            border-bottom-width: 1px;
+          }
+        }
+      }
+    }
+  }
+}

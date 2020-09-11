@@ -1,149 +1,153 @@
 <header class="header">
   <div class="container">
-    <div class="header__inner">
-      <a href="/" class="header__logo">
-        <img
-          src="http://rosanalitica.dubaua.ru/images/logo.svg"
-          alt="Росаналитика"
-          class="header__logo-desktop"
-        />
-        <img
-          src="http://rosanalitica.dubaua.ru/images/logo-mobile.svg"
-          alt="Росаналитика"
-          class="header__logo-mobile"
-        />
-      </a>
-
-      <!-- Блок city-contacts модификатор header -->
-      <div class="header__main" data-header-main>
-        <div class="header__contacts">
-          <div class="header__contact header__contact--city">
-            <a href="" data-choose-city>Санкт-Петербург</a>
-          </div>
-          <div class="header__contact">
-            <a href="tel:+78124673474">+7 812 467-34-74</a>
-          </div>
-          <div class="header__contact">
-            <a href="mailto:info@spectranalit.ru">info@spectranalit.ru</a>
-          </div>
-        </div>
-
-        <!-- TODO отдельный блок меню -->
-        <nav class="header__navigation">
-          <div class="header__navigation-item">
-            <a href="" data-catalog-toggler>Каталог</a>
-          </div>
-          <div class="header__navigation-item"><a href="">О компании</a></div>
-          <div class="header__navigation-item"><a href="">Партнеры</a></div>
-          <div class="header__navigation-item"><a href="">Контакты</a></div>
-        </nav>
+    <div class="row">
+      <div class="col col-xs-2 col-xl-2 col-xs-middle">
+        <a href="/" class="header__logo">
+          <img
+            src="http://rosanalitica.dubaua.ru/images/logo.svg"
+            alt="Росаналитика"
+            class="header__logo-desktop"
+          />
+          <img
+            src="http://rosanalitica.dubaua.ru/images/logo-mobile.svg"
+            alt="Росаналитика"
+            class="header__logo-mobile"
+          />
+        </a>
       </div>
 
-      <div
-        class="header__burger hamburger hamburger--slider"
-        id="hamburger"
-        data-hamburger
-      >
-        <span class="hamburger-box">
-          <span class="hamburger-inner"> </span>
-        </span>
+      <div class="col col-xs-2 col-xl-10">
+        <div class="header__main" data-header-main>
+          <ul class="city-contacts city-contacts--header">
+            <li
+              class="city-contacts__contact city-contacts__contact--city"
+              data-choose-city
+            >
+              <a href="">Санкт-Петербург</a>
+            </li>
+            <li class="city-contacts__contact">
+              <a href="tel:+78124673474">+7 812 467-34-74</a>
+            </li>
+            <li class="city-contacts__contact">
+              <a href="mailto:info@spectranalit.ru">info@spectranalit.ru</a>
+            </li>
+          </ul>
+
+          <ul class="navigation navigation--header">
+            <li class="navigation__item" data-catalog-toggler>
+              <a href="">Каталог</a>
+            </li>
+            <li class="navigation__item"><a href="">О компании</a></li>
+            <li class="navigation__item"><a href="">Партнеры</a></li>
+            <li class="navigation__item"><a href="">Контакты</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div
-      class="header__hamburger-menu hamburger-menu"
-      data-hamburger-menu
-      data-simplebar
+      class="header__burger hamburger hamburger--slider"
+      id="hamburger"
+      data-hamburger
     >
-      <div class="hamburger-menu__inner">
-        <div class="hamburger-menu__search">
-          <input
-            type="text"
-            class="hamburger-menu__search-input"
-            placeholder="Найти товар в каталоге"
-          />
-          <button class="hamburger-menu__search-button">
-            <svg class="hamburger-menu__search-icon">
-              <use xlink:href="#search" />
-            </svg>
-          </button>
-        </div>
+      <span class="hamburger-box">
+        <span class="hamburger-inner"> </span>
+      </span>
+    </div>
+  </div>
 
-        <!-- TODO отдельный блок меню -->
-        <nav class="hamburger-menu__navigation">
+  <div
+    class="header__hamburger-menu hamburger-menu"
+    data-hamburger-menu
+    data-simplebar
+  >
+    <div class="hamburger-menu__inner">
+      <div class="hamburger-menu__search">
+        <input
+          type="text"
+          class="hamburger-menu__search-input"
+          placeholder="Найти товар в каталоге"
+        />
+        <button class="hamburger-menu__search-button">
+          <svg class="hamburger-menu__search-icon">
+            <use xlink:href="#search" />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="navigation navigation--hamburger-menu">
+        <li class="navigation__item" data-catalog-mobile-toggler>
+          <a href="">Каталог</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">О компании</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Контакты</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Вакансии</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Акции</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Новости</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Статьи</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Партнеры</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Клиенты</a>
+        </li>
+        <li class="navigation__item">
+          <a href="">Отзывы</a>
+        </li>
+      </ul>
+
+      <ul class="city-contacts city-contacts--hamburger-menu">
+        <li class="city-contacts__contact">
           <div
-            class="hamburger-menu__navigation-item"
-            data-catalog-mobile-toggler
-            data-number="01"
+            class="city-contacts__contact-link city-contacts__contact-link--city"
+            data-choose-city
           >
-            <a href="">Каталог</a>
-          </div>
-          <!-- <%= require('html-loader!@/partials/catalog-menu.html') %> -->
-          <div class="hamburger-menu__navigation-item" data-number="02">
-            <a href="">О компании</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="03">
-            <a href="">Контакты</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="04">
-            <a href="">Вакансии</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="05">
-            <a href="">Акции</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="06">
-            <a href="">Новости</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="07">
-            <a href="">Статьи</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="08">
-            <a href="">Партнеры</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="09">
-            <a href="">Клиенты</a>
-          </div>
-          <div class="hamburger-menu__navigation-item" data-number="10">
-            <a href="">Отзывы</a>
-          </div>
-        </nav>
-
-        <!-- Блок city-contacts модификатор header-menu -->
-        <div class="hamburger-menu__contacts">
-          <div class="hamburger-menu__contact">
-            <div
-              class="hamburger-menu__contact-link hamburger-menu__contact-link--city"
-              data-choose-city
+            <svg
+              class="city-contacts__contact-icon city-contacts__contact-icon--pin"
             >
-              <svg class="hamburger-menu__contact-icon hamburger-menu__contact-icon--pin">
-                <use xlink:href="#pin" />
-              </svg>
-              <a href="">Санкт-Петербург</a>
-            </div>
+              <use xlink:href="#pin" />
+            </svg>
+            <a href="">Санкт-Петербург</a>
           </div>
-          <div class="hamburger-menu__contact">
-            <div class="hamburger-menu__contact-link">
-              <svg class="hamburger-menu__contact-icon hamburger-menu__contact-icon--phone">
-                <use xlink:href="#phone" />
-              </svg>
-              <a href="tel:+78124673474">+7 812 467-34-74</a>
-            </div>
+        </li>
+        <li class="city-contacts__contact">
+          <div class="city-contacts__contact-link">
+            <svg
+              class="city-contacts__contact-icon city-contacts__contact-icon--phone"
+            >
+              <use xlink:href="#phone" />
+            </svg>
+            <a href="tel:+78124673474">+7 812 467-34-74</a>
           </div>
-          <div class="hamburger-menu__contact">
-            <div class="hamburger-menu__contact-link">
-              <svg class="hamburger-menu__contact-icon hamburger-menu__contact-icon--email">
-                <use xlink:href="#email" />
-              </svg>
-              <a href="mailto:info@spectranalit.ru">info@spectranalit.ru</a>
-            </div>
+        </li>
+        <li class="city-contacts__contact">
+          <div class="city-contacts__contact-link">
+            <svg
+              class="city-contacts__contact-icon city-contacts__contact-icon--email"
+            >
+              <use xlink:href="#email" />
+            </svg>
+            <a href="mailto:info@spectranalit.ru">info@spectranalit.ru</a>
           </div>
-        </div>
+        </li>
+      </ul>
 
-        <div class="hamburger-menu__footer">
-          <p>© ООО «НПП Спектраналит»</p>
-          <p>196084, г. Санкт-Петербург, ул. Цветочная, д. 18, лит В</p>
-          <p data-current-year>2020 г.</p>
-        </div>
+      <div class="hamburger-menu__footer">
+        <p>© ООО «НПП Спектраналит»</p>
+        <p>196084, г. Санкт-Петербург, ул. Цветочная, д. 18, лит В</p>
+        <p data-current-year>2020 г.</p>
       </div>
     </div>
   </div>
