@@ -34,8 +34,3 @@ function setBurgerMenuWidth() {
 
 setBurgerMenuWidth();
 window.addEventListener('resize', setBurgerMenuWidth);
-
-// в футере бургер-меню указываем текущий год
-const yearParagraph = document.querySelector('[data-current-year]');
-const currentYear = new Date().getFullYear();
-yearParagraph.innerText = currentYear + ' г.';
