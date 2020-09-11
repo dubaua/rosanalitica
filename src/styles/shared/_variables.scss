@@ -54,6 +54,8 @@ $--font-size-1000: 40px;
 $--font-size-1100: 45px;
 $--font-size-1200: 50px;
 $--font-size-1300: 60px;
+$--font-size-1400: 70px;
+$--font-size-1500: 80px;
 
 $--font-weight-thin: 100;
 $--font-weight-ultra-light: 200;
@@ -78,8 +80,6 @@ $--font-line-height-xs: 1.1;
 $--font-multiplier-25: 0.25em;
 $--font-multiplier-75: 0.75em;
 
-$--color-text-brand: #36B0DB;
-
 $--color-text-400: #7b9cad;
 $--color-text-500: #25536a;
 $--color-text-600: #252829;
@@ -88,18 +88,20 @@ $--color-text-contrast-400: #7b9cad;
 $--color-text-contrast-500: #dae3e7;
 $--color-text-contrast-600: #ffffff;
 
-$--color-background-brand: #0099CC;
-
 $--color-background-400: #dae3e7;
 $--color-background-500: #e6edef;
 $--color-background-600: #f6f9fa;
 $--color-background-700: #ffffff;
 
-$--color-background-contrast-300: #36B0DB;
+$--color-background-contrast-200: #66d8ef;
+$--color-background-contrast-300: #36b0db;
 $--color-background-contrast-400: #619ab8;
-$--color-background-contrast-500: #3A6D87;
-$--color-background-contrast-600: #25536A;
+$--color-background-contrast-500: #3a6d87;
+$--color-background-contrast-600: #25536a;
 $--color-background-contrast-700: #134760;
+
+$--color-text-brand: $--color-background-contrast-300;
+$--color-background-brand: #0099cc;
 
 $--color-gray-50: #ffffff;
 $--color-gray-75: #fafafa;
@@ -119,6 +121,12 @@ $--color-text--contrast: $--color-gray-50;
 $--color-text--contrast-muted: #f9e198;
 $--color-background: $--color-gray-50;
 $--color-background--contrast: $--color-text;
+
+$--catalog-tile-gradient: linear-gradient(
+  342.61deg,
+  $--color-background-contrast-200 15.67%,
+  $--color-background-contrast-300 94.43%
+);
 
 $--timing-in-out-cubic: cubic-bezier(0.62, 0, 0.38, 1);
 $--timing-in-circ: cubic-bezier(0, 1, 1, 1);
