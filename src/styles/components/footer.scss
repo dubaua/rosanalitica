@@ -1,0 +1,27 @@
+@import '~@/styles/shared/globals.scss';
+
+.footer {
+  padding: 32px 0 24px;
+  background: $--color-background-contrast-700;
+
+  &__contact {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: $--font-size-500;
+    color: $--color-text-brand;
+    
+    &--city {
+      font-weight: $--font-weight-bold;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__muted {
+    margin-top: 0.5em;
+    font-size: $--font-size-100;
+    color: $--color-text-contrast-400;
+  }
+}
