@@ -19,3 +19,23 @@ catalogToggler.addEventListener('click', () => {
 catalogMobileToggler.addEventListener('click', () => {
   catalogMenu.classList.toggle(activeClass);
 });
+
+// задаем ширину бургер-меню на десктопе
+function setBurgerMenuWidth() {
+  if (window.innerWidth >= 1200) {
+    const headerMain = document.querySelector('[data-header-main]');
+    const headerMainWidth = headerMain.offsetWidth;
+
+    hamburgerMenu.style.width = headerMainWidth + 'px';
+  } else {
+    hamburgerMenu.style.width = 'auto';
+  }
+}
+
+setBurgerMenuWidth();
+window.addEventListener('resize', setBurgerMenuWidth);
+
+// в футере бургер-меню указываем текущий год
+const yearParagraph = document.querySelector('[data-current-year]');
+const currentYear = new Date().getFullYear();
+yearParagraph.innerText = currentYear + ' г.';
