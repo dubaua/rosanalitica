@@ -1,6 +1,9 @@
 @import '~@/styles/shared/globals.scss';
 
 .footer {
+  @include to('xl') {
+    display: none;
+  }
   padding: 32px 0 24px;
   background: $--color-background-contrast-700;
 
