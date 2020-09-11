@@ -1,0 +1,50 @@
+@import '~@/styles/shared/globals.scss';
+
+.footer-menu {
+  $this: &;
+  list-style: none;
+  margin: -0.5em 0 0.5em;
+  padding: 0;
+
+  &__item {
+    a {
+      display: block;
+      padding: 0.5em 0;
+      color: $--color-text-contrast-600;
+      &:before {
+        margin-right: 0.62em;
+        counter-increment: item;
+        content: counter(item, decimal-leading-zero);
+        color: $--color-text-brand;
+        letter-spacing: $--font-letter-spacing-medium;
+      }
+    }
+  }
+
+  &--site {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    counter-reset: item;
+    height: 8em; // чтобы уместить в колонке 4 пункта
+    counter-reset: item 1;
+    #{$this}__item {
+      width: 50%;
+    }
+  }
+
+  &--child {
+    margin-top: 0.25em;
+    #{$this}__item {
+      a {
+        padding: 0.25em 0;
+        font-size: $--font-size-100;
+        font-weight: $--font-weight-light;
+        color: $--color-text-contrast-500;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
