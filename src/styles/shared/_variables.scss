@@ -13,7 +13,8 @@ $--row: 'row';
 $--column: 'col';
 $--offset: 'offset';
 
-$--page-padding-x: 5.5vmax;
+$--page-padding-x-xs: 2vmax;
+$--page-padding-x-lg: 5.5vmax;
 $--page-padding-y-xs: 40px;
 $--page-padding-y-lg: 80px;
 $--gutter: 1.5vmax;
@@ -157,3 +158,5 @@ $--color-background: $--color-text--contrast;
 $--color-background--contrast: $--color-text;
 
 $--header-height: calc(6vmax + 50px);
+
+$--logo-width-xl: 157px;
