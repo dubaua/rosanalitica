@@ -12,22 +12,16 @@ if (hamburger) {
     hamburger.classList.toggle(activeClass);
     hamburgerMenu.classList.toggle(activeClass);
   });
-} else {
-  console.error('no hamburger');
 }
 if (catalogToggler) {
   catalogToggler.addEventListener('click', () => {
     catalogMenu.classList.toggle(activeClass);
   });
-} else {
-  console.error('no catalogToggler');
 }
 if (catalogMobileToggler) {
   catalogMobileToggler.addEventListener('click', () => {
     catalogMenu.classList.toggle(activeClass);
   });
-} else {
-  console.error('no catalogMobileToggler');
 }
 
 // задаем ширину бургер-меню на десктопе
