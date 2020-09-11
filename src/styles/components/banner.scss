@@ -2,6 +2,12 @@
 
 .banner {
   position: relative;
+  margin-bottom: 16px;
+  
+  @include from('lg') {
+    margin-bottom: 30px;
+  }
+
   &__picture {
     margin-right: -$--page-padding-x-xs;
     margin-left: -$--page-padding-x-xs;
@@ -10,16 +16,22 @@
       margin-right: 0;
       margin-left: 30%;
       width: 70%;
+
+      img {
+        width: 100%;
+      }
+
       &--inverse {
         margin-left: 0;
         margin-right: 30%;
       }
     }
   }
+
   &__overlay {
     position: relative;
     margin-top: -32px;
-    padding: 112px 16px 16px;
+    padding: 16px;
     background: $--color-background-contrast-700;
     color: $--color-text--contrast;
     font-size: $--font-size-900;
@@ -37,13 +49,21 @@
       top: 96px;
       width: 44%;
       padding: 16px 36px 64px;
-      font-size: $--font-size-1200;
+      font-size: 53px;
       font-weight: $--font-weight-ultra-light;
+      border-radius: $--border-radius;
+
       &--inverse {
         text-align: right;
         left: auto;
         right: 0;
       }
+    }
+
+    @include from('2xl') {
+      top: 30%;
+      width: 36%;
+      background: red;
     }
 
     &--brand {

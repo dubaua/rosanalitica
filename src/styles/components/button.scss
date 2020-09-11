@@ -4,12 +4,15 @@
   display: inline-block;
   padding: 0.75em 1em;
   min-width: 192px;
-  border-radius: $--border-radius-button;
   font-size: $--font-size-200;
   font-weight: $--font-weight-medium;
   letter-spacing: $--font-letter-spacing-small;
   text-align: center;
   text-transform: lowercase;
+  
+  @include from('lg') {
+    border-radius: $--border-radius-button;
+  }
 
   &--quiet {
     border: 1px solid;
