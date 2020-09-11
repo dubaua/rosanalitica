@@ -6,9 +6,13 @@
   <body>
     <%= require('html-loader!@/partials/header.html') %>
     
-    <%= require('html-loader!@/partials/newsfeed.html') %>
-    <%= require('html-loader!@/partials/partners.html') %>
-    <%= require('html-loader!@/partials/clients.html') %>
+    <main class="main">
+      <%= require('html-loader!@/partials/slider.html') %>
+      <%= require('html-loader!@/partials/newsfeed.html') %>
+      <%= require('html-loader!@/partials/partners.html') %>
+      <%= require('html-loader!@/partials/clients.html') %>
+    </main>
+
     <%= require('html-loader!@/partials/footer.html') %>
   </body>
 </html>

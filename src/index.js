@@ -5,4 +5,7 @@ import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 import 'normalize.css';
 
+import 'swiper/swiper-bundle.css';
+
 import '@/js/menu.js';
+import '@/js/slider.js';

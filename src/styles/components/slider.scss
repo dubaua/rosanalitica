@@ -1,0 +1,220 @@
+@import '~@/styles/shared/globals.scss';
+
+.slider {
+  position: relative;
+  margin-bottom: 24px;
+  
+  @include from('md') {
+    margin-top: 60px;
+    margin-bottom: 48px;
+  }
+
+  &__pagination {
+    position: static;
+    margin: 15px -2px 0;
+    height: 8px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include from('md') {
+      margin: 30px -6px 0;
+    }
+
+    .swiper-pagination-bullet {
+      margin: 0 2px;
+
+      width: 50px;
+      height: 4px;
+      border-radius: 2px;
+      opacity: 1;
+      background-color: $--color-background-700;
+      cursor: pointer;
+
+      transition: transform $--duration-100 linear;
+
+      @include from('md') {
+        margin: 0 6px;
+        border-radius: 3.5px;
+      }
+
+      &:hover {
+        background-color: $--color-background-contrast-300;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $--color-text;
+      border-radius: 4px;
+
+      transform: scaleY(2);
+      transform-origin: top;
+
+      @include from('md') {
+        max-width: 146px;
+      }
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 100;
+
+    height: 45px;
+
+    @include from('md') {
+      bottom: auto;
+      top: 40%;
+    }
+  }
+
+  &__navigation-button {
+    position: absolute;
+    top: 0;
+
+    width: 40px;
+    height: 45px;
+
+    cursor: pointer;
+    pointer-events: all;
+
+    &--prev {
+      display: none;
+      left: 15px;
+
+      @include from('md') {
+        display: block;
+      }
+
+      color: $--color-text--contrast;
+    }
+
+    &--next {
+      right: 5vmax;
+      color: $--color-text;
+
+      @include from('md') {
+        right: 20px;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .swiper-container {
+    margin-left: -$--page-padding-x-xs;
+    @include from('md') {
+      margin-left: 0;
+    }
+  }
+
+  .swiper-slide-next {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+.slide {
+  background: linear-gradient(315deg, #baedff 0%, #36b0db 100%);
+
+  @include from('md') {
+    border-radius: 5px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 306px;
+
+    background-color: $--color-background-700;
+
+    @include from('md') {
+      order: 1;
+      height: 520px;
+
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    min-height: 358px;
+    box-sizing: border-box;
+    padding: 20px 38px 18px 20px;
+
+    @include from('md') {
+      padding: 26px 30px 32px;
+      height: 100%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.14;
+    color: $--color-text--contrast;
+    margin-bottom: 14px;
+
+    @include from('md') {
+      font-weight: 300;
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $--color-text-600;
+
+    @include from('md') {
+      font-size: 24px;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 190px;
+    box-sizing: border-box;
+    padding: 13px 16px 16px;
+
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.18px;
+
+    color: $--color-text--contrast;
+    background-color: $--color-background-contrast-600;
+
+    @include from('md') {
+      border-radius: 3px;
+    }
+
+    @include from('xl') {
+      width: 248px;
+      font-size: 18px;
+    }
+  }
+}
