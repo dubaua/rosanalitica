@@ -38,6 +38,7 @@
       @include from('md') {
         margin: 0 6px;
         border-radius: 3.5px;
+        width: 146px;
       }
 
       &:hover {
@@ -51,10 +52,6 @@
 
       transform: scaleY(2);
       transform-origin: top;
-
-      @include from('md') {
-        max-width: 146px;
-      }
     }
   }
 
