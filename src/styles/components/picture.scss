@@ -1,0 +1,11 @@
+@import '~@/styles/shared/globals.scss';
+
+.picture {
+  display: block;
+  &__image,
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}

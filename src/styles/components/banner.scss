@@ -1,0 +1,50 @@
+@import '~@/styles/shared/globals.scss';
+
+.banner {
+  position: relative;
+  &__picture {
+    margin-right: -$--page-padding-x-xs;
+    margin-left: -$--page-padding-x-xs;
+
+    @include from('lg') {
+      margin-right: 0;
+      margin-left: 0;
+      width: 70%;
+    }
+  }
+  &__overlay {
+    position: relative;
+    margin-top: -32px;
+    padding: 112px 16px 16px;
+    background: $--color-background-brand;
+    color: $--color-text--contrast;
+    font-size: $--font-size-900;
+    font-weight: $--font-weight-light;
+    line-height: $--font-line-height-xs;
+    letter-spacing: $--font-letter-spacing-small;
+    strong {
+      color: $--color-text-600;
+      font-weight: normal;
+    }
+
+    @include from('lg') {
+      position: absolute;
+      right: 0;
+      top: 80px;
+      width: 44%;
+      padding: 16px 36px 64px;
+      text-align: right;
+    }
+  }
+
+  &__link {
+    margin: 16px 24px;
+
+    @include from('lg') {
+      position: absolute;
+      right: 36px;
+      bottom: 0;
+      margin: 0;
+    }
+  }
+}
