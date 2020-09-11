@@ -1,11 +1,27 @@
 @import '~@/styles/shared/globals.scss';
 
 .section {
+  position: relative;
   @include from(lg) {
     padding: 40px 0;
   }
 
-  &--highlight {
-    background: $--color-background-700;
+  @include from(lg) {
+    &--highlight {
+      background: $--color-background-700;
+    }
+
+    &--highlight-bottom {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 54%;
+        z-index: 0;
+        background: $--color-background-700;
+      }
+    }
   }
 }

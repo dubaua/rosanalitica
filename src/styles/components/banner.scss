@@ -8,32 +8,50 @@
 
     @include from('lg') {
       margin-right: 0;
-      margin-left: 0;
+      margin-left: 30%;
       width: 70%;
+      &--inverse {
+        margin-left: 0;
+        margin-right: 30%;
+      }
     }
   }
   &__overlay {
     position: relative;
     margin-top: -32px;
     padding: 112px 16px 16px;
-    background: $--color-background-brand;
+    background: $--color-background-contrast-700;
     color: $--color-text--contrast;
     font-size: $--font-size-900;
     font-weight: $--font-weight-light;
     line-height: $--font-line-height-xs;
     letter-spacing: $--font-letter-spacing-small;
     strong {
-      color: $--color-text-600;
-      font-weight: normal;
+      color: $--color-text-brand;
+      font-weight: inherit;
     }
 
     @include from('lg') {
       position: absolute;
-      right: 0;
-      top: 80px;
+      left: 0;
+      top: 96px;
       width: 44%;
       padding: 16px 36px 64px;
-      text-align: right;
+      font-size: $--font-size-1200;
+      font-weight: $--font-weight-ultra-light;
+      &--inverse {
+        text-align: right;
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &--brand {
+      background: $--color-background-brand;
+      color: $--color-text--contrast;
+      strong {
+        color: $--color-text-600;
+      }
     }
   }
 
@@ -42,9 +60,15 @@
 
     @include from('lg') {
       position: absolute;
-      right: 36px;
+      left: 36px;
       bottom: 0;
       margin: 0;
+
+      &--inverse {
+        text-align: right;
+        left: auto;
+        right: 36px;
+      }
     }
   }
 }
