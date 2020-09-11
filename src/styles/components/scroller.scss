@@ -1,0 +1,64 @@
+@import '@/styles/shared/_globals.scss';
+
+.scroller {
+  position: relative;
+}
+
+.start-fade,
+.end-fade {
+  position: absolute;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+  transition-duration: 60ms;
+  pointer-events: none;
+  &-vertical {
+    height: 32px;
+    left: -32px;
+    right: -32px;
+  }
+  &-horizontal {
+    width: 2em;
+    top: -32px;
+    bottom: -32px;
+  }
+  &-active {
+    opacity: 1;
+  }
+}
+
+.start-fade {
+  &-vertical {
+    top: 0;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  }
+  &-horizontal {
+    left: 0;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+  }
+  &-active {
+    opacity: 1;
+  }
+}
+
+.end-fade {
+  &-vertical {
+    bottom: 0;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+  }
+  &-horizontal {
+    right: 0;
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+  }
+}
+
+.container {
+  &-vertical {
+    overflow-y: scroll;
+    overflow-x: visible;
+  }
+  &-horizontal {
+    overflow-y: visible;
+    overflow-x: scroll;
+  }
+}

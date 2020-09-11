@@ -3,7 +3,7 @@
 .company {
   $this: &;
   display: block;
-  margin-bottom: 40px;
+  margin: 20px 0;
 
   &:hover {
     & #{$this}__picture {
