@@ -1,119 +1,36 @@
 @import '~@/styles/shared/globals.scss';
 
 .newsfeed {
-  margin-bottom: 77px;
-  @include from(lg) {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: flex-start;
-    background-color: #fff;
-    margin-left: -2vmax;
-    margin-right: -2vmax;
-    padding: 85px 7vmax 79px 7vmax;
-    margin-bottom: 0;
-  }
-
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 22px;
+    height: 100%;
     @include from(lg) {
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
-      width: 219px;
-      margin-bottom: 0;
-    }
-  }
-  &__image {
-    width: 100%;
-    height: 197px;
-    object-fit: cover;
-  }
-  &__item-title {
-    font-size: $--font-size-400;
-    font-weight: $--font-weight-semi-bold;
-    line-height: $--font-line-height-medium;
-    letter-spacing: $--font-letter-spacing-medium;
-    color: #252829;
-    order: 3;
-    margin: 0 16px 0 22px;
-    max-height: 85px;
-    overflow: hidden;
-
-    @include from(lg) {
-      order: 2;
-      margin: 0;
-      margin-bottom: 8px;
-      margin-top: auto;
-      font-size: $--font-size-200;
-      font-weight: $--font-weight-regular;
-      line-height: $--font-line-height-small;
-      letter-spacing: $--font-letter-spacing-small;
-    }
-  }
-  &__link {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-    flex-shrink: 0;
-    background: #ffffff;
-    width: 304px;
-    height: 427px;
-    margin-right: 16px;
-    position: relative;
-
-    @include from(lg) {
-      border-left: 1px solid #979797;
-      width: 215px;
-      height: 352px;
-      padding: 0 20px 0 20px;
-      justify-content: space-between;
-      margin-right: 0;
-    }
-  }
-
-  & > time {
-    order: 2;
-    font-weight: $--font-weight-semi-bold;
-    font-size: $--font-size-200;
-    line-height: $--font-line-height-medium;
-    letter-spacing: $--font-letter-spacing-small;
-    color: #0099cc;
-    margin: 0 16px 4px 22px;
-
-    @include from(lg) {
-      order: 1;
-      margin: 0 0 auto 0;
-      font-weight: 500;
-      font-size: $--font-size-300;
-      font-weight: $--font-weight-medium;
-      line-height: $--font-line-height-small;
-      letter-spacing: $--font-letter-spacing-small;
-      color: #36b0db;
     }
   }
 
   &__list {
-    display: flex;
-    flex-direction: row;
+    max-width: 100%;
     overflow-x: auto;
   }
-  &__picture {
-    order: 1;
-    margin: 0;
-    margin-bottom: 19px;
 
-    @include from(lg) {
-      order: 3;
-      margin-bottom: 0;
+  &__list-scroller {
+    width: 400vw;
+    @include from('xl') {
+      width: auto;
     }
   }
+
   &__show-all {
     margin-top: 2px;
+    @include from(lg) {
+      margin-bottom: 20px;
+    }
   }
+
   &__title {
     font-size: $--font-size-750;
     font-weight: $--font-weight-regular;
@@ -121,22 +38,11 @@
     margin: 0;
 
     @include from(lg) {
+      margin-top: 20px;
       font-size: $--font-size-750;
       line-height: $--font-line-height-small;
       letter-spacing: $--font-letter-spacing-small;
       color: #1d1d1b;
-    }
-  }
-
-  &__arrow {
-    position: absolute;
-    bottom: 30px;
-    left: 22px;
-    width: 40px;
-    height: 40px;
-
-    @include from(lg) {
-      display: none;
     }
   }
 }

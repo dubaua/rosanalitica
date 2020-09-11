@@ -1,0 +1,11 @@
+@import '~@/styles/shared/globals.scss';
+
+.section {
+  @include from(lg) {
+    padding: 40px 0;
+  }
+
+  &--highlight {
+    background: $--color-background-700;
+  }
+}

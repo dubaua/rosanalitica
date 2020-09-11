@@ -1,10 +1,6 @@
 @import '~@/styles/shared/globals.scss';
 
 .companies {
-  @include from(lg) {
-    padding: 40px 0;
-  }
-
   &__description {
     font-size: $--font-size-200;
     font-weight: $--font-weight-regular;
@@ -21,7 +17,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 22px;
 
     @include from(lg) {
       align-items: flex-end;

@@ -1,0 +1,67 @@
+@import '~@/styles/shared/globals.scss';
+
+.news {
+  display: flex;
+  flex-direction: column;
+  // min-height: 427px;
+  margin: 20px 0;
+  position: relative;
+  @include from(lg) {
+    min-height: 352px;
+    padding: 0 20px;
+    border-left: 1px solid #979797;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $--font-size-200;
+    font-weight: $--font-weight-medium;
+    line-height: $--font-line-height-small;
+    letter-spacing: $--font-letter-spacing-small;
+    color: $--color-text-brand;
+
+    @include from(lg) {
+      order: 1;
+      margin: 0 0 auto 0;
+      font-size: $--font-size-300;
+    }
+  }
+
+  &__title {
+    font-size: $--font-size-300;
+    font-weight: $--font-weight-medium;
+    line-height: $--font-line-height-medium;
+    letter-spacing: $--font-letter-spacing-medium;
+    color: #252829;
+    margin: 0;
+    overflow: hidden;
+
+    @include from(lg) {
+      margin: auto 0 8px;
+      font-weight: $--font-weight-regular;
+      line-height: $--font-line-height-small;
+      letter-spacing: $--font-letter-spacing-small;
+      order: 2;
+    }
+  }
+
+  &__picture {
+    margin: 0 0 20px;
+    @include from(lg) {
+      margin-bottom: 0;
+      box-shadow: inset 0 0 0 1px $--color-text-brand;
+      order: 3;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 197px;
+    object-fit: cover;
+    @include from(lg) {
+      object-fit: none;
+    }
+  }
+}
