@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs.html') %>
+
+      <section class="section section--narrow">
+        <div class="about">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-xl-8 col-xl-offset-1">
+                <h1 class="about__title">
+                  Ведущая компания на рынке лабораторного оборудования
+                </h1>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-12">
+                <picture class="about__picture picture">
+                  <img
+                    src="http://rosanalitica.dubaua.ru/images/about/about.jpg"
+                    alt="Росаналитика"
+                    class="picture__image"
+                  />
+                </picture>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-md-6 col-xl-7">
+                <p class="about__description">
+                  ООО «НПП Спектраналит» — производитель и официальный дилер
+                  крупнейших европейских производителей лабораторного,
+                  аналитического, технологического, метрологического
+                  оборудования и приборов КИПиА.
+                </p>
+              </div>
+            </div>
+
+            <div class="about__content">
+              <div class="row">
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <p class="about__column">
+                    Мы напрямую работаем с Agilent Technologies, Ritter, Ohaus,
+                    Sartorius и многими другими ведущими
+                    заводами-изготовителями, имеем самые короткие сроки поставки
+                    на рынке лабораторного оборудования.
+                  </p>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <p class="about__column">
+                    Мы предоставляем полный спектр услуг по комплексному
+                    оснащению аналитических, промышленных, производственных и
+                    научно-исследовательских лабораторий.
+                  </p>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <p class="about__column">
+                    Занимаемся поставками лабораторного оборудования и мебели,
+                    лабораторного стекла и химических реактивов для крупных
+                    промышленных предприятий нефтегазовой отрасли и
+                    метрологических центров по всей России.
+                  </p>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <p class="about__column">
+                    Многолетний опыт и высокий профессионализм наших сотрудников
+                    позволяет максимально оперативно и с высоким качеством
+                    решать задачи для лабораторий любого профиля, в том числе
+                    медицинских, ветеринарных, экологических, пищевых и
+                    нефтехимических.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%= require('html-loader!@/partials/services.html') %>
+
+      <!-- TODO banner is contrast on this page -->
+      <%= require('html-loader!@/partials/banner.html') %> 
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

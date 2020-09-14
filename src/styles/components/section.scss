@@ -2,11 +2,34 @@
 
 .section {
   position: relative;
-  @include from(lg) {
+  @include from('lg') {
     padding: 40px 0;
   }
 
-  @include from(lg) {
+  &--narrow {
+    @include from('lg') {
+      padding: 0;
+    }
+  }
+
+  &--highlight-from-top {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 8%;
+      z-index: -1;
+      background: $--color-background-700;
+
+      @include from('lg') {
+        top: 20%;
+      }
+    }
+  }
+
+  @include from('lg') {
     &--highlight {
       background: $--color-background-700;
     }
@@ -19,7 +42,7 @@
         bottom: 0;
         right: 0;
         top: 54%;
-        z-index: 0;
+        z-index: -1;
         background: $--color-background-700;
       }
     }
