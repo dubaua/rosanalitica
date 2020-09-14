@@ -4,11 +4,8 @@ Swiper.use([Navigation, Pagination]);
 
 //TODO если элемент один, то слайдер не нужен
 
-const mainSlider = new Swiper('.swiper-container', {
+const mainSlider = new Swiper('.main-swiper-container', {
   loop: true,
-  autoplay: {
-    delay: 3000,
-  },
   roundLengths: true,
 
   pagination: {
