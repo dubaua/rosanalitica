@@ -18,3 +18,5 @@ const mainSlider = new Swiper('.main-swiper-container', {
     nextEl: '.slider__navigation-button--next',
   },
 });
+
+console.log('slider');

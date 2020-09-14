@@ -8,7 +8,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 const helpers = require('./helpers');
 const commonConfig = require('./webpack.config.common');
 const isProd = process.env.NODE_ENV === 'production';
-const environment = isProd ? require('./env/prod.env') : require('./env/staging.env');
+const environment = isProd
+  ? require('./env/prod.env')
+  : require('./env/staging.env');
 
 const webpackConfig = merge(commonConfig, {
   mode: 'production',
@@ -32,7 +34,7 @@ const webpackConfig = merge(commonConfig, {
       new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: !isProd,
+        sourceMap: true,
       }),
     ],
   },
@@ -45,11 +47,12 @@ const webpackConfig = merge(commonConfig, {
   ],
 });
 
-if (!isProd) {
-  webpackConfig.devtool = 'source-map';
+webpackConfig.devtool = 'source-map';
 
+if (!isProd) {
   if (process.env.npm_config_report) {
-    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+      .BundleAnalyzerPlugin;
     webpackConfig.plugins.push(new BundleAnalyzerPlugin());
   }
 }

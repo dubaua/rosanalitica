@@ -78,4 +78,9 @@ ul {
 
 .main {
   margin-top: $--header-height;
+  overflow: hidden;
+
+  @include from('xl') {
+    margin-top: $--header-height-xl;
+  }
 }

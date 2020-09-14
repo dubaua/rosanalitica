@@ -43,16 +43,16 @@ const webpackConfig = {
         include: [helpers.root('src')],
         use: [
           { loader: MiniCSSExtractPlugin.loader, options: { hmr: isDev } },
-          { loader: 'css-loader', options: { sourceMap: isDev } },
+          { loader: 'css-loader', options: { sourceMap: true } },
           { loader: 'resolve-url-loader' },
-          { loader: 'sass-loader', options: { sourceMap: isDev } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
         ],
       },
       {
         test: /\.css$/,
         use: [
           { loader: MiniCSSExtractPlugin.loader, options: { hmr: isDev } },
-          { loader: 'css-loader', options: { sourceMap: isDev } },
+          { loader: 'css-loader', options: { sourceMap: true } },
         ],
       },
       {
