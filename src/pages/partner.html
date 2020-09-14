@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs-inner.html') %>
+
+      <section class="section section--narrow">
+        <div class="partner">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-md-2 col-xl-7">
+                <p class="partner__description description">
+                  Компания Sartorius AG (Германия), насчитывающая около 4600
+                  сотрудников и имеющая свои филиалы и представительства более
+                  чем 110 странах мира, ведет свою историю от мастерской точной
+                  механики, которую открыл в 1870 году Флоренс Сарториус.
+                </p>
+              </div>
+
+              <div
+                class="col col-xs-2 col-md-1 col-md-offset-1 col-xl-3 col-xl-offset-1"
+              >
+                <div class="partner__logo picture">
+                  <img
+                    src="http://rosanalitica.dubaua.ru/images/partners/sartorius.png"
+                    alt="Сарториус"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-8">
+                <div class="client__cover picture cover">
+                  <img
+                    src="http://www.rosanalitica.dubaua.ru/images/partners/sartorius-img.jpg"
+                    alt="Название партнера"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-7">
+                <div class="partner__content typography">
+                  <p>
+                    В своей деятельности фирма Sartorius неразрывно связана с
+                    традициями знаменитого Геттингенского университета, что
+                    помогло нам стать одним из лидеров на глобальном рынке
+                    лабораторных весов, промышленных весовых систем,
+                    сепарационных систем и битехнологий.
+                  </p>
+
+                  <p>
+                    Фирма Sartorius AG, расположенная в самом центре Германии —
+                    в старинном университетском городе Геттингене, получила
+                    мировое признание благодаря производству точных весов и
+                    фильтрационного оборудования.
+                  </p>
+                  <p>
+                    За последние годы фирма Sartorius значительно расширила
+                    сферу деятельности и спектр предлагаемых продуктов. Часть
+                    бизнеса Biohit по производству дозирующих устройств
+                    приобретена компанией Sartorius в декабре 2011 года.
+                  </p>
+                  <p>
+                    Новые продукты фирмы Sartorius в мехатронике — промышленные
+                    (до 300 т) весовые системы, инновационные лабораторные весы
+                    СUBIS, конвейерные системы динамического взвешивания и
+                    металлодетекции — удачно дополнили модельный ряд весов
+                    Sartorius.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

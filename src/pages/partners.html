@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs.html') %>
+
+      <section class="section section--narrow">
+        <div class="partners">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-xl-12">
+                <picture class="partners__picture picture intro-image">
+                  <img
+                    src="http://rosanalitica.dubaua.ru/images/partners/partners-cover.png"
+                    alt="Наши партнёры"
+                    class="picture__image"
+                  />
+                </picture>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-md-2 col-xl-7">
+                <p class="partners__description description">
+                  ООО «НПП Спектраналит» — производитель и официальный дилер
+                  крупнейших европейских производителей лабораторного,
+                  аналитического, технологического, метрологического
+                  оборудования и приборов КИПиА.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="companies">
+            <div class="companies__list">
+              <div class="row">
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/partner.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/partners/spektron.png"
+                        alt="Спектрон"
+                      />
+                    </figure>
+                    <span class="companies__description">
+                      <p>Рентгенофлуоресцентные спектрометры и анализаторы</p>
+                    </span>
+                  </a>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/partner.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/partners/ritter.png"
+                        alt="Ritter"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Газовые счетчики для лабораторий высокой точности</p>
+                    </span>
+                  </a>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/partner.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/partners/agilent-technologies.png"
+                        alt="Agilent Technologies"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Признанный мировой лидер в области измерений</p>
+                    </span>
+                  </a>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/partner.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/partners/sartorius.png"
+                        alt="Sartorius"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Всемирно известное решение для взвешивания</p>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TODO pagination -->
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

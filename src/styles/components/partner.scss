@@ -1,0 +1,19 @@
+@import '~@/styles/shared/globals.scss';
+
+.partner {
+  &__description {
+  }
+
+  &__logo {
+  }
+
+  &__content {
+    margin-top: 22px;
+    margin-bottom: 30px;
+
+    @include from('xl') {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+  }
+}

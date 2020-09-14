@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs-inner.html') %>
+
+      <section class="section section--narrow">
+        <div class="client">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-md-2 col-xl-7">
+                <p class="client__description description">
+                  ПАО АНК «Башнефть» — динамично развивающаяся
+                  вертикально-интегрированная нефтяная компания, сформированная
+                  на базе крупнейших предприятий ТЭК Республики Башкортостан.
+                  Компания входит в топ-10 предприятий России по объему добычи
+                  нефти и в топ-5 — по нефтепереработке.
+                </p>
+              </div>
+
+              <div
+                class="col col-xs-2 col-md-1 col-md-offset-1 col-xl-3 col-xl-offset-1"
+              >
+                <div class="client__logo picture">
+                  <img
+                    src="http://rosanalitica.dubaua.ru/images/clients/bashneft-color-logo.png"
+                    alt="Сарториус"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-8">
+                <div class="client__cover picture cover">
+                  <img
+                    src="http://www.rosanalitica.dubaua.ru/images/clients/client-image.jpg"
+                    alt="Название партнера"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-7">
+                <div class="client__content typography">
+                  <p>
+                    Розничная сеть Компании насчитывает 544 собственные АЗС,
+                    расположенные в 15 регионах России.
+                  </p>
+
+                  <p>
+                    На автозаправочных станциях сети «Башнефть» клиентам
+                    предлагается высококачественное топливо, а также широкий
+                    спектр сопутствующих товаров и дополнительных сервисов:
+                    кафе, магазины.
+                  </p>
+                  <p>
+                    Для корпоративных клиентов разработана удобная система
+                    безналичных расчетов, которая позволяет профессионально
+                    управлять затратами на топливо, контролировать расходы на
+                    ГСМ и повысить эффективность деятельности предприятия. Для
+                    клиентов – физических лиц действует Программа лояльности.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

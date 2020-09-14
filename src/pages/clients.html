@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs.html') %>
+
+      <section class="section section--narrow">
+        <div class="clients">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-xl-12">
+                <picture class="clients__picture picture intro-image">
+                  <img
+                    src="http://rosanalitica.dubaua.ru/images/clients/clients-coverpng.png"
+                    alt="Наши клиенты"
+                    class="picture__image"
+                  />
+                </picture>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-md-2 col-xl-7">
+                <p class="clients__description description">
+                  ООО «НПП Спектраналит» — производитель и официальный дилер крупнейших европейских производителей лабораторного, аналитического, технологического, метрологического оборудования и приборов КИПиА
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="companies">
+            <div class="companies__list">
+              <div class="row">
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/client.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/clients/lukoil.png"
+                        alt="Лукойл"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Одна из крупнейших публичных вертикально интегрированных нефтегазовых компаний в мире</p>
+                    </span>
+                  </a>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/client.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/clients/alrosa.png"
+                        alt="Алроса"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Лидер алмазодобывающей отрасли мира, российская горнорудная компания с государственным участием</p>
+                    </span>
+                  </a>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/client.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/clients/admiraltejskie-verfi.png"
+                        alt="Адмиралтейские верфи"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Центр неатомного подводного кораблестроения России</p>
+                    </span>
+                  </a>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <a href="/client.html" class="company">
+                    <figure class="company__picture">
+                      <img
+                        class="company__image"
+                        src="http://rosanalitica.dubaua.ru/images/clients/bashneft.png"
+                        alt="Башнефть"
+                      />
+                    </figure>
+                    <span class="company__description">
+                      <p>Одно из старейших предприятий нефтяной отрасли России</p>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TODO pagination -->
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>
