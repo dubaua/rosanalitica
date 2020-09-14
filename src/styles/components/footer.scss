@@ -12,21 +12,6 @@
     display: block;
   }
 
-  &__contact {
-    display: block;
-    margin-bottom: 0.5em;
-    font-size: $--font-size-500;
-    color: $--color-text-brand;
-    
-    &--city {
-      font-weight: $--font-weight-bold;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   &__muted {
     margin-top: 0.5em;
     font-size: $--font-size-100;
