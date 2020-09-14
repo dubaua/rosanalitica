@@ -21,29 +21,31 @@
 
     #{$navigation}__item {
       @include from('xl') {
-        position: relative;
-        cursor: pointer;
-
-        height: 100%;
         box-sizing: border-box;
-        padding: 15px 50px;
-
         color: $--color-text-contrast-600;
 
-        &:hover {
-          background-color: $--color-background-contrast-600;
+        a {
+          padding: 15px 50px;
+
+          &:hover {
+            background-color: $--color-background-contrast-600;
+          }
         }
-
+        
         &--active {
-          &:after {
-            position: absolute;
-            content: '';
-            left: 0;
-            right: 0;
-            bottom: 0;
+          a {
+            position: relative;
 
-            height: 4px;
-            background-color: $--color-background-contrast-300;
+            &:after {
+              position: absolute;
+              content: '';
+              left: 0;
+              right: 0;
+              bottom: 0;
+
+              height: 4px;
+              background-color: $--color-background-contrast-300;
+            }
           }
         }
       }
