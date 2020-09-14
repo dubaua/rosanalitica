@@ -1,6 +1,8 @@
 import Swiper, { Navigation } from 'swiper';
-
 Swiper.use([Navigation]);
+
+const contentSlider = document.querySelector('[data-content-slider]');
+const bannerSlideClass = 'banner--slider';
 
 function initContentSlider() {
   const contentSliderControls = document.querySelector(
@@ -41,10 +43,9 @@ function initContentSlider() {
   } else {
     // hide controls if swiper is no needed
     contentSliderControls.style.display = 'none';
+    contentSlider.querySelector('.banner').classList.remove(bannerSlideClass);
   }
 }
-
-const contentSlider = document.querySelector('[data-content-slider]');
 
 if (contentSlider) {
   initContentSlider();
