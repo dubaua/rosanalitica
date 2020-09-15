@@ -41,6 +41,10 @@
     line-height: $--font-line-height-xs;
     letter-spacing: $--font-letter-spacing-small;
 
+    p {
+      margin: 0;
+    }
+
     strong {
       color: $--color-text-brand;
       font-weight: inherit;
