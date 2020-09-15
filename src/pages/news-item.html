@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs-inner.html') %>
+
+      <section class="section section--narrow">
+        <div class="article">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-xl-7">
+                <h1 class="article__title title">
+                  Наша компания стала официальным дилером Metrohm
+                </h1>
+                <div class="article__date">12 / 02 / 2020</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-8">
+                <div class="article__cover picture">
+                  <img
+                    src="http://www.rosanalitica.dubaua.ru/images/news/news-cover-1.jpg"
+                    alt="Наша компания стала официальным дилером Metrohm"
+                  />
+                </div>
+              </div>
+
+              <div class="col col-xs-2 col-md-2 col-xl-7">
+                <p class="article__description description">
+                  Мы готовы предложить широкий спектр оборудования компании
+                  Metrohm для решений, охватывающих любые потребности в
+                  различных отраслях промышленности
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-7">
+                <div class="typography">
+                  <p>
+                    Мы готовы предложить широкий спектр оборудования компании
+                    Metrohm для решений, охватывающих любые потребности в
+                    различных отраслях промышленности, и в кратчайшие сроки
+                    подготовить для Вас технико-коммерческое предложение по
+                    выгодным ценам и на наиболее подходящих именно для Вас
+                    условиях.
+                  </p>
+                  <p>
+                    С основным оборудованием, производимым компанией Metrohm, Вы
+                    можете ознакомиться на нашем сайте: <a href="http://www.spectranalit.ru">www.spectranalit.ru</a>
+                  </p>
+                  <p>
+                    Если Вы не найдете нужного оборудования на сайте, наши
+                    сотрудники всегда готовы рассмотреть Ваши потребности и
+                    подобрать подходящее оборудование. Будем рады ответить на
+                    все интересующие Вас вопросы по телефону или электронной
+                    почте.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-8">
+                <div class="article__links">
+                  <a href="" class="article__link article__link--prev">
+                    <svg>
+                      <use xlink:href="#arrow" />
+                    </svg>
+                    предыдущая новость
+                  </a>
+                  <a href="" class="article__link article__link--next">
+                    следующая новость
+                    <svg>
+                      <use xlink:href="#arrow" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>
