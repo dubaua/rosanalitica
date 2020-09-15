@@ -1,6 +1,7 @@
 @import '~@/styles/shared/globals.scss';
 
 .breadcrumbs {
+  $this: &;
   padding-top: 20px;
   margin-bottom: 24px;
 
@@ -12,6 +13,8 @@
   &__inner {
     position: relative;
     margin-left: 53px;
+    list-style: none;
+    padding: 0;
 
     display: flex;
     align-items: center;
@@ -25,13 +28,8 @@
   &__back {
     position: absolute;
     right: calc(100% + 33px);
-
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-
+    top: 0;
+    display: block;
     color: $--color-text;
 
     @include from('xl') {
@@ -49,26 +47,23 @@
     font-weight: 300;
     font-size: 35px;
     color: $--color-text-brand;
-  }
 
-  &__element {
-    position: relative;
-    margin-left: 28px;
-    margin-top: 8px;
+    &--muted {
+      margin-left: 0.5em;
+      margin-top: 0.5em;
 
-    font-style: italic;
-    font-size: 16px;
-    color: $--color-text-600;
-    text-decoration: none;
+      font-style: italic;
+      font-size: 16px;
+      color: $--color-text-600;
+      text-decoration: none;
 
-    &:before {
-      content: '—';
-      position: absolute;
-      left: -20px;
-    }
-
-    &--active {
-      font-weight: bold;
+      &:before {
+        content: '—';
+        margin-right: 0.3em;
+      }
+      &#{$this}__section--active {
+        font-weight: bold;
+      }
     }
   }
 }
