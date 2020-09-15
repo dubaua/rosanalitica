@@ -1,23 +1,26 @@
 import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
-const contentSlider = document.querySelector('[data-content-slider]');
-const bannerSlideClass = 'banner--slider';
+const contentSliderNodeList = document.querySelectorAll('[data-content-slider]');
 
-function initContentSlider() {
-  const contentSliderControls = document.querySelector(
-    '[data-content-slider-controls]',
-  );
-  const slideNodeList = document.querySelectorAll(
-    '[data-content-slider-slide]',
-  );
+if (contentSliderNodeList.length) {
+  for (let i = 0; i < contentSliderNodeList.length; i++) {
+    initContentSlider(contentSliderNodeList[i]);
+  }
+}
+
+function initContentSlider(contentSlider) {
+  const contentSliderControls = contentSlider.querySelector('[data-content-slider-controls]');
+  const slideNodeList = contentSlider.querySelectorAll('[data-content-slider-slide]');
   const slideArray = Array.from(slideNodeList);
   const slidesCount = slideArray.length;
 
-  const currentSliderNode = document.querySelector(
-    '[data-content-slider-current]',
-  );
-  const totalSliderNode = document.querySelector('[data-content-slider-total]');
+  console.log(slideArray, slidesCount);
+
+  const currentSliderNode = contentSlider.querySelector('[data-content-slider-current]');
+  const totalSliderNode = contentSlider.querySelector('[data-content-slider-total]');
+
+  const bannerSlideClass = 'banner--slider';
 
   function updateCurrentSlide(number) {
     currentSliderNode.innerText = number;
@@ -25,28 +28,32 @@ function initContentSlider() {
 
   // init swiper only if slides more than 1
   if (slidesCount > 1) {
-    const contentSlider = new Swiper('.content-swiper-container', {
+    const swiperContainerNode = contentSlider.querySelector('[data-content-slider-container]');
+    new Swiper(swiperContainerNode, {
       loop: true,
       roundLengths: true,
 
       navigation: {
         nextEl: '.content-slider__navigation-button--next',
       },
+
+      on: {
+        slideChange() {
+          updateCurrentSlide(this.realIndex + 1);
+        },
+        init() {
+          updateCurrentSlide(this.realIndex + 1);
+          totalSliderNode.innerText = slidesCount;
+        },
+      },
     });
 
-    totalSliderNode.innerText = slidesCount;
-    updateCurrentSlide(contentSlider.realIndex + 1);
-
-    contentSlider.on('slideChange', () => {
-      updateCurrentSlide(contentSlider.realIndex + 1);
-    });
+    const bannerNodeList = contentSlider.querySelectorAll('[data-content-slider-banner]');
+    for (let i = 0; i < bannerNodeList.length; i++) {
+      bannerNodeList[i].classList.add(bannerSlideClass);
+    }
   } else {
     // hide controls if swiper is no needed
     contentSliderControls.style.display = 'none';
-    contentSlider.querySelector('.banner').classList.remove(bannerSlideClass);
   }
-}
-
-if (contentSlider) {
-  initContentSlider();
 }
