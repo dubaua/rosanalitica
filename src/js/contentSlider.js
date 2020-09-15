@@ -15,6 +15,8 @@ function initContentSlider(contentSlider) {
   const slideArray = Array.from(slideNodeList);
   const slidesCount = slideArray.length;
 
+  console.log(slideArray, slidesCount);
+
   const currentSliderNode = contentSlider.querySelector('[data-content-slider-current]');
   const totalSliderNode = contentSlider.querySelector('[data-content-slider-total]');
 
@@ -26,20 +28,24 @@ function initContentSlider(contentSlider) {
 
   // init swiper only if slides more than 1
   if (slidesCount > 1) {
-    const contentSliderInstance = new Swiper('.content-swiper-container', {
+    const swiperContainerNode = contentSlider.querySelector('[data-content-slider-container]');
+    new Swiper(swiperContainerNode, {
       loop: true,
       roundLengths: true,
 
       navigation: {
         nextEl: '.content-slider__navigation-button--next',
       },
-    });
 
-    totalSliderNode.innerText = slidesCount;
-    updateCurrentSlide(contentSliderInstance.realIndex + 1);
-
-    contentSliderInstance.on('slideChange', () => {
-      updateCurrentSlide(contentSliderInstance.realIndex + 1);
+      on: {
+        slideChange() {
+          updateCurrentSlide(this.realIndex + 1);
+        },
+        init() {
+          updateCurrentSlide(this.realIndex + 1);
+          totalSliderNode.innerText = slidesCount;
+        },
+      },
     });
 
     const bannerNodeList = contentSlider.querySelectorAll('[data-content-slider-banner]');
