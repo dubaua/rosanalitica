@@ -59,6 +59,7 @@
 
     &--next {
       color: $--color-text-600;
+      text-align: right;
       transition: color $--duration-200 linear;
 
       svg {
