@@ -17,6 +17,16 @@
   * + * {
     margin-top: 1em;
   }
+
+  a {
+    color: $--color-text-brand;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $--color-text-500;
+    }
+  }
   // h1,
   // .h1 {
   //   margin: 1.5em 0 1em;
