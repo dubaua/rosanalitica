@@ -10,4 +10,5 @@ import 'swiper/swiper-bundle.css';
 import '@/js/menu.js';
 import '@/js/slider.js';
 import '@/js/contentSlider.js';
+import '@/js/jobs.js';
 // import '@/js/scroller.js';

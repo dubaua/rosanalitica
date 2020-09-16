@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs.html') %>
+
+      <section class="section section--narrow">
+        <div class="jobs">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-xl-12">
+                <picture class="jobs__picture picture intro-image">
+                  <img
+                    src="http://rosanalitica.dubaua.ru/images/jobs-cover.jpg"
+                    alt="Вакансии"
+                    class="picture__image"
+                  />
+                </picture>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-md-2 col-xl-6">
+                <p class="jobs__description description">
+                  Мы всегда рады новым специалистам, которые могут у нас расти и
+                  развиваться, а мы конечно же поможем им в этом. Если вас
+                  заинтересовала работа в нашей компании — смело присылайте нам
+                  своё резюме! Присоединяйся к нашей команде и ты поймешь, на
+                  что способен!
+                </p>
+              </div>
+              <div class="col col-xs-2 col-md-2 col-xl-6">
+                <div class="jobs__info">
+                  <p>Мы ценим наших сотрудников и обеспечиваем им:</p>
+                  <ul>
+                    <li>
+                      официальное оформление, соблюдение всех норм Трудового
+                      кодекса РФ;
+                    </li>
+                    <li>
+                      достойный доход, соответствующий квалификации и навыкам;
+                    </li>
+                    <li>полный социальный пакет, дополнительные льготы;</li>
+                    <li>
+                      работу в дружном приветливом коллективе, имеющем
+                      корпоративную культуру.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-xs-2 col-xl-9"></div>
+
+              <div class="col col-xs-2 col-xl-3">
+                <div class="jobs__feedback">
+                  <div class="jobs__feedback-description">
+                    <p>
+                      Заполните форму отклика ниже или присылайте резюме на
+                      почту
+                      <a href="mailto:hr@spectranalit.ru">hr@spectranalit.ru</a>
+                      <br />
+                      Мы свяжемся с вами в течение двух недель.
+                    </p>
+                  </div>
+                  
+                  <form action="" class="jobs__form form">
+                    <input type="text" class="jobs__input input" placeholder="Имя">
+                    <input type="phone" class="jobs__input input" placeholder="Телефон">
+                    <input type="email" class="jobs__input input" placeholder="E-mail">
+                    <input type="file" class="jobs__input input" placeholder="E-mail">
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>
