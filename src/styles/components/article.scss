@@ -3,6 +3,11 @@
 .article {
   padding-bottom: 50px;
 
+  @include from('xl') {
+    background-color: $--color-background-500;
+    padding-top: 14px;
+  }
+
   &__title {
   }
 
