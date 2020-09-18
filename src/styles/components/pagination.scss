@@ -20,12 +20,14 @@
   }
 
   &__arrow {
-    color: $--color-text-600;
+    display: block;
+    color: $--color-text-brand;
     cursor: pointer;
 
     svg {
-      width: 20px;
-      height: 23px;
+      width: 27px;
+      height: 30px;
+      display: block;
     }
 
     &--prev {
@@ -62,7 +64,8 @@
 
     &--disabled {
       #{$pagination}__arrow {
-        color: $--color-text-brand;
+        color: $--color-gray-500;
+        cursor: unset;
       }
 
       #{$pagination}__item-link {
