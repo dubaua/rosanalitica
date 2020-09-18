@@ -58,9 +58,15 @@
       text-decoration: none;
 
       &:before {
-        content: '—';
+        background: $--color-text-600;
+        content: '';
+        display: inline-block;
+        width: 0.75em;
+        height: 0.14em;
+        vertical-align: middle;
         margin-right: 0.3em;
       }
+
       &#{$this}__section--active {
         font-weight: bold;
       }
