@@ -2,13 +2,19 @@
 
 .button {
   display: inline-block;
+  cursor: pointer;
+  box-shadow: none;
   padding: 0.75em 1em;
+  box-sizing: border-box;
+
   min-width: 192px;
   font-size: $--font-size-200;
   font-weight: $--font-weight-medium;
   letter-spacing: $--font-letter-spacing-small;
   text-align: center;
   text-transform: lowercase;
+
+  transition: all $--duration-100 linear;
   
   @include from('lg') {
     border-radius: $--border-radius-button;
@@ -16,5 +22,37 @@
 
   &--quiet {
     border: 1px solid;
+  }
+
+  &--primary {
+    height: 49px;
+    padding: 10px 9px;
+
+    border: none;
+    
+    color: $--color-text-contrast-600;
+    background-color: $--color-background-contrast-300;
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: $--color-background-contrast-200;
+    }
+  }
+
+  &--dark {
+    height: 49px;
+    padding: 10px 9px;
+
+    border: none;
+    
+    color: $--color-text-contrast-600;
+    background-color: $--color-text-contrast-400;
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: $--color-background-contrast-500;
+    }
   }
 }

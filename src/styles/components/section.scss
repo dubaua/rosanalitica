@@ -29,6 +29,10 @@
     }
   }
 
+  &--strong-bottom {
+    padding-bottom: 32px;
+  }
+
   @include from('lg') {
     &--highlight {
       background: $--color-background-700;
@@ -45,6 +49,10 @@
         z-index: -1;
         background: $--color-background-700;
       }
+    }
+
+    &--strong-bottom {
+      padding-bottom: 54px;
     }
   }
 }

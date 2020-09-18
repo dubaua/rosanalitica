@@ -6,6 +6,11 @@
 @import '~@/styles/utility.scss';
 @import '~@/styles/typography.scss';
 
+@import '~@/styles/components/button.scss';
+@import '~@/styles/components/input.scss';
+@import '~@/styles/components/file-input.scss';
+@import '~@/styles/components/checkbox.scss';
+
 @import '~@/styles/components/section.scss';
 @import '~@/styles/components/companies.scss';
 @import '~@/styles/components/company.scss';
@@ -21,7 +26,6 @@
 @import '~@/styles/components/city-contacts.scss';
 @import '~@/styles/components/banner.scss';
 @import '~@/styles/components/picture.scss';
-@import '~@/styles/components/button.scss';
 @import '~@/styles/components/search.scss';
 @import '~@/styles/components/catalog-tiles.scss';
 @import '~@/styles/components/content-slider.scss';

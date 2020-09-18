@@ -47,3 +47,9 @@ $breakpoints: (
     }
   }
 }
+
+@mixin not-using-mouse {
+  @at-root body:not(.using-mouse) {
+    @content;
+  }
+}

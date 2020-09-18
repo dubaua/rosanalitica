@@ -1,0 +1,44 @@
+@import '~@/styles/shared/globals.scss';
+
+.file-input {
+  $input: &;
+  
+  input {
+    color: transparent;
+    height: 0;
+    font-size: 0;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+      height: 0;
+    }
+
+    &:hover {
+
+    }
+
+    &:active {
+      
+    }
+
+    &:focus {
+
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: -24px;
+  }
+
+  &__file-name {
+    display: none;
+    max-width: 100%;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    word-break: break-word;
+
+    font-size: 14px;
+    color: $--color-text-600;
+  }
+}
