@@ -15,8 +15,6 @@ function initContentSlider(contentSlider) {
   const slideArray = Array.from(slideNodeList);
   const slidesCount = slideArray.length;
 
-  console.log(slideArray, slidesCount);
-
   const currentSliderNode = contentSlider.querySelector('[data-content-slider-current]');
   const totalSliderNode = contentSlider.querySelector('[data-content-slider-total]');
 

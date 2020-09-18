@@ -6,7 +6,7 @@ const jobsItemNodeArray = Array.from(
 const jobsItemActiveClass = 'job-list__item--active';
 
 const feedbackFormNode = document.querySelector('[data-feedback-form-block]');
-let formHeight = feedbackFormNode.offsetHeight;
+let formHeight = feedbackFormNode ? feedbackFormNode.offsetHeight : null;
 let jobsItemActiveIndex = null;
 let isMobile = window.innerWidth <= 1200;
 
@@ -75,16 +75,18 @@ function closeFeedbackForm() {
   });
 }
 
-initJobs();
+if (jobsItemNodeArray.length && feedbackFormNode) {
+  initJobs();
 
-window.addEventListener('resize', () => {
-  isMobile = window.innerWidth <= 1200;
-  if (isMobile) {
-    openFeedbackForm();
-    if (jobsItemActiveIndex !== null) {
-      setOpenJobsItemHeight(jobsItemNodeArray[jobsItemActiveIndex]);
+  window.addEventListener('resize', () => {
+    isMobile = window.innerWidth <= 1200;
+    if (isMobile) {
+      openFeedbackForm();
+      if (jobsItemActiveIndex !== null) {
+        setOpenJobsItemHeight(jobsItemNodeArray[jobsItemActiveIndex]);
+      }
+    } else if (jobsItemActiveIndex === null) {
+      closeFeedbackForm();
     }
-  } else if (jobsItemActiveIndex === null) {
-    closeFeedbackForm();
-  }
-});
+  });
+}
