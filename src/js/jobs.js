@@ -1,69 +1,90 @@
-let isAccordeonInitialized = false;
-const jobsNodeList = document.querySelectorAll('[data-job-item]');
-const jobsNodeArray = Array.from(jobsNodeList);
+import { nextTick } from './utils.js';
+
+const jobsItemNodeArray = Array.from(
+  document.querySelectorAll('[data-jobs-item]'),
+);
 const jobsItemActiveClass = 'job-list__item--active';
 
-const feedbackForm = document.querySelector('[data-feedback-form-block]');
-let formHeight = feedbackForm.offsetHeight;
+const feedbackFormNode = document.querySelector('[data-feedback-form-block]');
+let formHeight = feedbackFormNode.offsetHeight;
+let jobsItemActiveIndex = null;
+let isMobile = window.innerWidth <= 1200;
 
-console.log('feedbackForm.offsetHeight', formHeight, feedbackForm.offsetHeight);
-
-const jobPanelHeightMobile = 78;
 const jobPanelHeight = 62;
 
 function initJobs() {
-  const isMobile = window.innerWidth <= 1200;
+  jobsItemNodeArray.forEach((jobsItemNode, jobsItemIndex) => {
+    const toggleButtonNode = jobsItemNode.querySelector(
+      '[data-jobs-item-toggle]',
+    );
 
-  if (jobsNodeArray.length > 0) {
-    for (let jobIndex = 0; jobIndex < jobsNodeArray.length; jobIndex++) {
-      const job = jobsNodeArray[jobIndex];
-      const toggler = job.querySelector('[data-job-toggler]');
+    toggleButtonNode.addEventListener('click', () => {
+      const isJobsItemActive = jobsItemActiveIndex === jobsItemIndex;
+      jobsItemActiveIndex = isJobsItemActive ? null : jobsItemIndex;
 
-      toggler.addEventListener('click', () => {
-        const isJobsActive = job.classList.contains(jobsItemActiveClass);
-
-        for (let i = 0; i < jobsNodeArray.length; i++) {
-          const job = jobsNodeArray[i];
-          job.classList.remove(jobsItemActiveClass);
-          job.style.height = isMobile
-            ? jobPanelHeightMobile + 'px'
-            : jobPanelHeight + 'px';
-
-          if (!isMobile) {
-            feedbackForm.style.opacity = '0';
-          }
-        }
-
-        if (!isJobsActive) {
-          job.classList.add(jobsItemActiveClass);
-
-          if (isMobile) {
-            job.style.height = 'auto';
-          } else {
-            feedbackForm.style.display = 'block';
-            formHeight = feedbackForm.offsetHeight;
-            job.style.height = formHeight + 20 + 'px';
-
-            setTimeout(() => {
-              feedbackForm.style.opacity = '1';
-              feedbackForm.style.transform =
-                'translateY(' + jobIndex * jobPanelHeight + 'px)';
-            }, 10);
-          }
+      if (!isMobile) {
+        if (jobsItemActiveIndex !== null) {
+          openFeedbackForm();
         } else {
-          feedbackForm.style.display = 'none';
+          closeFeedbackForm();
+        }
+      }
+
+      jobsItemNodeArray.forEach((jobsItemNode, _jobsItemIndex) => {
+        if (!isJobsItemActive && jobsItemIndex === _jobsItemIndex) {
+          openJobsItem(jobsItemNode);
+        } else {
+          closeJobsItem(jobsItemNode);
         }
       });
-    }
+    });
+  });
+}
 
-    isAccordeonInitialized = true;
-  }
+function openJobsItem(jobsItemNode) {
+  jobsItemNode.classList.add(jobsItemActiveClass);
+  setOpenJobsItemHeight(jobsItemNode);
+}
+
+function setOpenJobsItemHeight(jobsItemNode) {
+  jobsItemNode.style.height = isMobile ? 'auto' : formHeight + 20 + 'px';
+}
+
+function closeJobsItem(jobsItemNode) {
+  jobsItemNode.classList.remove(jobsItemActiveClass);
+  jobsItemNode.style.height = isMobile ? 'auto' : jobPanelHeight + 'px';
+}
+
+function openFeedbackForm() {
+  feedbackFormNode.style.display = 'block';
+  formHeight = feedbackFormNode.offsetHeight;
+
+  nextTick(() => {
+    feedbackFormNode.style.opacity = '1';
+    if (!isMobile) {
+      feedbackFormNode.style.transform =
+        'translateY(' + jobsItemActiveIndex * jobPanelHeight + 'px)';
+    }
+  });
+}
+
+function closeFeedbackForm() {
+  feedbackFormNode.style.opacity = '0';
+  nextTick(() => {
+    feedbackFormNode.style.display = 'none';
+  });
 }
 
 initJobs();
 
 window.addEventListener('resize', () => {
-  if (!isAccordeonInitialized) {
-    initJobs();
+  isMobile = window.innerWidth <= 1200;
+  if (isMobile) {
+    openFeedbackForm();
+    if (jobsItemActiveIndex !== null) {
+      setOpenJobsItemHeight(jobsItemNodeArray[jobsItemActiveIndex]);
+    }
+  } else if (jobsItemActiveIndex === null) {
+    closeFeedbackForm();
   }
 });

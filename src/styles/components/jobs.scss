@@ -58,6 +58,7 @@
   $jobs: &;
 
   &__item-body {
+    display: none;
     opacity: 0;
     padding-bottom: 26px;
     pointer-events: none;
@@ -65,6 +66,10 @@
     transition-property: opacity;
     transition-timing-function: linear;
     transition-duration: $--duration-100;
+
+    @include from('xl') {
+      display: block;
+    }
   }
 
   &__item-panel {
@@ -199,6 +204,7 @@
         transition-delay: $--duration-500;
         opacity: 1;
         pointer-events: all;
+        display: block;
       }
 
       #{$jobs}__item-toggler-icon--show {
