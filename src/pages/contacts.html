@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs.html') %>
+
+      <section class="section section--narrow section--strong-bottom">
+        <div class="container">
+          <div class="contacts">
+            <div class="contacts__leading">
+              <div
+                class="city"
+                itemprop="blogPost"
+                itemscope=""
+                itemtype="https://schema.org/BlogPosting"
+              >
+                <div class="row">
+                  <div class="col col-xs-2 col-md-2 col-xl-3">
+                    <h2 class="city__title city__label--brand city__label--pin">
+                      <svg class="city__pin">
+                        <use xlink:href="#pin"></use>
+                      </svg>
+                      Санкт-Петербург
+                    </h2>
+                    <div class="city__address city__address--brand">
+                      ул. Цветочная, дом 18 лит В
+                    </div>
+                  </div>
+                  <div class="col col-xs-2 col-md-2 col-xl-3">
+                    <div class="city__manager">Евгения Невская</div>
+                    <div class="city__position">
+                      Менеджер по работе с клиентами
+                    </div>
+                  </div>
+                  <div class="col col-xs-2 col-md-2 col-xl-3">
+                    <a
+                      href="tel:+78124673474"
+                      class="city__phone city__phone--strong city__phone--leading"
+                    >
+                      +7 812 467-34-74
+                    </a>
+                  </div>
+                  <div class="col col-xs-2 col-md-2 col-xl-3">
+                    <a
+                      href="mailto:spb@spectranalit.ru"
+                      class="city__email city__email--strong city__email--leading"
+                    >
+                      spb@spectranalit.ru
+                    </a>
+                  </div>
+                  <div class="col col-xs-2 col-md-4 col-xl-12">
+                    <div class="city__map-container">
+                      <div class="city__map" id="map"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__list">
+              <div class="row">
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <div class="city">
+                    <h2 class="city__title">Москва</h2>
+                    <div class="city__address">ул. Ленина, дом 15, офис 2</div>
+                    <div class="city__manager">Игорь Тарасов</div>
+                    <div class="city__position">
+                      Менеджер по работе с клиентами
+                    </div>
+                    <a
+                      href="tel:+78124673474"
+                      class="city__phone city__phone--strong"
+                    >
+                      +7 812 467-34-74
+                    </a>
+                    <a
+                      href="mailto:ekb@spectranalit.ru"
+                      class="city__email city__email--strong"
+                    >
+                      ekb@spectranalit.ru
+                    </a>
+                  </div>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <div class="city">
+                    <h2 class="city__title">Екатеринбург</h2>
+                    <div class="city__address">ул. Малышева, дом 3, офис 5</div>
+                    <div class="city__manager">Мария Нечаева</div>
+                    <div class="city__position">
+                      Менеджер по работе с клиентами
+                    </div>
+                    <a
+                      href="tel:+78124673474"
+                      class="city__phone city__phone--strong"
+                    >
+                      +7 812 467-34-74
+                    </a>
+                    <a
+                      href="mailto:ekb@spectranalit.ru"
+                      class="city__email city__email--strong"
+                    >
+                      ekb@spectranalit.ru
+                    </a>
+                  </div>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <div class="city">
+                    <h2 class="city__title">Казань</h2>
+                    <div class="city__address">ул. Каюма Насыри, дом 4</div>
+                    <div class="city__manager">Арина Валиева</div>
+                    <div class="city__position">
+                      Менеджер по работе с клиентами
+                    </div>
+                    <a
+                      href="tel:+78124673474"
+                      class="city__phone city__phone--strong"
+                    >
+                      +7 812 467-34-74
+                    </a>
+                    <a
+                      href="mailto:kazan@spectranalit.ru"
+                      class="city__email city__email--strong"
+                    >
+                      kazan@spectranalit.ru
+                    </a>
+                  </div>
+                </div>
+                <div class="col col-xs-2 col-md-2 col-xl-3">
+                  <div class="contacts__form" data-feedback-form-block>
+                    <div class="contacts__form-description typography">
+                      <p>
+                        Заполните форму заказа обратного звонка и наши менеджеры
+                        свяжутся с вами в ближайшее время
+                      </p>
+                    </div>
+
+                    <form
+                      action="post"
+                      class="contacts__form-form form"
+                      enctype="multipart/form-data"
+                      data-feedback-form
+                    >
+                      <input
+                        type="text"
+                        class="contacts__form-input input"
+                        placeholder="Имя"
+                        required
+                      />
+                      <input
+                        type="phone"
+                        class="contacts__form-input input"
+                        placeholder="Телефон"
+                        required
+                      />
+
+                      <button
+                        class="contacts__form-button button button--primary"
+                        type="submit"
+                      >
+                        заказать звонок
+                      </button>
+
+                      <div class="contacts__form-checkbox checkbox">
+                        <input
+                          class="checkbox__native"
+                          type="checkbox"
+                          value="1"
+                          id="privacy"
+                          data-select-checkbox
+                          required
+                        />
+                        <span class="checkbox__box">
+                          <span class="checkbox__tick"></span>
+                        </span>
+                        <label for="privacy" class="checkbox__label"
+                          >Даю согласие на обработку персональных данных</label
+                        >
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

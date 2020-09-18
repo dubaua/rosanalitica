@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development';
  * 1. создаем новый файл в @/pages
  * 2. добавляем его имя сторокой в массив pageNameArray
  */
-const pageNameArray = ['index', 'about', 'partners', 'clients', 'partner', 'client', 'news', 'news-item', 'jobs'];
+const pageNameArray = ['index', 'about', 'partners', 'clients', 'partner', 'client', 'news', 'news-item', 'jobs', 'contacts'];
 
 const pageHtmlWebpackPluginConfigArray = pageNameArray.map((entryName) => {
   return new HtmlWebpackPlugin({

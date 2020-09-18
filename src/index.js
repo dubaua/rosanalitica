@@ -12,4 +12,5 @@ import '@/js/slider.js';
 import '@/js/contentSlider.js';
 import '@/js/jobs.js';
 import '@/js/fileInput.js';
+import '@/js/map.js';
 // import '@/js/scroller.js';
