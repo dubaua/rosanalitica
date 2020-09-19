@@ -20,7 +20,8 @@ for (let i = 0; i < horizontalScrollerNodeList.length; i++) {
 
   drawScroll(horizontalScrollerNode, horizontalScrollerContainerNode);
 }
-unction Scroller({ children, className, horizontal }: Props) {
+
+function Scroller({ children, className, horizontal }: Props) {
   const [reachBoundaries, setReachBoundaries] = useState({
     start: true,
     end: false

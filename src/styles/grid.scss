@@ -131,7 +131,6 @@ $cross-axis-alignments: (
 .#{$column} {
   flex-grow: 1;
   flex-basis: 0;
-  box-sizing: border-box;
   max-width: 100%;
 }
 

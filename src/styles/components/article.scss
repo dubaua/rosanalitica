@@ -12,6 +12,7 @@
   }
 
   &__date {
+    display: block;
     margin: 20px 0;
     font-weight: 500;
     font-size: 18px;
@@ -27,53 +28,5 @@
 
   &__description {
     margin: 25px 0;
-  }
-
-  &__links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    font-size: 16px;
-    font-weight: normal;
-
-    svg {
-      width: 20px;
-      height: 23px;
-    }
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    margin-top: 38px;
-
-    &--prev {
-      color: $--color-text-brand;
-      transition: color $--duration-200 linear;
-
-      svg {
-        transform: rotate(180deg);
-        margin-right: 10px;
-      }
-
-      &:hover {
-        color: $--color-text-500;
-      }
-    }
-
-    &--next {
-      color: $--color-text-600;
-      text-align: right;
-      transition: color $--duration-200 linear;
-
-      svg {
-        margin-left: 10px;
-      }
-
-      &:hover {
-        color: $--color-text-500;
-      }
-    }
   }
 }

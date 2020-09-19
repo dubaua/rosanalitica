@@ -21,7 +21,6 @@
 
     #{$navigation}__item {
       @include from('xl') {
-        box-sizing: border-box;
         color: $--color-text-contrast-600;
 
         a {
@@ -54,7 +53,6 @@
 
   &--hamburger-menu {
     flex-grow: 1;
-    box-sizing: border-box;
     margin-top: 10px;
     margin-left: 5vmax;
 
@@ -74,7 +72,6 @@
 
     #{$navigation}__item {
       position: relative;
-      box-sizing: border-box;
 
       display: block;
       padding: 0.25em 0;

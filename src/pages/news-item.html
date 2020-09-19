@@ -17,7 +17,7 @@
                 <h1 class="article__title title">
                   Наша компания стала официальным дилером Metrohm
                 </h1>
-                <div class="article__date">12 / 02 / 2020</div>
+                <time class="article__date">12 / 02 / 2020</time>
               </div>
             </div>
 
@@ -67,24 +67,7 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="col col-xs-2 col-xl-8 col-xl-offset-1">
-                <div class="article__links">
-                  <a href="" class="article__link article__link--prev">
-                    <svg>
-                      <use xlink:href="#arrow" />
-                    </svg>
-                    предыдущая новость
-                  </a>
-                  <a href="" class="article__link article__link--next">
-                    следующая новость
-                    <svg>
-                      <use xlink:href="#arrow" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <%= require('html-loader!@/partials/pager.html') %>
           </div>
         </div>
       </section>

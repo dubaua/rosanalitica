@@ -17,7 +17,7 @@
       top: 555px;
     }
 
-    @include from('lg') {
+    @include from('xl') {
       top: 0;
     }
 
@@ -29,11 +29,10 @@
   &__controls-inner {
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-		align-items: center;
-		padding: 0 16px;
+    align-items: center;
+    padding: 0 16px;
 
-    @include from('lg') {
+    @include from('xl') {
       padding: 0 36px;
       width: 30%;
     }
@@ -52,7 +51,7 @@
     color: $--color-text-brand;
     font-weight: 200;
 
-    @include from('lg') {
+    @include from('xl') {
       color: $--color-text-600;
     }
   }
