@@ -6,7 +6,7 @@
   position: relative;
   margin-bottom: 16px;
 
-  @include from('lg') {
+  @include from('xl') {
     margin-bottom: 30px;
   }
 
@@ -14,7 +14,7 @@
     margin-right: -$--page-padding-x-xs;
     margin-left: -$--page-padding-x-xs;
 
-    @include from('lg') {
+    @include from('xl') {
       margin-right: 0;
       margin-left: 30%;
       width: 70%;
@@ -50,12 +50,12 @@
       font-weight: inherit;
     }
 
-    @include from('lg') {
+    @include from('xl') {
       position: absolute;
       left: 0;
       top: 66px;
       width: 44%;
-      padding: 16px 36px;
+      padding: 16px 36px 64px;
       font-size: 53px;
       font-weight: $--font-weight-ultra-light;
       border-radius: $--border-radius;
@@ -65,10 +65,6 @@
         left: auto;
         right: 0;
       }
-    }
-
-    @include from('xl') {
-      padding: 16px 36px 64px;
     }
 
     @include from('xxl') {
@@ -88,7 +84,7 @@
   &__link {
     margin: 16px 24px;
 
-    @include from('lg') {
+    @include from('xl') {
       position: absolute;
       left: 36px;
       bottom: 0;
@@ -106,7 +102,7 @@
     #{$banner}__overlay {
       padding: 112px 16px 16px;
 
-      @include from('lg') {
+      @include from('xl') {
         top: 106px;
         padding: 16px 36px;
       }
@@ -135,7 +131,7 @@
         object-position: center;
       }
 
-      @include from('lg') {
+      @include from('xl') {
         height: auto;
 
         img {

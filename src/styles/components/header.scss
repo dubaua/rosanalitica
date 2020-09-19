@@ -8,7 +8,6 @@
   z-index: 100;
 
   height: $--header-height;
-  box-sizing: border-box;
 
   background-color: $--color-background-contrast-700;
 
@@ -48,7 +47,7 @@
 
   &__main {
     @include from('xl') {
-      margin-right: -$--page-padding-x-lg;
+      margin-right: -$--page-padding-x-xl;
     }
   }
 
@@ -64,7 +63,7 @@
     transform: translateY(-50%);
 
     @include from('xl') {
-      right: $--page-padding-x-lg;
+      right: $--page-padding-x-xl;
     }
 
     &.is-active {
@@ -111,12 +110,11 @@
       justify-content: space-between;
       height: 100%;
 
-      box-sizing: border-box;
       padding: 0 22px 34px 20px;
 
       @include from('xl') {
         flex-flow: row wrap;
-        padding: 24px $--page-padding-x-lg 34px 52px;
+        padding: 24px $--page-padding-x-xl 34px 52px;
       }
     }
 

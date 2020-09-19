@@ -78,7 +78,6 @@
     align-items: center;
     padding: 10px 0;
     cursor: pointer;
-    box-sizing: border-box;
     height: 100%;
 
     @include from('xl') {
@@ -164,7 +163,6 @@
   &__item {
     position: relative;
     border-bottom: 2px solid $--color-background-700;
-    box-sizing: border-box;
 
     height: 78px;
     @include from('xl') {
@@ -192,7 +190,7 @@
         background-color: $--color-background-500;
 
         @include from('lg') {
-          left: -$--page-padding-x-lg;
+          left: -$--page-padding-x-xl;
         }
       }
 

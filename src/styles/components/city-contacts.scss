@@ -22,7 +22,6 @@
     #{$this}__contact {
       @include from('xl') {
         height: 100%;
-        box-sizing: border-box;
         padding: 15px 43px;
 
         color: $--color-text;
@@ -118,9 +117,11 @@
     #{$this}__contact {
       display: block;
       margin-bottom: 0.5em;
-      font-size: $--font-size-500;
+      font-size: $--font-size-300;
       color: $--color-text-brand;
-
+      @include from('xxl') {
+        font-size: $--font-size-500;
+      }
       &--city {
         font-weight: $--font-weight-bold;
       }

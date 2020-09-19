@@ -1,17 +1,16 @@
 @import '~@/styles/shared/globals.scss';
 
 .news-item {
-  $news-item: &;
+  $this: &;
 
   position: relative;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  margin: 20px 20px;
+  height: 100%;
+  width: 100%;
 
-  @include from('lg') {
-    padding: 0 20px;
-    margin: 0 20px;
+  @include from('sm') {
+    padding-left: $--gutter;
     border-left: 1px solid #979797;
   }
 
@@ -24,7 +23,7 @@
     letter-spacing: $--font-letter-spacing-small;
     color: $--color-text-brand;
 
-    @include from('lg') {
+    @include from('xl') {
       order: 1;
       margin: 0 0 48px 0;
       font-size: $--font-size-300;
@@ -40,7 +39,7 @@
     margin: 0;
     overflow: hidden;
 
-    @include from('lg') {
+    @include from('xl') {
       margin: auto 0 8px;
       font-weight: $--font-weight-regular;
       line-height: $--font-line-height-small;
@@ -56,10 +55,10 @@
     padding-bottom: 111%;
     margin: 0 0 20px;
 
-    border: 1px solid $--color-text-brand;
+    border: $--news-item-border-width solid $--color-text-brand;
     background-color: $--color-background-700;
 
-    @include from('lg') {
+    @include from('xl') {
       margin-bottom: 0;
       order: 3;
     }
@@ -122,7 +121,7 @@
   }
 
   &:hover {
-    #{$news-item}__read-more {
+    #{$this}__read-more {
       &:before {
         opacity: 0.7;
       }
@@ -130,6 +129,40 @@
       svg {
         opacity: 1;
         transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__read-more-scrollable {
+    display: none;
+  }
+
+  @include to('xl') {
+    &--scrollable {
+      background: $--color-background-700;
+      padding-bottom: 24px;
+      padding-left: 0;
+      border-left: 0;
+      #{$this}__picture {
+        padding-bottom: 65%;
+      }
+      #{$this}__date,
+      #{$this}__title {
+        margin-left: $--page-padding-x-xs;
+        margin-bottom: 20px;
+      }
+      #{$this}__read-more {
+        display: none;
+      }
+      #{$this}__read-more-scrollable {
+        display: block;
+        margin-left: $--page-padding-x-xs;
+        margin-top: auto;
+        color: $--color-text-brand;
+        svg {
+          width: 40px;
+          height: 44px;
+        }
       }
     }
   }
