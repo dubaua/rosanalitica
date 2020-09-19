@@ -8,3 +8,5 @@ import './arrow.svg';
 import './catalog-tiles-arrow-right.svg';
 import './plus.svg';
 import './minus.svg';
+import './cross.svg';
+import './zoom.svg';
