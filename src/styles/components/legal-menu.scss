@@ -1,0 +1,29 @@
+@import '~@/styles/shared/globals.scss';
+
+.legal-menu {
+  $this: &;
+
+  list-style: none;
+  margin: 0 $--gutter * -0.5;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    padding-left: $--gutter * 0.5;
+    padding-right: $--gutter * 0.5;
+    &:nth-child(1) {
+      width: 3 / 7 * 100%;
+      ;
+    }
+    &:nth-child(2) {
+      width: 4 / 7 * 100%;
+    }
+    a {
+      font-size: $--font-size-100;
+      color: $--color-text-contrast-400;
+      &:hover {
+        color: $--color-text-contrast-500;
+      }
+    }
+  }
+}
