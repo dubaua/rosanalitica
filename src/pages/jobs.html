@@ -364,57 +364,7 @@
 
             <div class="col col-xs-2 col-xl-3">
               <div class="job-list__feedback" data-feedback-form-block>
-                <div class="job-list__feedback-description typography">
-                  <p>
-                    Заполните форму отклика ниже или присылайте резюме на почту
-                    <a href="mailto:hr@spectranalit.ru">hr@spectranalit.ru</a>
-                    <br />
-                    Мы свяжемся с вами в течение двух недель.
-                  </p>
-                </div>
-
-                <form action="post" class="job-list__form form" enctype="multipart/form-data" data-feedback-form>
-                  <input
-                    type="text"
-                    class="job-list__input input"
-                    placeholder="Имя"
-                    required
-                  />
-                  <input
-                    type="phone"
-                    class="job-list__input input"
-                    placeholder="Телефон"
-                    required
-                  />
-                  <input
-                    type="email"
-                    class="job-list__input input"
-                    placeholder="E-mail"
-                    required
-                  />
-
-                  <label class="job-list__input-file file-input" data-file-input>
-                    <div class="file-input__button button button--dark" data-file-input-label>загрузить резюме</div>
-                    <input data-file-native-input type="file" id="file" aria-label="Загрузить резюме" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,application/pdf" required>
-                    <div class="file-input__file-name" data-file-input-current-file></div>
-                  </label>
-
-                  <button
-                    class="job-list__button button button--primary"
-                    type="submit"
-                  >
-                    Откликнуться
-                  </button>
-
-                  <div class="job-list__checkbox checkbox">
-                    <input class="checkbox__native" type="checkbox" value="1" id="privacy" data-select-checkbox required />
-                    <span class="checkbox__box">
-                      <span class="checkbox__tick"></span>
-                    </span>
-                    <label for="privacy" class="checkbox__label">Даю согласие на обработку персональных данных</label>
-                  </div>
-
-                </form>
+                <%= require('html-loader!@/partials/jobs-form.html') %>
               </div>
             </div>
           </div>

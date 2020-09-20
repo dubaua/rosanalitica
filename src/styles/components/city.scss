@@ -1,36 +1,5 @@
 @import '~@/styles/shared/globals.scss';
 
-.contacts {
-  &__leading {
-  }
-
-  &__contacts {
-  }
-
-  &__form {
-  }
-
-  &__form-description {
-    margin-bottom: 8px;
-  }
-
-  &__form-form {
-  }
-
-  &__form-input {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  &__form-button {
-    margin-bottom: 8px;
-    width: 100%;
-  }
-
-  &__form-checkbox {
-  }
-}
-
 .city {
   margin-bottom: 32px;
 
@@ -48,9 +17,6 @@
   &__label {
     &--brand {
       color: $--color-text-brand;
-    }
-
-    &--pin {
     }
   }
 

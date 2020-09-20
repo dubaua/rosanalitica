@@ -1,9 +1,6 @@
 @import '~@/styles/shared/globals.scss';
 
 .jobs {
-  &__picture {
-  }
-
   &__description {
     @include from('md') {
       padding-right: 20px;
@@ -176,8 +173,6 @@
     }
 
     &--active {
-      // #{$jobs}
-
       &:before {
         position: absolute;
         left: -$--page-padding-x-xs;
@@ -217,46 +212,14 @@
 
   &__feedback {
     padding-bottom: 24px;
+    padding-top: 24px;
 
     @include from('xl') {
       opacity: 0;
       display: none;
 
       transition: transform $--duration-500 $--timing-in-out-cubic,
-        opacity $--duration-100 linear;
+      opacity $--duration-100 linear;
     }
-  }
-
-  &__feedback-description {
-    padding-top: 24px;
-    margin-bottom: 24px;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1.25;
-    color: $--color-text-600;
-    
-    @include from('xl') {
-      margin-bottom: 62px;
-    }
-  }
-
-  &__form {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  &__input {
-    margin-bottom: 10px;
-  }
-
-  &__input-file {
-    margin-bottom: 10px;
-  }
-
-  &__button {
-    margin-bottom: 10px;
-  }
-
-  &__checkbox {
   }
 }

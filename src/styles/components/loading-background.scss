@@ -1,0 +1,27 @@
+@import '~@/styles/shared/_globals.scss';
+
+.loading-background {
+  $loader-width: 33%;
+  $transparent: transparentize($--color-background-700, 1);
+  $halfTransparent: transparentize($--color-background-700, 0.5);
+
+  position: absolute;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -$loader-width;
+    width: $loader-width;
+    background: linear-gradient(-90deg, $transparent 0px, $halfTransparent 50%, $transparent 100%);
+    animation: loading 1.38s linear 0.62s infinite;
+  }
+}
+
+@keyframes loading {
+  100% {
+    left: 100%;
+  }
+}

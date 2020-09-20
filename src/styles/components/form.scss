@@ -1,0 +1,27 @@
+@import '~@/styles/shared/globals.scss';
+
+.form {
+  &__field {
+    margin: 0;
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &__label {
+    @include hidden-accessible;
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__form-button {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+}
