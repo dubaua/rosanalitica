@@ -10,3 +10,4 @@ import './plus.svg';
 import './minus.svg';
 import './cross.svg';
 import './zoom.svg';
+import './chevron.svg';
