@@ -16,11 +16,19 @@
               <div
                 class="col col-xs-2 col-lg-1 col-xl-3 col-xs-last col-sm-last col-md-last"
               >
-                <div class="testimonial__image picture">
+                <div
+                  class="testimonial__image picture"
+                  data-testimonial-picture
+                >
                   <img
                     src="http://www.rosanalitica.dubaua.ru/images/testimonials/testimonial-5.png"
                     alt="Отзыв по поставкам — ООО «Газпром Трансгаз Санкт-Петербург», 15.02.2019"
                   />
+                  <div class="testimonial__zoom-image" data-testimonial-zoom>
+                    <svg>
+                      <use xlink:href="#zoom" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
@@ -76,11 +84,19 @@
               <div
                 class="col col-xs-2 col-lg-1 col-xl-3 col-xs-last col-sm-last col-md-last"
               >
-                <div class="testimonial__image picture">
+                <div
+                  class="testimonial__image picture"
+                  data-testimonial-picture
+                >
                   <img
                     src="http://www.rosanalitica.dubaua.ru/images/testimonials/testimonial-5.png"
                     alt="Отзыв по поставкам — ООО «Газпром Трансгаз Санкт-Петербург», 15.02.2019"
                   />
+                  <div class="testimonial__zoom-image" data-testimonial-zoom>
+                    <svg>
+                      <use xlink:href="#zoom" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
@@ -136,11 +152,19 @@
               <div
                 class="col col-xs-2 col-lg-1 col-xl-3 col-xs-last col-sm-last col-md-last"
               >
-                <div class="testimonial__image picture">
+                <div
+                  class="testimonial__image picture"
+                  data-testimonial-picture
+                >
                   <img
                     src="http://www.rosanalitica.dubaua.ru/images/testimonials/testimonial-5.png"
                     alt="Отзыв по поставкам — ООО «Газпром Трансгаз Санкт-Петербург», 15.02.2019"
                   />
+                  <div class="testimonial__zoom-image" data-testimonial-zoom>
+                    <svg>
+                      <use xlink:href="#zoom" />
+                    </svg>
+                  </div>
                 </div>
               </div>
 
@@ -194,6 +218,22 @@
         </div>
       </div>
 
+      <div class="testimonial-popup" data-testimonial-popup>
+        <div
+          class="testimonial-popup__overlay"
+          data-testimonial-popup-overlay
+        ></div>
+        <img class="testimonial-popup__picture" src="" alt="" data-testimonial-popup-image />
+        <button
+          type="button"
+          class="testimonial-popup__close-button"
+          data-testimonial-popup-close
+        >
+          <svg>
+            <use xlink:href="#cross" />
+          </svg>
+        </button>
+      </div>
     </main>
 
     <%= require('html-loader!@/partials/footer.html') %>

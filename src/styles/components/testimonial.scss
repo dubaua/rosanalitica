@@ -10,8 +10,10 @@
   }
 
   &__image {
+    position: relative;
     cursor: pointer;
     margin-top: 16px;
+
     @include from('xl') {
       margin-top: 0;
     }
@@ -22,6 +24,63 @@
 
       @include from('xl') {
         width: 100%;
+      }
+    }
+  }
+
+  &__zoom-image {
+    $zoom: &;
+
+    display: none;
+
+    @include from('xl') {
+      display: block;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      z-index: 1;
+      color: $--color-text-contrast-600;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        content: '';
+        background-color: $--color-background-brand;
+
+        opacity: 0;
+        transition: opacity $--duration-100 linear;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 32px;
+        height: 32px;
+
+        opacity: 0;
+        transition: opacity $--duration-100 linear;
+      }
+
+      &:hover {
+        &:before {
+          opacity: 0.7;
+        }
+
+        svg {
+          opacity: 1;
+        }
       }
     }
   }
