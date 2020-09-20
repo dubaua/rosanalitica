@@ -78,14 +78,6 @@ ul {
   outline: none;
 }
 
-input,
-button,
-select {
-  &:focus {
-    box-shadow: 0 0 0 2px $--color-text-brand;
-  }
-}
-
 *::selection {
   color: $--color-text-contrast-600;
   background: $--color-background-brand;
