@@ -1,0 +1,45 @@
+<div class="sender" data-sender>
+  <div class="sender__description typography">
+    <p>Заполните форму заказа обратного звонка и наши менеджеры свяжутся с вами в ближайшее время</p>
+  </div>
+  <form action="post" class="form" action="/form.php" method="post" data-sender-form>
+    <div class="form__field">
+      <label for="contact-us-name" class="form__label">Имя</label>
+      <input
+        id="contact-us-name"
+        name="contact-us-name"
+        type="text"
+        placeholder="Имя"
+        required
+        class="form__input input"
+      />
+    </div>
+    <div class="form__field">
+      <label for="contact-us-phone" class="form__label">Телефон</label>
+      <input
+        id="contact-us-phone"
+        name="contact-us-phone"
+        type="text"
+        placeholder="Телефон"
+        required
+        class="form__input input"
+      />
+    </div>
+    <div class="form__field">
+      <button class="form__button button button--primary" type="submit" data-sender-submit-button disabled>
+        <div class="button__loading-underlay loading-background"></div>
+        заказать звонок
+      </button>
+    </div>
+    <div class="form__field">
+      <div class="checkbox">
+        <input class="checkbox__native" type="checkbox" value="1" id="privacy" data-sender-privacy-accept required />
+        <span class="checkbox__box">
+          <span class="checkbox__tick"></span>
+        </span>
+        <label for="privacy" class="checkbox__label">Даю согласие на обработку персональных данных</label>
+      </div>
+    </div>
+  </form>
+  <div class="sender__message" data-sender-message></div>
+</div>

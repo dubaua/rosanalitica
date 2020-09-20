@@ -17,4 +17,8 @@
     font-size: $--font-size-100;
     color: $--color-text-contrast-400;
   }
+
+  &__copy {
+    white-space: nowrap;
+  }
 }

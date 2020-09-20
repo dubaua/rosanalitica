@@ -29,22 +29,6 @@
         &:first-of-type {
           padding-left: 50px;
         }
-
-        a {
-          &:hover {
-            border-bottom: 1px solid $--color-text;
-          }
-        }
-
-        &--city {
-          a {
-            border-bottom: 1px solid $--color-text;
-
-            &:hover {
-              border-bottom-width: 0;
-            }
-          }
-        }
       }
     }
   }
@@ -100,16 +84,6 @@
       display: inline-block;
       color: inherit;
       text-decoration: none;
-
-      &--city {
-        a {
-          border-bottom: 2px solid $--color-text-brand;
-
-          @include from('xl') {
-            border-bottom-width: 1px;
-          }
-        }
-      }
     }
   }
 

@@ -133,58 +133,7 @@
                   </div>
                 </div>
                 <div class="col col-xs-2 col-md-2 col-xl-3">
-                  <div class="contacts__form" data-feedback-form-block>
-                    <div class="contacts__form-description typography">
-                      <p>
-                        Заполните форму заказа обратного звонка и наши менеджеры
-                        свяжутся с вами в ближайшее время
-                      </p>
-                    </div>
-
-                    <form
-                      action="post"
-                      class="contacts__form-form form"
-                      enctype="multipart/form-data"
-                      data-feedback-form
-                    >
-                      <input
-                        type="text"
-                        class="contacts__form-input input"
-                        placeholder="Имя"
-                        required
-                      />
-                      <input
-                        type="phone"
-                        class="contacts__form-input input"
-                        placeholder="Телефон"
-                        required
-                      />
-
-                      <button
-                        class="contacts__form-button button button--primary"
-                        type="submit"
-                      >
-                        заказать звонок
-                      </button>
-
-                      <div class="contacts__form-checkbox checkbox">
-                        <input
-                          class="checkbox__native"
-                          type="checkbox"
-                          value="1"
-                          id="privacy"
-                          data-select-checkbox
-                          required
-                        />
-                        <span class="checkbox__box">
-                          <span class="checkbox__tick"></span>
-                        </span>
-                        <label for="privacy" class="checkbox__label"
-                          >Даю согласие на обработку персональных данных</label
-                        >
-                      </div>
-                    </form>
-                  </div>
+                  <%= require('html-loader!@/partials/contacts-form.html') %>
                 </div>
               </div>
             </div>
