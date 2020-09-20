@@ -24,6 +24,8 @@
     display: block;
     padding: $space-vertical $space-horizontal;
     background-color: $--color-background-700;
+    white-space: nowrap;
+
     &:hover,
     &:focus {
       background-color: $--color-background-brand;
