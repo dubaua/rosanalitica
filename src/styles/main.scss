@@ -1,15 +1,15 @@
 @import 'shared/globals.scss';
 
-@import '~@/styles/grid.scss';
-@import '~@/styles/container.scss';
-@import '~@/styles/hamburger.scss';
-@import '~@/styles/utility.scss';
-@import '~@/styles/typography.scss';
-
-@import '~@/styles/components/button.scss';
-@import '~@/styles/components/input.scss';
-@import '~@/styles/components/file-input.scss';
-@import '~@/styles/components/checkbox.scss';
+@import '~@/styles/common/button.scss';
+@import '~@/styles/common/checkbox.scss';
+@import '~@/styles/common/container.scss';
+@import '~@/styles/common/file-input.scss';
+@import '~@/styles/common/grid.scss';
+@import '~@/styles/common/hamburger.scss';
+@import '~@/styles/common/input.scss';
+@import '~@/styles/common/picture.scss';
+@import '~@/styles/common/typography.scss';
+@import '~@/styles/common/utility.scss';
 
 @import '~@/styles/components/about.scss';
 @import '~@/styles/components/arrow-button.scss';
@@ -36,7 +36,7 @@
 @import '~@/styles/components/news.scss';
 @import '~@/styles/components/pager.scss';
 @import '~@/styles/components/pagination.scss';
-@import '~@/styles/components/picture.scss';
+
 @import '~@/styles/components/search.scss';
 @import '~@/styles/components/section.scss';
 @import '~@/styles/components/sender.scss';
