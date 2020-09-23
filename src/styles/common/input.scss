@@ -1,7 +1,7 @@
 @import '~@/styles/shared/globals.scss';
 
 .input {
-  height: 49px;
+  height: $--button-height;
   border: none;
   box-shadow: none;
   padding: 10px 9px;
