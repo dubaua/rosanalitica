@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <%= require('html-loader!@/partials/breadcrumbs.html') %>
+
+      <!-- search form -->
+      <section class="section section--narrow">
+        <div class="container">
+          <div class="row">
+            <div class="col col-xs-2 col-xl-offset-1 col-xl-8">
+              <form
+                class="search-form"
+                id="searchForm"
+                action="/search"
+                method="post"
+              >
+                <div class="search search--wide search--contrast">
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Введите текст для поиска"
+                  />
+                  <button class="search__button" type="submit">
+                    <svg class="search__icon">
+                      <use xlink:href="#search" />
+                    </svg>
+                  </button>
+                </div>
+
+                <input type="hidden" name="task" value="search" />
+
+                <div class="search-form__result">
+                  <p>
+                    Найдено <span class="badge badge-info">0</span> объектов
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- results list -->
+      <section class="section section--narrow">
+        <dl class="search-results">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-2 col-xl-offset-1 col-xl-8">
+                <a
+                  class="search-results__item"
+                  href="/news/4-poluchen-sertifikat-sootvetstviya-trebovaniyam-standarta-gost"
+                >
+                  <dt class="search-results__item-title">
+                    Получен сертификат соответствия требованиям стандарта
+                  </dt>
+                  <dd class="search-results__item-description">
+                    Мы готовы предложить широкий спектр оборудования компании
+                    Metrohm для решений, охватывающих любые потребности в
+                    различных отраслях промышленности Мы готовы предложить
+                    широкий спектр оборудования компании&nbsp;...
+                  </dd>
+                  <div class="search-results__item-link">подробнее...</div>
+                </a>
+                <a
+                  class="search-results__item"
+                  href="/news/4-poluchen-sertifikat-sootvetstviya-trebovaniyam-standarta-gost"
+                >
+                  <dt class="search-results__item-title">
+                    Получен сертификат соответствия требованиям стандарта
+                  </dt>
+                  <dd class="search-results__item-description">
+                    Мы готовы предложить широкий спектр оборудования компании
+                    Metrohm для решений, охватывающих любые потребности в
+                    различных отраслях промышленности Мы готовы предложить
+                    широкий спектр оборудования компании&nbsp;...
+                  </dd>
+                  <div class="search-results__item-link">подробнее...</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </dl>
+      </section>
+
+      <!-- search error -->
+      <section class="section section--narrow section--strong-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col col-xs-2 col-xl-offset-1 col-xl-8">
+              <div class="search-error">
+                <p>
+                  Для выполнения поиска длина фразы должна быть не менее 3 и не
+                  более 200 символов.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%= require('html-loader!@/partials/pagination.html') %>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>
