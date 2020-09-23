@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { redrawActiveJobsItem } from './jobs.js';
+import { nextTick } from './utils.js';
 
 const senderSelector = '[data-sender]';
 const senderFormSelector = '[data-sender-form]';
@@ -32,11 +34,12 @@ for (let i = 0; i < senderNodeList.length; i++) {
 
     const formData = new FormData(senderFormNode);
 
+    formData.append('target', senderFormNode.dataset.senderForm);
+
     senderSubmitButtonNode.classList.add(buttonLoadingClassname);
     const headers = senderFormNode.encoding ? { 'Content-Type': senderFormNode.encoding } : null;
 
-    let message = '';
-    let success = false;
+    let result = null;
 
     try {
       const { data } = await axios({
@@ -45,10 +48,15 @@ for (let i = 0; i < senderNodeList.length; i++) {
         url: senderFormNode.action,
         data: formData,
       });
-      message = data.message;
-      success = data.message;
+      result = data;
     } catch (error) {
-      message = error.message;
+      result = error;
+    }
+
+    const { success, message, errors } = result;
+
+    if (errors) {
+      printErrors(errors);
     }
 
     senderSubmitButtonNode.classList.remove(buttonLoadingClassname);
@@ -61,5 +69,17 @@ for (let i = 0; i < senderNodeList.length; i++) {
     senderMessageNode.classList.remove(messageNodePositiveClassname);
     senderMessageNode.classList.remove(messageNodeNegativeClassname);
     senderMessageNode.classList.add(success ? messageNodePositiveClassname : messageNodeNegativeClassname);
+
+    nextTick(redrawActiveJobsItem);
   });
+}
+
+function printErrors(errors) {
+  for (const key in errors) {
+    if (Object.prototype.hasOwnProperty.call(errors, key)) {
+      const errorMessage = errors[key];
+      const errorMessageNode = document.querySelector(`[data-sender-form-error="${key}"]`);
+      errorMessageNode.textContent = errorMessage;
+    }
+  }
 }

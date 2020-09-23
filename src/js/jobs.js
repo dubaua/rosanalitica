@@ -1,12 +1,14 @@
 import { nextTick } from './utils.js';
 
-const jobsItemNodeArray = Array.from(
-  document.querySelectorAll('[data-jobs-item]'),
-);
+const jobsItemNodeArray = Array.from(document.querySelectorAll('[data-jobs-item]'));
 const jobsItemActiveClass = 'job-list__item--active';
 
 const feedbackFormNode = document.querySelector('[data-feedback-form-block]');
-let formHeight = feedbackFormNode ? feedbackFormNode.offsetHeight : null;
+
+function getFormHeight() {
+  return feedbackFormNode ? feedbackFormNode.offsetHeight : 0;
+}
+
 let jobsItemActiveIndex = null;
 let isMobile = window.innerWidth <= 1200;
 
@@ -14,9 +16,7 @@ const jobPanelHeight = 62;
 
 function initJobs() {
   jobsItemNodeArray.forEach((jobsItemNode, jobsItemIndex) => {
-    const toggleButtonNode = jobsItemNode.querySelector(
-      '[data-jobs-item-toggle]',
-    );
+    const toggleButtonNode = jobsItemNode.querySelector('[data-jobs-item-toggle]');
 
     toggleButtonNode.addEventListener('click', () => {
       const isJobsItemActive = jobsItemActiveIndex === jobsItemIndex;
@@ -47,7 +47,12 @@ function openJobsItem(jobsItemNode) {
 }
 
 function setOpenJobsItemHeight(jobsItemNode) {
-  jobsItemNode.style.height = isMobile ? 'auto' : formHeight + 20 + 'px';
+  jobsItemNode.style.height = isMobile ? 'auto' : getFormHeight() + 20 + 'px';
+}
+
+export function redrawActiveJobsItem() {
+  const jobsItemNode = jobsItemNodeArray[jobsItemActiveIndex];
+  setOpenJobsItemHeight(jobsItemNode);
 }
 
 function closeJobsItem(jobsItemNode) {
@@ -57,13 +62,11 @@ function closeJobsItem(jobsItemNode) {
 
 function openFeedbackForm() {
   feedbackFormNode.style.display = 'block';
-  formHeight = feedbackFormNode.offsetHeight;
 
   nextTick(() => {
     feedbackFormNode.style.opacity = '1';
     if (!isMobile) {
-      feedbackFormNode.style.transform =
-        'translateY(' + jobsItemActiveIndex * jobPanelHeight + 'px)';
+      feedbackFormNode.style.transform = 'translateY(' + jobsItemActiveIndex * jobPanelHeight + 'px)';
     }
   });
 }

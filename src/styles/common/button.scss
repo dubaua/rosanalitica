@@ -28,7 +28,7 @@
   }
 
   &--primary {
-    height: 49px;
+    height: $--button-height;
     padding: 10px 9px;
 
     border: none;
@@ -44,7 +44,7 @@
   }
 
   &--dark {
-    height: 49px;
+    height: $--button-height;
     padding: 10px 9px;
 
     border: none;

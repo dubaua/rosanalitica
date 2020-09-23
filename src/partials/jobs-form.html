@@ -41,18 +41,17 @@
         class="form__input input"
       />
     </div>
-    <div class="form__field">
-      <label class="file-input" data-file-input>
-        <div class="file-input__button button button--dark" data-file-input-label>загрузить резюме</div>
-        <input
-          data-file-native-input
-          type="file"
-          id="file"
-          aria-label="Загрузить резюме" 
-          accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,application/pdf"
-          required>
-        <div class="file-input__file-name" data-file-input-current-file></div>
-      </label>
+    <div class="form__field file-input" data-file-input>
+      <label class="file-input__button button button--dark" for="file" data-file-input-label>загрузить резюме</label>
+      <input
+        data-file-native-input
+        type="file"
+        id="file"
+        aria-label="Загрузить резюме"
+        accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,application/pdf"
+        required
+      />
+      <div class="file-input__file-name" data-file-input-current-file></div>
     </div>
     <div class="form__field">
       <button class="form__button button button--primary" type="submit" data-sender-submit-button disabled>

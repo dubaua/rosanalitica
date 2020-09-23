@@ -15,4 +15,10 @@
       color: red;
     }
   }
+
+  &__error {
+    margin-top: 4px;
+    color: red;
+    font-size: $--font-size-100;
+  }
 }

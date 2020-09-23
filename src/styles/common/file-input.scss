@@ -2,33 +2,20 @@
 
 .file-input {
   $input: &;
-  
-  input {
-    color: transparent;
-    height: 0;
-    font-size: 0;
 
-    &::-webkit-file-upload-button {
-      visibility: hidden;
-      height: 0;
-    }
+  position: relative;
 
-    &:hover {
-
-    }
-
-    &:active {
-      
-    }
-
-    &:focus {
-
-    }
+  input[type=file] {
+    position: relative;
+    height: $--button-height;
+    width: 100%;
   }
 
   &__button {
+    position: absolute;
+    height: $--button-height;
     width: 100%;
-    margin-bottom: -24px;
+    z-index: 1;
   }
 
   &__file-name {
