@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <section class="section section--narrow">
+        <div class="container">
+          <div class="row">
+            <div class="col col-xs-0 col-sm-0 col-md-0 col-lg-0 col-xl-4">
+              <%= require('html-loader!@/partials/catalog-menu.html') %>
+            </div>
+
+            <div class="col col-xs-2 col-xl-8">
+              <div class="catalog-intro">
+                <div
+                  class="catalog-intro__image"
+                  style="
+                    background-image: url(http://www.rosanalitica.dubaua.ru/images/catalog-into.jpg);
+                  "
+                ></div>
+
+                <div class="catalog-intro__content">
+                  <h1 class="catalog-intro__title">Каталог</h1>
+
+                  <div class="catalog-intro__text">
+                    <p>
+                      Мы напрямую работаем с Agilent Technologies, Ritter,
+                      Ohaus, Sartorius и многими другими ведущими
+                      заводами-изготовителями, имеем самые короткие сроки
+                      поставки на рынке лабораторного оборудования.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="catalog-tiles">
+                <div class="catalog-tiles__list">
+                  <div
+                    class="catalog-tiles__item catalog-tiles__item--brand catalog-tiles__item--1"
+                  >
+                    <div class="catalog-tiles__picture picture">
+                      <img
+                        src="http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-1.png"
+                        alt="Плитка"
+                        class="picture__image"
+                      />
+                    </div>
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Лабораторное оборудование
+                    </h2>
+                  </div>
+                  <div class="catalog-tiles__item catalog-tiles__item--2">
+                    <div class="catalog-tiles__picture picture">
+                      <img
+                        src="http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-2.png"
+                        alt="Плитка"
+                        class="picture__image"
+                      />
+                    </div>
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Аналитическое оборудование
+                    </h2>
+                  </div>
+                  <div
+                    class="catalog-tiles__item catalog-tiles__item--brand catalog-tiles__item--3"
+                  >
+                    <div
+                      class="catalog-tiles__picture catalog-tiles__picture--bottom picture"
+                    >
+                      <img
+                        src="http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-3.png"
+                        alt="Плитка"
+                        class="picture__image"
+                      />
+                    </div>
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Оборудование для анализа
+                    </h2>
+                  </div>
+                  <div class="catalog-tiles__item catalog-tiles__item--4">
+                    <div class="catalog-tiles__picture picture">
+                      <img
+                        src="http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-4.png"
+                        alt="Плитка"
+                        class="picture__image"
+                      />
+                    </div>
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Испытательное оборудование
+                    </h2>
+                  </div>
+                  <div
+                    class="catalog-tiles__item catalog-tiles__item--cover catalog-tiles__item--5"
+                    style="
+                      background-image: url(http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-5.png);
+                    "
+                  >
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Лабораторная мебель
+                    </h2>
+                  </div>
+                  <div
+                    class="catalog-tiles__item catalog-tiles__item--brand catalog-tiles__item--6"
+                  >
+                    <div class="catalog-tiles__picture picture">
+                      <img
+                        src="http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-1.png"
+                        alt="Плитка"
+                        class="picture__image"
+                      />
+                    </div>
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Лабораторное оборудование
+                    </h2>
+                  </div>
+                  <div class="catalog-tiles__item catalog-tiles__item--7">
+                    <div class="catalog-tiles__picture picture">
+                      <img
+                        src="http://rosanalitica.dubaua.ru/images/catalog-tiles/catalog-tile-2.png"
+                        alt="Плитка"
+                        class="picture__image"
+                      />
+                    </div>
+                    <h2 class="catalog-tiles__subtitle">
+                      <svg class="catalog-tiles__arrow">
+                        <use xlink:href="#catalog-tiles-arrow-right" />
+                      </svg>
+                      Лабораторное оборудование
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="catalog-special">
+                <h2 class="catalog-special__title">Специальные предложения</h2>
+
+                <div class="product-list product-list--card">
+                  <div class="row">
+                    <div class="col col-xs-2 col-lg-2">
+                      <a
+                        href="/product.html"
+                        class="product-card"
+                        data-product
+                        data-product-id="123"
+                      >
+                        <div class="product-card__expander">
+                          <h3 class="product-card__title" data-product-title>
+                            Лабораторные весы Cubis 10202S
+                          </h3>
+
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                            alt="Лабораторные весы Cubis 10202S"
+                            class="product-card__image"
+                          />
+
+                          <div class="product-card__info">
+                            <div class="product-card__description">
+                              <p>
+                                Весы Cubis® — это первая полностью модульная
+                                серия лабораторных весов.
+                              </p>
+                            </div>
+
+                            <button
+                              class="button button--quiet product-card__button"
+                              data-product-button
+                            >
+                              запросить цену
+                            </button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col col-xs-2 col-lg-2">
+                      <a
+                        href="/product.html"
+                        class="product-card"
+                        data-product
+                        data-product-id="123"
+                      >
+                        <div class="product-card__expander">
+                          <h3 class="product-card__title" data-product-title>
+                            Лабораторные весы Cubis 10202S
+                          </h3>
+
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                            alt="Лабораторные весы Cubis 10202S"
+                            class="product-card__image"
+                          />
+
+                          <div class="product-card__info">
+                            <div class="product-card__description">
+                              <p>
+                                Весы Cubis® — это первая полностью модульная
+                                серия лабораторных весов.
+                              </p>
+                            </div>
+
+                            <button
+                              class="button button--quiet product-card__button"
+                              data-product-button
+                            >
+                              запросить цену
+                            </button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col col-xs-2 col-lg-2">
+                      <a
+                        href="/product.html"
+                        class="product-card"
+                        data-product
+                        data-product-id="123"
+                      >
+                        <div class="product-card__expander">
+                          <h3 class="product-card__title" data-product-title>
+                            Лабораторные весы Cubis 10202S
+                          </h3>
+
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                            alt="Лабораторные весы Cubis 10202S"
+                            class="product-card__image"
+                          />
+
+                          <div class="product-card__info">
+                            <div class="product-card__description">
+                              <p>
+                                Весы Cubis® — это первая полностью модульная
+                                серия лабораторных весов.
+                              </p>
+                            </div>
+
+                            <button
+                              class="button button--quiet product-card__button"
+                              data-product-button
+                            >
+                              запросить цену
+                            </button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col col-xs-2 col-lg-2">
+                      <a
+                        href="/product.html"
+                        class="product-card"
+                        data-product
+                        data-product-id="123"
+                      >
+                        <div class="product-card__expander">
+                          <h3 class="product-card__title" data-product-title>
+                            Лабораторные весы Cubis 10202S
+                          </h3>
+
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                            alt="Лабораторные весы Cubis 10202S"
+                            class="product-card__image"
+                          />
+
+                          <div class="product-card__info">
+                            <div class="product-card__description">
+                              <p>
+                                Весы Cubis® — это первая полностью модульная
+                                серия лабораторных весов.
+                              </p>
+                            </div>
+
+                            <button
+                              class="button button--quiet product-card__button"
+                              data-product-button
+                            >
+                              запросить цену
+                            </button>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

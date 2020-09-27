@@ -1,5 +1,3 @@
-import { popup } from 'leaflet';
-
 const popupNode = document.querySelector('[data-testimonial-popup]');
 const popupImageNode = document.querySelector('[data-testimonial-popup-image]');
 const picturesNodeList = document.querySelectorAll(

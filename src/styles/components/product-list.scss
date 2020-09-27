@@ -1,0 +1,106 @@
+@import '~@/styles/shared/globals.scss';
+
+.product-list {
+  &--card {
+  }
+
+  &--compact {
+  }
+}
+
+.product-card {
+  $this: &;
+
+  display: block;
+  margin-bottom: 12px;
+  margin-left: -$--page-padding-x-xs;
+  margin-right: -$--page-padding-x-xs;
+
+  @include from('lg') {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include from('xl') {
+    position: relative;
+    height: 260px;
+    margin-bottom: 18px;
+  }
+
+  &__expander {
+    padding: 14px 18px 10px;
+    background-color: $--color-background-700;
+
+    @include from('xl') {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $--color-text-brand;
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid $--color-background-400;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__info {
+    @include from('xl') {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    color: $--color-text-600;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $--color-background-400;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
+
+  @include from('xl') {
+    &:hover {
+      z-index: 1;
+
+      #{$this}__expander {
+        top: -16px;
+        right: -20px;
+        left: -20px;
+
+        padding: 30px 38px 10px;
+        box-shadow: $--card-shadow;
+      }
+
+      #{$this}__info {
+        display: block;
+      }
+
+      #{$this}__title {
+        text-decoration: underline;
+        color: $--color-text-600;
+      }
+    }
+  }
+}

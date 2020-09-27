@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+  <head>
+    <%= require('html-loader!@/partials/head.html') %>
+  </head>
+  <body>
+    <%= require('html-loader!@/partials/header.html') %>
+
+    <main class="main">
+      <section class="section section--narrow">
+        <div class="container">
+          <div class="row">
+            <div class="col col-xs-0 col-sm-0 col-md-0 col-lg-0 col-xl-4">
+              <%= require('html-loader!@/partials/catalog-menu.html') %>
+            </div>
+
+            <div class="col col-xs-2 col-xl-8">
+              <div class="category-list">
+                <h2 class="category-list__title">Лабораторное оборудование</h2>
+
+                <div class="col col-xs-2 col-lg-2">
+                  <a class="category-card" href="/category.html">
+                    <div class="category-card__expander">
+                      <div class="category-card__top">
+                        <h3 class="category-card__title">Весовая техника</h3>
+
+                        <button class="category-card__button">
+                          <svg>
+                            <use xlink:href="#arrow-right-triangle" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="category-card__image">
+                        <img
+                          src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
+                          alt="Весовая техника"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col col-xs-2 col-lg-2">
+                  <a class="category-card" href="/category.html">
+                    <div class="category-card__expander">
+                      <div class="category-card__top">
+                        <h3 class="category-card__title">
+                          Лабораторные посудомоечные машины и дезинфекторы
+                        </h3>
+
+                        <button class="category-card__button">
+                          <svg>
+                            <use xlink:href="#arrow-right-triangle" />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="category-card__image">
+                        <img
+                          src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
+                          alt="Лабораторные посудомоечные машины и дезинфекторы"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%= require('html-loader!@/partials/footer.html') %>
+  </body>
+</html>

@@ -10,7 +10,26 @@ const isDev = process.env.NODE_ENV === 'development';
  * 1. создаем новый файл в @/pages
  * 2. добавляем его имя сторокой в массив pageNameArray
  */
-const pageNameArray = ['index', 'about', 'partners', 'clients', 'partner', 'client', 'news', 'news-item', 'jobs', 'contacts', 'testimonials', 'specials', 'special', 'search'];
+const pageNameArray = [
+  'index',
+  'about',
+  'partners',
+  'clients',
+  'partner',
+  'client',
+  'news',
+  'news-item',
+  'jobs',
+  'contacts',
+  'testimonials',
+  'specials',
+  'special',
+  'search',
+  'catalog',
+  'category-list',
+  'category',
+  'product',
+];
 
 const pageHtmlWebpackPluginConfigArray = pageNameArray.map((entryName) => {
   return new HtmlWebpackPlugin({
@@ -90,7 +109,11 @@ const webpackConfig = {
       },
     ],
   },
-  plugins: [new MiniCSSExtractPlugin(), ...pageHtmlWebpackPluginConfigArray, new SpriteLoaderPlugin()],
+  plugins: [
+    new MiniCSSExtractPlugin(),
+    ...pageHtmlWebpackPluginConfigArray,
+    new SpriteLoaderPlugin(),
+  ],
 };
 
 module.exports = webpackConfig;

@@ -15,3 +15,4 @@ import '@/js/fileInput.js';
 import '@/js/map.js';
 import '@/js/sender.js';
 import '@/js/testimonialPopup.js';
+import '@/js/catalogMenu.js';
