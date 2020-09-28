@@ -1,10 +1,10 @@
 <section class="section section--highlight">
   <div class="container">
-    <div class="news news--homepage">
-      <div class="news__header">
-        <h2 class="news__title">Новости и&nbsp;события</h2>
-        <div class="news__show-all">
-          <a href="/news.html" class="arrow-button">
+    <div class="newsfeed">
+      <div class="newsfeed__header">
+        <h2 class="newsfeed__title">Новости и&nbsp;события</h2>
+        <div class="newsfeed__show-all">
+          <a href="/news" class="arrow-button">
             <svg class="arrow-button__icon">
               <use xlink:href="#arrow-right-triangle" />
             </svg>
@@ -12,104 +12,51 @@
           </a>
         </div>
       </div>
-
-      <div class="news__list-scroller">
-        <div class="news__list news__list--scrollable">
-          <div class="news__item news__item--scrollable">
-            <a href="/news-item.html" class="news-item news-item--scrollable">
-              <figure class="news-item__picture">
-                <img class="news-item__image" src="http://rosanalitica.dubaua.ru/images/news/news-1.png" alt="" />
-                <div class="news-item__read-more">
-                  <svg>
-                    <use xlink:href="#arrow" />
-                  </svg>
-                </div>
-              </figure>
-              <time class="news-item__date" datetime="2020-02-28 19:11:53">28 / 02 / 2020</time>
-              <h3 class="news-item__title">Наша компания стала официальным дилером Metrohm</h3>
-              <div class="news-item__read-more-scrollable">
-                <svg>
-                  <use xlink:href="#arrow" />
-                </svg>
-              </div>
-            </a>
-          </div>
-          <div class="news__item news__item--scrollable">
-            <a href="/news-item.html" class="news-item news-item--scrollable">
-              <figure class="news-item__picture">
-                <img class="news-item__image" src="http://rosanalitica.dubaua.ru/images/news/news-2.png" alt="" />
-                <div class="news-item__read-more">
-                  <svg>
-                    <use xlink:href="#arrow" />
-                  </svg>
-                </div>
-              </figure>
-              <time class="news-item__date" datetime="2020-02-12 19:11:53">12 / 02 / 2020</time>
-              <h3 class="news-item__title">Встрече дилеров SARTORIUS Россия|СНГ 2019</h3>
-              <div class="news-item__read-more-scrollable">
-                <svg>
-                  <use xlink:href="#arrow" />
-                </svg>
-              </div>
-            </a>
-          </div>
-          <div class="news__item news__item--scrollable">
-            <a href="/news-item.html" class="news-item news-item--scrollable">
-              <figure class="news-item__picture">
-                <img class="news-item__image" src="http://rosanalitica.dubaua.ru/images/news/news-3.png" alt="" />
-                <div class="news-item__read-more">
-                  <svg>
-                    <use xlink:href="#arrow" />
-                  </svg>
-                </div>
-              </figure>
-              <time class="news-item__date" datetime="2020-02-10 19:11:53">10 / 02 / 2020</time>
-              <h3 class="news-item__title">Получен сертификат соответствия требованиям стандарта ГОСТ</h3>
-              <div class="news-item__read-more-scrollable">
-                <svg>
-                  <use xlink:href="#arrow" />
-                </svg>
-              </div>
-            </a>
-          </div>
-          <div class="news__item news__item--scrollable">
-            <a href="/news-item.html" class="news-item news-item--scrollable">
-              <figure class="news-item__picture">
-                <img class="news-item__image" src="http://rosanalitica.dubaua.ru/images/news/news-4.png" alt="" />
-                <div class="news-item__read-more">
-                  <svg>
-                    <use xlink:href="#arrow" />
-                  </svg>
-                </div>
-              </figure>
-              <time class="news-item__date" datetime="2020-01-30 19:14:08">30 / 01 / 2020</time>
-              <h3 class="news-item__title">Изменённый режим работы в связи с пандемией COVID-19</h3>
-              <div class="news-item__read-more-scrollable">
-                <svg>
-                  <use xlink:href="#arrow" />
-                </svg>
-              </div>
-            </a>
-          </div>
-          <div class="news__item news__item--scrollable">
-            <a href="/news-item.html" class="news-item news-item--scrollable">
-              <figure class="news-item__picture">
-                <img class="news-item__image" src="http://rosanalitica.dubaua.ru/images/news/news-5.png" alt="" />
-                <div class="news-item__read-more">
-                  <svg>
-                    <use xlink:href="#arrow" />
-                  </svg>
-                </div>
-              </figure>
-              <time class="news-item__date" datetime="2020-01-14 19:14:27">14 / 01 / 2020</time>
-              <h3 class="news-item__title">ООО «Спектраналит» — официальным дилер ООО «Мониторинг»</h3>
-              <div class="news-item__read-more-scrollable">
-                <svg>
-                  <use xlink:href="#arrow" />
-                </svg>
-              </div>
-            </a>
-          </div>
+      <div class="newsfeed__list">
+        <div class="newsfeed__item">
+          <a href="/news/2-nasha-kompaniya-stala-ofitsial-nym-dilerom-metrohm" class="news">
+            <figure class="news__picture">
+              <img class="news__image" src="http://rosanalitica.dubaua.ru/images/news/news-1.png" alt="" />
+            </figure>
+            <time class="news__date" datetime="2020-02-28 19:11:53">2020 / 02 / 28</time>
+            <h3 class="news__title">Наша компания стала официальным дилером Metrohm</h3>
+          </a>
+        </div>
+        <div class="newsfeed__item">
+          <a href="/news/3-vstreche-dilerov-sartorius-rossiya-sng-2019" class="news">
+            <figure class="news__picture">
+              <img class="news__image" src="http://rosanalitica.dubaua.ru/images/news/news-2.png" alt="" />
+            </figure>
+            <time class="news__date" datetime="2020-02-12 19:11:53">2020 / 02 / 12</time>
+            <h3 class="news__title">Встрече дилеров SARTORIUS Россия|СНГ 2019</h3>
+          </a>
+        </div>
+        <div class="newsfeed__item">
+          <a href="/news/4-poluchen-sertifikat-sootvetstviya-trebovaniyam-standarta-gost" class="news">
+            <figure class="news__picture">
+              <img class="news__image" src="http://rosanalitica.dubaua.ru/images/news/news-3.png" alt="" />
+            </figure>
+            <time class="news__date" datetime="2020-02-10 19:11:53">2020 / 02 / 10</time>
+            <h3 class="news__title">Получен сертификат соответствия требованиям стандарта ГОСТ</h3>
+          </a>
+        </div>
+        <div class="newsfeed__item">
+          <a href="/news/5-izmenjonnyj-rezhim-raboty-v-svyazi-s-pandemiej-covid-19" class="news">
+            <figure class="news__picture">
+              <img class="news__image" src="http://rosanalitica.dubaua.ru/images/news/news-4.png" alt="" />
+            </figure>
+            <time class="news__date" datetime="2020-01-30 19:14:08">2020 / 01 / 30</time>
+            <h3 class="news__title">Изменённый режим работы в связи с пандемией COVID-19</h3>
+          </a>
+        </div>
+        <div class="newsfeed__item">
+          <a href="/news/6-ooo-spektranalit-ofitsial-nym-diler-ooo-monitoring" class="news">
+            <figure class="news__picture">
+              <img class="news__image" src="http://rosanalitica.dubaua.ru/images/news/news-5.png" alt="" />
+            </figure>
+            <time class="news__date" datetime="2020-01-14 19:14:27">2020 / 01 / 14</time>
+            <h3 class="news__title">ООО «Спектраналит» — официальным дилер ООО «Мониторинг»</h3>
+          </a>
         </div>
       </div>
     </div>
