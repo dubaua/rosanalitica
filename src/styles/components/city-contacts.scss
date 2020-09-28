@@ -22,29 +22,12 @@
     #{$this}__contact {
       @include from('xl') {
         height: 100%;
-        box-sizing: border-box;
         padding: 15px 43px;
 
         color: $--color-text;
 
         &:first-of-type {
           padding-left: 50px;
-        }
-
-        a {
-          &:hover {
-            border-bottom: 1px solid $--color-text;
-          }
-        }
-
-        &--city {
-          a {
-            border-bottom: 1px solid $--color-text;
-
-            &:hover {
-              border-bottom-width: 0;
-            }
-          }
         }
       }
     }
@@ -101,16 +84,6 @@
       display: inline-block;
       color: inherit;
       text-decoration: none;
-
-      &--city {
-        a {
-          border-bottom: 2px solid $--color-text-brand;
-
-          @include from('xl') {
-            border-bottom-width: 1px;
-          }
-        }
-      }
     }
   }
 
@@ -118,9 +91,11 @@
     #{$this}__contact {
       display: block;
       margin-bottom: 0.5em;
-      font-size: $--font-size-500;
+      font-size: $--font-size-300;
       color: $--color-text-brand;
-
+      @include from('xxl') {
+        font-size: $--font-size-500;
+      }
       &--city {
         font-weight: $--font-weight-bold;
       }

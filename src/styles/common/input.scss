@@ -1,0 +1,22 @@
+@import '~@/styles/shared/globals.scss';
+
+.input {
+  height: $--button-height;
+  border: none;
+  box-shadow: none;
+  padding: 10px 9px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $--color-text-600;
+  background-color: $--color-background-700;
+
+  @include from('lg') {
+    border-radius: $--border-radius-button;
+  }
+
+  &::placeholder {
+    color: $--color-text-400;
+    opacity: 1;
+  }
+}

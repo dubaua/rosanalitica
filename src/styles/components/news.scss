@@ -2,66 +2,119 @@
 
 .news {
   display: flex;
-  flex-direction: column;
-  // min-height: 427px;
-  margin: 20px 0;
-  position: relative;
-  @include from(lg) {
-    min-height: 352px;
-    padding: 0 20px;
-    border-left: 1px solid #979797;
+  flex-flow: row wrap;
+  margin: 0 -20px;
+  padding-left: $--page-padding-x-xs;
+  padding-right: $--page-padding-x-xs;
+  @include from('xl') {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: nowrap;
+
+    &--homepage {
+      margin-bottom: 40px;
+    }
   }
 
-  &__date {
-    display: block;
-    margin-bottom: 8px;
-    font-size: $--font-size-200;
-    font-weight: $--font-weight-medium;
-    line-height: $--font-line-height-small;
-    letter-spacing: $--font-letter-spacing-small;
-    color: $--color-text-brand;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
 
-    @include from(lg) {
-      order: 1;
-      margin: 0 0 auto 0;
-      font-size: $--font-size-300;
+    @include from('xl') {
+      width: 1 / 6 * 100%;
+      margin-bottom: 0;
+      flex-direction: column;
+      align-items: flex-start;
     }
+  }
+
+  &__show-all {
+    margin-top: 2px;
   }
 
   &__title {
-    font-size: $--font-size-300;
-    font-weight: $--font-weight-medium;
-    line-height: $--font-line-height-medium;
-    letter-spacing: $--font-letter-spacing-medium;
-    color: #252829;
+    font-size: $--font-size-750;
+    font-weight: $--font-weight-regular;
+    line-height: $--font-line-height-xs;
     margin: 0;
-    overflow: hidden;
 
-    @include from(lg) {
-      margin: auto 0 8px;
-      font-weight: $--font-weight-regular;
+    @include from('xl') {
+      font-size: $--font-size-750;
       line-height: $--font-line-height-small;
       letter-spacing: $--font-letter-spacing-small;
-      order: 2;
+      color: #1d1d1b;
     }
   }
 
-  &__picture {
-    margin: 0 0 20px;
-    @include from(lg) {
-      margin-bottom: 0;
-      box-shadow: inset 0 0 0 1px $--color-text-brand;
-      order: 3;
+  &__list-scroller {
+    @include from('xl') {
+      width: 5 / 6 * 100%;
     }
   }
 
-  &__image {
-    display: block;
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -2vmax $--gutter * -0.5;
+
+    @include to('xl') {
+      &--scrollable {
+        width: 400vw;
+        margin: 0 $--gutter * -0.5;
+        @include from('sm') {
+          width: 300vw;
+        }
+
+        @include from('md') {
+          width: 200vw;
+        }
+
+        @include from('lg') {
+          width: 150vw;
+        }
+      }
+    }
+  }
+
+  @include to('xl') {
+    &__list-scroller {
+      overflow-x: scroll;
+      width: calc(100% + #{$--page-padding-x-xs * 2});
+      margin: 0 $--page-padding-x-xs * -1 4vmax;
+    }
+  }
+
+  &__item {
     width: 100%;
-    height: 197px;
-    object-fit: cover;
-    @include from(lg) {
-      object-fit: none;
+    padding: 0 $--gutter * 0.5;
+    margin: $--page-padding-x-xs 0;
+
+    @include from('sm') {
+      width: 50%;
+    }
+
+    @include from('md') {
+      width: 33%;
+    }
+
+    @include from('lg') {
+      width: 25%;
+    }
+
+    @include from('xl') {
+      width: 20%;
+    }
+
+    @include to('xl') {
+      &--scrollable {
+        width: 20%;
+        margin: 0;
+      }
     }
   }
 }

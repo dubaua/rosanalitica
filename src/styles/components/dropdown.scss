@@ -1,0 +1,45 @@
+@import '~@/styles/shared/globals.scss';
+
+.dropdown {
+  $this: &;
+
+  $space-horizontal: 8px;
+  $space-vertical: 6px;
+
+  position: relative;
+
+  &__options {
+    display: none;
+    position: absolute;
+    margin: $space-vertical $space-horizontal * -1;
+  }
+
+  &__selected {
+    display: block;
+    margin: $space-vertical * -1 $space-horizontal * -1;
+    padding: $space-vertical $space-horizontal;
+  }
+
+  &__item {
+    display: block;
+    padding: $space-vertical $space-horizontal;
+    background-color: $--color-background-700;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      background-color: $--color-background-brand;
+      color: $--color-text-contrast-600;
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    #{$this}__options {
+      display: block;
+    }
+    #{$this}__selected {
+      background: $--color-background-700;
+    }
+  }
+}

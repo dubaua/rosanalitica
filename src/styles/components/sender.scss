@@ -1,0 +1,24 @@
+@import '~@/styles/shared/globals.scss';
+
+.sender {
+  &__description {
+    margin-bottom: 10px;
+  }
+
+  &__message {
+    margin-top: 10px;
+    &--positive {
+      color: green;
+    }
+
+    &--negative {
+      color: red;
+    }
+  }
+
+  &__error {
+    margin-top: 4px;
+    color: red;
+    font-size: $--font-size-100;
+  }
+}

@@ -1,0 +1,31 @@
+@import '~@/styles/shared/globals.scss';
+
+.file-input {
+  $input: &;
+
+  position: relative;
+
+  input[type=file] {
+    position: relative;
+    height: $--button-height;
+    width: 100%;
+  }
+
+  &__button {
+    position: absolute;
+    height: $--button-height;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__file-name {
+    display: none;
+    max-width: 100%;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    word-break: break-word;
+
+    font-size: 14px;
+    color: $--color-text-600;
+  }
+}

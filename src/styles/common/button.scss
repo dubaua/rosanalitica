@@ -1,0 +1,98 @@
+@import '~@/styles/shared/globals.scss';
+
+.button {
+  $this: &;
+  $loadingClassname: #{$this}--loading;
+
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 0.75em 1em;
+  position: relative;
+
+  min-width: 192px;
+  font-size: $--font-size-200;
+  font-weight: $--font-weight-medium;
+  letter-spacing: $--font-letter-spacing-small;
+  text-align: center;
+  text-transform: lowercase;
+
+  transition: all $--duration-100 linear;
+
+  @include from('lg') {
+    border-radius: $--border-radius-button;
+  }
+
+  &--quiet {
+    border: 1px solid;
+  }
+
+  &--primary {
+    height: $--button-height;
+    padding: 10px 9px;
+
+    border: none;
+
+    color: $--color-text-contrast-600;
+    background-color: $--color-background-contrast-300;
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: $--color-background-contrast-200;
+    }
+  }
+
+  &--dark {
+    height: $--button-height;
+    padding: 10px 9px;
+
+    border: none;
+
+    color: $--color-text-contrast-600;
+    background-color: $--color-text-contrast-400;
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:hover {
+      background-color: $--color-background-contrast-500;
+    }
+  }
+
+  &__loading-underlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  &--loading {
+    cursor: not-allowed;
+    background: $--color-background-brand;
+    color: $--color-gray-50;
+
+    #{$this}__loading-underlay {
+      display: block;
+    }
+  }
+
+  &:disabled:not(#{$loadingClassname}) {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: not-allowed;
+      user-select: none;
+      color: $--color-gray-600;
+      background-color: $--color-gray-400;
+    }
+    &#{$this}--quiet {
+      background: none;
+    }
+    &__loading-underlay {
+      display: none;
+    }
+  }
+}

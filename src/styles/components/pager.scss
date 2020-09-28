@@ -1,0 +1,50 @@
+@import '~@/styles/shared/globals.scss';
+
+.pager {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+
+  &__item {
+    margin-top: 38px;
+    &--prev {
+      margin-right: auto;
+    }
+    &--next {
+      margin-left: auto;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    transition: color $--duration-200 linear;
+    color: $--color-text-600;
+
+    svg {
+      width: 20px;
+      height: 23px;
+    }
+
+    &:hover {
+      color: $--color-text-brand;
+    }
+
+    &--prev {
+      svg {
+        transform: rotate(180deg);
+        margin-right: 10px;
+      }
+    }
+
+    &--next {
+      text-align: right;
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@import '~@/styles/shared/globals.scss';
+
+.news-item {
+  $this: &;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  @include from('sm') {
+    padding-left: $--gutter;
+    border-left: 1px solid #979797;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $--font-size-200;
+    font-weight: $--font-weight-medium;
+    line-height: $--font-line-height-small;
+    letter-spacing: $--font-letter-spacing-small;
+    color: $--color-text-brand;
+
+    @include from('xl') {
+      order: 1;
+      margin: 0 0 48px 0;
+      font-size: $--font-size-300;
+    }
+  }
+
+  &__title {
+    font-size: $--font-size-300;
+    font-weight: $--font-weight-medium;
+    line-height: $--font-line-height-medium;
+    letter-spacing: $--font-letter-spacing-medium;
+    color: #252829;
+    margin: 0;
+    overflow: hidden;
+
+    @include from('xl') {
+      margin: auto 0 8px;
+      font-weight: $--font-weight-regular;
+      line-height: $--font-line-height-small;
+      letter-spacing: $--font-letter-spacing-small;
+      order: 2;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 111%;
+    margin: 0 0 20px;
+
+    border: $--news-item-border-width solid $--color-text-brand;
+    background-color: $--color-background-700;
+
+    @include from('xl') {
+      margin-bottom: 0;
+      order: 3;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__read-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    color: $--color-text-contrast-600;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+
+      background-color: $--color-background-contrast-300;
+      color: $--color-text-contrast-600;
+      opacity: 0;
+
+      transition-property: opacity;
+      transition-duration: $--duration-200;
+      transition-timing-function: $--timing-in-out-spring;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 60px;
+      height: 70px;
+      transform: translate(-80%, -50%);
+      opacity: 0;
+
+      transition-property: all;
+      transition-duration: $--duration-200;
+      transition-timing-function: linear;
+    }
+  }
+
+  &:hover {
+    #{$this}__read-more {
+      &:before {
+        opacity: 0.7;
+      }
+
+      svg {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__read-more-scrollable {
+    display: none;
+  }
+
+  @include to('xl') {
+    &--scrollable {
+      background: $--color-background-700;
+      padding-bottom: 24px;
+      padding-left: 0;
+      border-left: 0;
+      #{$this}__picture {
+        padding-bottom: 65%;
+      }
+      #{$this}__date,
+      #{$this}__title {
+        margin-left: $--page-padding-x-xs;
+        margin-bottom: 20px;
+      }
+      #{$this}__read-more {
+        display: none;
+      }
+      #{$this}__read-more-scrollable {
+        display: block;
+        margin-left: $--page-padding-x-xs;
+        margin-top: auto;
+        color: $--color-text-brand;
+        svg {
+          width: 40px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}

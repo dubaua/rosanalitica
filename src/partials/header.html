@@ -15,14 +15,20 @@
       <div class="col col-xs-2 col-xl-10">
         <div class="header__main" data-header-main>
           <ul class="city-contacts city-contacts--header">
-            <li class="city-contacts__contact city-contacts__contact--city" data-choose-city>
-              <a href="">Санкт-Петербург</a>
+            <li class="city-contacts__contact city-contacts__contact--city dropdown">
+              <span class="dropdown__selected">Санкт-Петербург</span>
+              <div class="dropdown__options">
+                <a class="dropdown__item" href="/set-city?cityId=24">Казань</a>
+                <a class="dropdown__item" href="/set-city?cityId=23">Екатеринбург</a>
+                <a class="dropdown__item" href="/set-city?cityId=22">Москва</a>
+                <a class="dropdown__item" href="/set-city?cityId=21">Санкт-Петербург</a>
+              </div>
             </li>
             <li class="city-contacts__contact">
               <a href="tel:+78124673474">+7 812 467-34-74</a>
             </li>
             <li class="city-contacts__contact">
-              <a href="mailto:info@spectranalit.ru">info@spectranalit.ru</a>
+              <a href="mailto:spb@spectranalit.ru">spb@spectranalit.ru</a>
             </li>
           </ul>
 
@@ -33,8 +39,12 @@
             <li class="navigation__item">
               <a href="/about.html">О компании</a>
             </li>
-            <li class="navigation__item"><a href="/partners.html">Партнеры</a></li>
-            <li class="navigation__item"><a href="/contacts.html">Контакты</a></li>
+            <li class="navigation__item">
+              <a href="/partners.html">Партнеры</a>
+            </li>
+            <li class="navigation__item">
+              <a href="/contacts.html">Контакты</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -72,7 +82,7 @@
           <a href="/jobs.html">Вакансии</a>
         </li>
         <li class="navigation__item">
-          <a href="/special.html">Акции</a>
+          <a href="/specials.html">Акции</a>
         </li>
         <li class="navigation__item">
           <a href="/news.html">Новости</a>

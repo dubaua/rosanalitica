@@ -1,0 +1,73 @@
+<div class="sender" data-sender>
+  <div class="sender__description typography">
+    <p>
+      Заполните форму отклика ниже или присылайте резюме на почту
+      <a href="mailto:hr@spectranalit.ru">hr@spectranalit.ru</a>
+      <br />
+      Мы свяжемся с вами в течение двух недель.
+    </p>
+  </div>
+  <form action="post" class="form" enctype="multipart/form-data" action="/form.php" method="post" data-sender-form>
+    <div class="form__field">
+      <label for="contact-us-name" class="form__label">Имя</label>
+      <input
+        id="contact-us-name"
+        name="contact-us-name"
+        type="text"
+        placeholder="Имя"
+        required
+        class="form__input input"
+      />
+    </div>
+    <div class="form__field">
+      <label for="contact-us-phone" class="form__label">Телефон</label>
+      <input
+        id="contact-us-phone"
+        name="contact-us-phone"
+        type="text"
+        placeholder="Телефон"
+        required
+        class="form__input input"
+      />
+    </div>
+    <div class="form__field">
+      <label for="contact-us-email" class="form__label">E-mai</label>
+      <input
+        id="contact-us-email"
+        name="contact-us-email"
+        type="text"
+        placeholder="E-mai"
+        required
+        class="form__input input"
+      />
+    </div>
+    <div class="form__field file-input" data-file-input>
+      <label class="file-input__button button button--dark" for="file" data-file-input-label>загрузить резюме</label>
+      <input
+        data-file-native-input
+        type="file"
+        id="file"
+        aria-label="Загрузить резюме"
+        accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf,application/pdf"
+        required
+      />
+      <div class="file-input__file-name" data-file-input-current-file></div>
+    </div>
+    <div class="form__field">
+      <button class="form__button button button--primary" type="submit" data-sender-submit-button disabled>
+        <div class="button__loading-underlay loading-background"></div>
+        заказать звонок
+      </button>
+    </div>
+    <div class="form__field">
+      <div class="checkbox">
+        <input class="checkbox__native" type="checkbox" value="1" id="privacy" data-sender-privacy-accept required />
+        <span class="checkbox__box">
+          <span class="checkbox__tick"></span>
+        </span>
+        <label for="privacy" class="checkbox__label">Даю согласие на обработку персональных данных</label>
+      </div>
+    </div>
+  </form>
+  <div class="sender__message" data-sender-message></div>
+</div>

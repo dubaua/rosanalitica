@@ -10,11 +10,11 @@
       <%= require('html-loader!@/partials/breadcrumbs.html') %>
 
       <section class="section section--narrow">
-        <div class="partners">
+        <div class="companies-page">
           <div class="container">
             <div class="row">
               <div class="col col-xs-2 col-xl-12">
-                <picture class="partners__picture picture intro-image">
+                <picture class="companies-page__picture picture intro-image">
                   <img
                     src="http://rosanalitica.dubaua.ru/images/partners/partners-cover.png"
                     alt="Наши партнёры"
@@ -26,7 +26,7 @@
 
             <div class="row">
               <div class="col col-xs-2 col-md-2 col-xl-7">
-                <p class="partners__description description">
+                <p class="companies-page__description description">
                   ООО «НПП Спектраналит» — производитель и официальный дилер
                   крупнейших европейских производителей лабораторного,
                   аналитического, технологического, метрологического
@@ -105,7 +105,7 @@
         </div>
       </section>
 
-      <!-- TODO pagination -->
+      <%= require('html-loader!@/partials/pagination.html') %>
     </main>
 
     <%= require('html-loader!@/partials/footer.html') %>
