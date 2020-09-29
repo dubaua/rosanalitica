@@ -1,0 +1,35 @@
+@import '~@/styles/shared/globals.scss';
+
+.product-type {
+  display: none;
+
+  @include from('lg') {
+    display: flex;
+    flex-flow: row nowrap;
+
+    &__toggler {
+      cursor: pointer;
+      color: $--color-text-contrast-600;
+
+      svg {
+        width: 24px;
+        height: 23px;
+      }
+
+      & + & {
+        margin-left: 10px;
+      }
+
+      &--active {
+        cursor: unset;
+        color: $--color-text-600;
+      }
+
+      &--card {
+      }
+
+      &--list {
+      }
+    }
+  }
+}

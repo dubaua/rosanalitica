@@ -5,9 +5,13 @@
 
   &__title {
     font-weight: 300;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 1.3;
 
     color: $--color-text-600;
+
+    @include from('lg') {
+      font-size: 35px;
+    }
   }
 }

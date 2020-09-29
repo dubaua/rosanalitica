@@ -26,6 +26,11 @@
   &--quiet {
     border: 1px solid;
     background-color: transparent;
+
+    &:hover {
+      color: $--color-text-contrast-600;
+      background-color: $--color-background-contrast-600;
+    }
   }
 
   &--primary {

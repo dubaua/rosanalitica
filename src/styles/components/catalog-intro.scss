@@ -46,9 +46,13 @@
 
     @include from('xl') {
       display: block;
-      top: 60px;
+      top: 64px;
 
       width: 70%;
+
+      p {
+        margin: 0;
+      }
     }
 
     @include from('xxl') {

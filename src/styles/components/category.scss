@@ -1,15 +1,23 @@
 @import '~@/styles/shared/globals.scss';
 
-.catalog-special {
-  margin-top: 58px;
-
-  @include from('xl') {
+.category {
+  &__heading {
     margin-top: 56px;
+    margin-bottom: 20px;
+
+    @include from('lg') {
+      margin-top: 60px;
+      margin-bottom: 38px;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 20px;
     font-weight: 300;
     font-size: 30px;
     line-height: 1.3;
@@ -17,10 +25,6 @@
 
     @include from('lg') {
       font-size: 35px;
-    }
-    
-    @include from('xl') {
-      margin-bottom: 34px;
     }
   }
 }

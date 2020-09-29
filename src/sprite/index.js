@@ -11,3 +11,5 @@ import './minus.svg';
 import './cross.svg';
 import './zoom.svg';
 import './chevron.svg';
+import './product-type-list.svg';
+import './product-type-card.svg';
