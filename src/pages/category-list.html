@@ -18,53 +18,82 @@
               <div class="category-list">
                 <h2 class="category-list__title">Лабораторное оборудование</h2>
 
-                <div class="col col-xs-2 col-lg-2">
-                  <a class="category-card" href="/category.html">
-                    <div class="category-card__expander">
-                      <div class="category-card__top">
-                        <h3 class="category-card__title">Весовая техника</h3>
-
-                        <button class="category-card__button">
-                          <svg>
-                            <use xlink:href="#arrow-right-triangle" />
-                          </svg>
-                        </button>
+                <div class="row">
+                  <div class="col col-xs-2 col-lg-2">
+                    <a class="category-card" href="/category.html">
+                      <div class="category-card__expander">
+                        <div class="category-card__top">
+                          <h3 class="category-card__title">Весовая техника</h3>
+  
+                          <button class="category-card__button">
+                            <svg>
+                              <use xlink:href="#arrow-right-triangle" />
+                            </svg>
+                          </button>
+                        </div>
+  
+                        <div class="category-card__image">
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
+                            alt="Весовая техника"
+                          />
+                        </div>
                       </div>
-
-                      <div class="category-card__image">
-                        <img
-                          src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
-                          alt="Весовая техника"
-                        />
+                    </a>
+                  </div>
+  
+                  <div class="col col-xs-2 col-lg-2">
+                    <a class="category-card" href="/category.html">
+                      <div class="category-card__expander">
+                        <div class="category-card__top">
+                          <h3 class="category-card__title">
+                            Верхнеприводные мешалки
+                          </h3>
+  
+                          <button class="category-card__button">
+                            <svg>
+                              <use xlink:href="#arrow-right-triangle" />
+                            </svg>
+                          </button>
+                        </div>
+  
+                        <div class="category-card__image">
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
+                            alt="Верхнеприводные мешалки"
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
+  
+                  <div class="col col-xs-2 col-lg-2">
+                    <a class="category-card" href="/category.html">
+                      <div class="category-card__expander">
+                        <div class="category-card__top">
+                          <h3 class="category-card__title">
+                            Лабораторные посудомоечные машины и дезинфекторы
+                          </h3>
+  
+                          <button class="category-card__button">
+                            <svg>
+                              <use xlink:href="#arrow-right-triangle" />
+                            </svg>
+                          </button>
+                        </div>
+  
+                        <div class="category-card__image">
+                          <img
+                            src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
+                            alt="Лабораторные посудомоечные машины и дезинфекторы"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
 
-                <div class="col col-xs-2 col-lg-2">
-                  <a class="category-card" href="/category.html">
-                    <div class="category-card__expander">
-                      <div class="category-card__top">
-                        <h3 class="category-card__title">
-                          Лабораторные посудомоечные машины и дезинфекторы
-                        </h3>
-
-                        <button class="category-card__button">
-                          <svg>
-                            <use xlink:href="#arrow-right-triangle" />
-                          </svg>
-                        </button>
-                      </div>
-
-                      <div class="category-card__image">
-                        <img
-                          src="http://www.rosanalitica.dubaua.ru/images/category-example-cover.png"
-                          alt="Лабораторные посудомоечные машины и дезинфекторы"
-                        />
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                <%= require('html-loader!@/partials/pagination.html') %>
               </div>
             </div>
           </div>
