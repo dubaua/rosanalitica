@@ -3,7 +3,7 @@
 .product-type {
   display: none;
 
-  @include from('lg') {
+  @include from('xl') {
     display: flex;
     flex-flow: row nowrap;
 
