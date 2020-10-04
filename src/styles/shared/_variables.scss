@@ -1,6 +1,7 @@
 $--letter-spacing: 0.015em;
 
-$--breakpoint-xs: 0;
+$--breakpoint-xxs: 0;
+$--breakpoint-xs: 375px;
 $--breakpoint-sm: 576px;
 $--breakpoint-md: 768px;
 $--breakpoint-lg: 992px;
@@ -19,6 +20,7 @@ $--page-padding-y-xs: 40px;
 $--page-padding-y-lg: 80px;
 $--gutter: 1.5vmax;
 
+$--gutter-xxs: $--gutter;
 $--gutter-xs: $--gutter;
 $--gutter-sm: $--gutter;
 $--gutter-md: $--gutter;
@@ -27,6 +29,7 @@ $--gutter-xl: $--gutter;
 $--gutter-xxl: $--gutter;
 $--gutter-xxxl: $--gutter;
 
+$--column-count-xxs: 2;
 $--column-count-xs: 2;
 $--column-count-sm: 4;
 $--column-count-md: 4;

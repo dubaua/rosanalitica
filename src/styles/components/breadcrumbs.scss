@@ -62,13 +62,84 @@
         content: '';
         display: inline-block;
         width: 0.75em;
-        height: 0.14em;
+        height: 0.01em;
         vertical-align: middle;
         margin-right: 0.3em;
       }
 
       &#{$this}__section--active {
         font-weight: bold;
+      }
+    }
+  }
+
+  &--catalog {
+    #{$this}__inner {
+      @include to('xl') {
+        margin-left: 32px;
+        margin-top: 0;
+      }
+    }
+
+    #{$this}__back {
+      right: calc(100% + 12px);
+      top: 9px;
+
+      @include from('xl') {
+        display: none;
+      }
+    }
+
+    #{$this}__section {
+      &:nth-of-type(2) {
+        margin-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &--muted {
+        @include to('xl') {
+          margin-left: 0;
+          font-size: 27px;
+          color: $--color-text-brand;
+        }
+
+        &:before {
+          display: none;
+
+          @include from('xl') {
+            display: inline-block;
+          }
+        }
+
+        &:after {
+          display: inline-block;
+          content: '→';
+          background: transparent;
+          height: auto;
+          width: auto;
+          vertical-align: baseline;
+          margin-left: 0.3em;
+          margin-right: 0.3em;
+
+          @include from('xl') {
+            display: none;
+          }
+        }
+      }
+
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+
+      &#{$this}__section--active {
+        @include to('xl') {
+          font-weight: normal;
+        }
       }
     }
   }

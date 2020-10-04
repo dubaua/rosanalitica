@@ -1,6 +1,7 @@
 @import '~@/styles/shared/_variables.scss';
 
 $breakpoints: (
+  xxs: $--breakpoint-xxs,
   xs: $--breakpoint-xs,
   sm: $--breakpoint-sm,
   md: $--breakpoint-md,

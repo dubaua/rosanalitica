@@ -115,10 +115,14 @@ $product-card: '.product-card';
 
     &__bottom {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       align-items: center;
       justify-content: space-between;
       text-align: center;
+
+      @include from('xs') {
+        flex-direction: row;
+      }
     }
 
     &__price {
@@ -174,7 +178,7 @@ $product-card: '.product-card';
 
   &--card {
     margin-bottom: 20px;
-    
+
     @include from('xl') {
       #{$product-card} {
         min-height: 260px;

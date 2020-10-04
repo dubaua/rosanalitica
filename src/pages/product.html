@@ -5,9 +5,332 @@
   </head>
   <body>
     <%= require('html-loader!@/partials/header.html') %>
-    
-    <main class="main">
 
+    <main class="main">
+      <section class="section section--narrow">
+        <div class="container">
+          <div class="row">
+            <div class="col col-xxs-0 col-sm-0 col-md-0 col-lg-0 col-xl-4">
+              <%= require('html-loader!@/partials/catalog-menu.html') %>
+            </div>
+
+            <div class="col col-xxs-2 col-xl-8">
+              <%= require('html-loader!@/partials/breadcrumbs-inner--catalog.html') %>
+
+              <div class="product">
+                <div class="product__card" data-product data-product-id="123">
+                  <div class="product__desktop-image">
+                    <img
+                      src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                      alt="Аналитические весы Cubis 124S"
+                    />
+                  </div>
+
+                  <div class="product__card-content">
+                    <h1 class="product__title" data-product-title>
+                      Аналитические весы Cubis 124S
+                    </h1>
+
+                    <div class="product__mobile-image">
+                      <img
+                        src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                        alt="Аналитические весы Cubis 124S"
+                      />
+                    </div>
+
+                    <div class="product__code">881533</div>
+                    <div class="product__short-description">
+                      <p>
+                        Весы Cubis® — это первая полностью модульная серия
+                        лабораторных весов. Охватывает все сферы применения,
+                        классифицируясь от ультра-микровесов, микровесов,
+                        полу-микровесов, аналитических весов и прецизионных
+                        весов, и до новых моделей большой грузоподъемности.
+                      </p>
+                    </div>
+
+                    <div class="product__card-bottom">
+                      <div class="product__price">
+                        <div class="product__price">
+                          <div class="product__old-price">152 500 ₽</div>
+                          <div class="product__new-price">132 500 ₽</div>
+                        </div>
+                      </div>
+                      <button
+                        class="button button--quiet"
+                        type="button"
+                        data-product-button
+                      >
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__main">
+                  <button
+                    class="product__print"
+                    type="button"
+                    data-print-product
+                  >
+                    <svg class="product__print-icon">
+                      <use xlink:href="#printer" />
+                    </svg>
+                    распечатать <br />страницу
+                  </button>
+
+                  <div class="product__description">
+                    <div class="typography">
+                      <h3>Описание</h3>
+                      <p>
+                        <strong>
+                          Пользователи выбирают опции для конфигурации весов,
+                          которые удовлетворяют их индивидуальные потребности и
+                          обеспечивают оптимальное решение для интеграции в
+                          рабочие процессы.
+                        </strong>
+                      </p>
+
+                      <h3>Преимущества</h3>
+
+                      <ul>
+                        <li>Быстрота</li>
+                        <li>Четкость определения процессов</li>
+                        <li>Точность.</li>
+                      </ul>
+
+                      <p>
+                        Серия Cubis® теперь охватывает весь спектр областей
+                        применения от исследований и контроля качества до
+                        разроботок технологических процессов и компаундирования.
+                      </p>
+
+                      <h3>Весовой блок Cubis 124S</h3>
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th style="text-align: left">Наименование</th>
+                            <th style="text-align: right">Значение</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Максимальная нагрузка весов Max, г</td>
+                            <td style="text-align: right">120</td>
+                          </tr>
+                          <tr>
+                            <td>Минимальная нагрузка весов Min, мг</td>
+                            <td style="text-align: right">10</td>
+                          </tr>
+                          <tr>
+                            <td>Действительная цена деления (d), мг</td>
+                            <td style="text-align: right">0,1</td>
+                          </tr>
+                          <tr>
+                            <td>Класс точности по ГОСТ Р 53228-2008</td>
+                            <td style="text-align: right">I</td>
+                          </tr>
+                          <tr>
+                            <td>Юстировка</td>
+                            <td style="text-align: right">Внутренняя isoCAL</td>
+                          </tr>
+                          <tr>
+                            <td>Размер чаши весов, мм</td>
+                            <td style="text-align: right">85х85</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <h3>Блоки управления и индикации</h3>
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th style="text-align: left">MSA –</th>
+                            <th style="text-align: left">MSU –</th>
+                            <th style="text-align: left">MSE –</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              Цветной дисплей, диагональ 5,7 дюйма, наклоняемый
+                              отсоединяемый. Сенсорное управление.
+                            </td>
+                            <td>
+                              Большой монохромный графический дисплей,
+                              наклоняемый отсоединяемый. Клавиши для управления.
+                            </td>
+                            <td>
+                              ЖК-дисплей, черно-белый, отсоединяемый. Клавиши
+                              для управления
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>USB, RS232, Ethernet, разъём для SD-карт</td>
+                            <td>USB, RS232, Ethernet, разъём для SD-карт</td>
+                            <td>USB, RS232</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <h3>
+                        Для данной модели возможен выбор ветрозащитной витрины
+                      </h3>
+
+                      <p>
+                        <strong>DU</strong> – Аналитическая ветрозащитная
+                        витрина, открываемая вручную (MSA, MSU, MSE)
+                      </p>
+
+                      <p>
+                        <strong>DA</strong> – Автоматическая ветрозащитная
+                        витрина (MSA, MSU)
+                      </p>
+
+                      <p>
+                        <strong>DI</strong> – Аналитическая витрина со
+                        встроенным ионизатором воздуха (MSA, MSU)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="product__files">
+                    <h3 class="product__subtitle">Полезные материалы</h3>
+
+                    <div class="row">
+                      <div class="col col-xxs-2 col-md-2 col-xl-4">
+                        <a href="" class="product__file" download>
+                          <svg class="product__file-icon">
+                            <use xlink:href="#pdf" />
+                          </svg>
+                          <div class="product__file-name">
+                            Каталог продукции Sartorius, PDF
+                          </div>
+                        </a>
+                      </div>
+                      
+                      <div class="col col-xxs-2 col-md-2 col-xl-4">
+                        <a href="" class="product__file" download>
+                          <svg class="product__file-icon">
+                            <use xlink:href="#pdf" />
+                          </svg>
+                          <div class="product__file-name">
+                            Каталог продукции Sartorius, PDF
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col col-xxs-2 col-md-2 col-xl-4">
+                        <a href="" class="product__file" download>
+                          <svg class="product__file-icon">
+                            <use xlink:href="#pdf" />
+                          </svg>
+                          <div class="product__file-name">
+                            Каталог продукции Sartorius, PDF
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="col col-xxs-2 col-md-2 col-xl-4">
+                        <a href="" class="product__file" download>
+                          <svg class="product__file-icon">
+                            <use xlink:href="#pdf" />
+                          </svg>
+                          <div class="product__file-name">
+                            Каталог продукции Sartorius, PDF
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product__videos">
+                    <h3 class="product__subtitle">Видеоматериалы</h3>
+
+                    <div class="row">
+                      <div class="col col-xxs-2 col-xl-6">
+                        <div class="product__video">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/embed/XhJqIp8VL6Q"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+
+                      <div class="col col-xxs-2 col-xl-6">
+                        <div class="product__video">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/embed/XhJqIp8VL6Q"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+
+                      <div class="col col-xxs-2 col-xl-6">
+                        <div class="product__video">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src="https://www.youtube.com/embed/XhJqIp8VL6Q"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product__bottom">
+                  <div class="product__bottom-image">
+                    <img
+                      src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
+                      alt="Аналитические весы Cubis 124S"
+                    />
+                  </div>
+
+                  <div class="product__card-content">
+                    <div class="product__title" data-product-title>
+                      Аналитические весы Cubis 124S
+                    </div>
+
+                    <div class="product__card-bottom">
+                      <div class="product__price">
+                        <div class="product__price">
+                          <div class="product__old-price">152 500 ₽</div>
+                          <div class="product__new-price">132 500 ₽</div>
+                        </div>
+                      </div>
+                      <button
+                        class="button button--quiet"
+                        type="button"
+                        data-product-button
+                      >
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <%= require('html-loader!@/partials/product-list-heading.html') %>
+
+                <%= require('html-loader!@/partials/product-list.html') %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <%= require('html-loader!@/partials/footer.html') %>

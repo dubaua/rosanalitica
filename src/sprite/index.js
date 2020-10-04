@@ -13,3 +13,5 @@ import './zoom.svg';
 import './chevron.svg';
 import './product-type-list.svg';
 import './product-type-card.svg';
+import './printer.svg';
+import './pdf.svg';

@@ -7,6 +7,7 @@ $offset: $--offset;
 
 // settings
 $breakpoints: (
+  xxs: $--breakpoint-xxs,
   xs: $--breakpoint-xs,
   sm: $--breakpoint-sm,
   md: $--breakpoint-md,
@@ -17,6 +18,7 @@ $breakpoints: (
 );
 
 $gutters: (
+  xxs: $--gutter-xxs,
   xs: $--gutter-xs,
   sm: $--gutter-sm,
   md: $--gutter-md,
@@ -27,6 +29,7 @@ $gutters: (
 );
 
 $column-counts: (
+  xxs: $--column-count-xxs,
   xs: $--column-count-xs,
   sm: $--column-count-sm,
   md: $--column-count-md,
