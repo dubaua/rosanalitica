@@ -1,0 +1,74 @@
+@import '~@/styles/shared/globals.scss';
+
+.catalog-panel {
+  $this: &;
+
+  &__title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding-top: 62px;
+
+    h1 {
+      margin: 0;
+      margin-left: 40px;
+
+      font-weight: 200;
+      font-size: 60px;
+      line-height: 1.1;
+      color: $--color-text-600;
+    }
+  }
+
+  &__title-back {
+    display: inline-block;
+
+    svg {
+      width: 40px;
+      height: 46px;
+      color: $--color-text-600;
+
+      transform: rotate(180deg);
+    }
+  }
+
+  &--plain {
+    display: none;
+
+    @include from('xl') {
+      display: block;
+      position: sticky;
+      top: $--header-height-xl;
+      margin-left: -$--page-padding-x-xl;
+
+      height: calc(100vh - 100px); // $--header-height-xl
+      box-sizing: border-box;
+      // padding-bottom: 30px;
+      background-color: $--color-background-700;
+    }
+
+    #{$this}__inner {
+      overflow: hidden;
+      height: 100%;
+      padding-left: $--page-padding-x-xl;
+    }
+
+    .simplebar-track {
+      background-color: $--color-gray-700;
+      width: 6px;
+      border-radius: $--border-radius;
+    }
+
+    .simplebar-scrollbar:before {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background-color: $--color-background-contrast-300;
+      width: 6px;
+      border-radius: $--border-radius;
+      opacity: 1;
+    }
+  }
+}
