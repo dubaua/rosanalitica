@@ -5,7 +5,7 @@ const toggleDataSelector = 'data-catalog-menu-toggle-button';
 const innerCategoryDataSelector = 'data-catalog-menu-category-list';
 
 const toggleActiveClass = 'catalog-menu__toggle--active';
-const categoryActiveClass = 'catalog-menu__inner-list--active';
+const categoryActiveClass = 'catalog-menu__list--active';
 
 let activeToggle = null;
 
