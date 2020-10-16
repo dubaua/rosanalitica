@@ -52,7 +52,9 @@ function setOpenJobsItemHeight(jobsItemNode) {
 
 export function redrawActiveJobsItem() {
   const jobsItemNode = jobsItemNodeArray[jobsItemActiveIndex];
-  setOpenJobsItemHeight(jobsItemNode);
+  if (jobsItemNode) {
+    setOpenJobsItemHeight(jobsItemNode);
+  }
 }
 
 function closeJobsItem(jobsItemNode) {
