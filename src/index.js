@@ -17,3 +17,4 @@ import '@/js/sender.js';
 import '@/js/testimonialPopup.js';
 import '@/js/catalogMenu.js';
 import '@/js/productType.js';
+import '@/js/orderForm.js';

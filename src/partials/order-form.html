@@ -1,0 +1,103 @@
+<div class="order-form sender" data-order-form data-sender>
+  <div class="order-form__overlay" data-order-form-overlay></div>
+
+  <div class="order-form__card">
+    <div class="order-form__title" data-order-form-title>Запрос цены</div>
+    <div class="order-form__description sender__description typography">
+      <p>
+        Заполните форму заказа ниже, и мы свяжемся с вами в течение двух дней.
+      </p>
+    </div>
+
+    <form
+      action="post"
+      class="form order-form__form"
+      enctype="multipart/form-data"
+      action="/form.php"
+      method="post"
+      data-sender-form
+    >
+      <div class="form__field">
+        <label for="contact-us-name" class="form__label">Имя</label>
+        <input
+          id="contact-us-name"
+          name="contact-us-name"
+          type="text"
+          placeholder="Имя"
+          required
+          class="form__input input"
+        />
+      </div>
+      <div class="form__field">
+        <label for="contact-us-phone" class="form__label">Телефон</label>
+        <input
+          id="contact-us-phone"
+          name="contact-us-phone"
+          type="text"
+          placeholder="Телефон"
+          required
+          class="form__input input"
+        />
+      </div>
+      <div class="form__field">
+        <label for="contact-us-email" class="form__label">E-mai</label>
+        <input
+          id="contact-us-email"
+          name="contact-us-email"
+          type="text"
+          placeholder="E-mai"
+          required
+          class="form__input input"
+        />
+      </div>
+      <div class="form__field">
+        <button
+          class="form__button button button--primary"
+          type="submit"
+          data-sender-submit-button
+          disabled
+        >
+          <div class="button__loading-underlay loading-background"></div>
+          <span data-order-form-button> запросить цену </span>
+        </button>
+      </div>
+      <div class="form__field">
+        <div class="checkbox">
+          <input
+            class="checkbox__native"
+            type="checkbox"
+            value="1"
+            id="privacy"
+            data-sender-privacy-accept
+            required
+          />
+          <span class="checkbox__box">
+            <span class="checkbox__tick"></span>
+          </span>
+          <label for="privacy" class="checkbox__label"
+            >Даю согласие на обработку персональных данных</label
+          >
+        </div>
+      </div>
+      <input
+        name="vendor-code"
+        type="hidden"
+        value=""
+        data-order-form-vendor-code
+      />
+      <input
+        name="product-title"
+        type="hidden"
+        value=""
+        data-order-form-product-title
+      />
+    </form>
+    <div class="sender__message" data-sender-message></div>
+  </div>
+
+  <button type="button" class="order-form__close-button" data-order-form-close>
+    <svg>
+      <use xlink:href="#cross" />
+    </svg>
+  </button>
+</div>
