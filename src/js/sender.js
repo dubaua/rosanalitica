@@ -71,6 +71,10 @@ for (let i = 0; i < senderNodeList.length; i++) {
     senderMessageNode.classList.add(success ? messageNodePositiveClassname : messageNodeNegativeClassname);
 
     nextTick(redrawActiveJobsItem);
+
+    if (typeof senderNode.onSuccess === 'function') {
+      senderNode.onSuccess();
+    }
   });
 }
 

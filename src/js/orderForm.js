@@ -50,25 +50,23 @@ function handleOpenForm(event, product) {
 }
 
 function initProductForm() {
-  vendorCodeInputNode = orderFormNode.querySelector(
-    '[data-order-form-vendor-code]',
-  );
-  productTitleInputNode = orderFormNode.querySelector(
-    '[data-order-form-product-title]',
-  );
+  vendorCodeInputNode = orderFormNode.querySelector('[data-order-form-vendor-code]');
+  productTitleInputNode = orderFormNode.querySelector('[data-order-form-product-title]');
 
   overlayNode = orderFormNode.querySelector(formOverlaySelector);
   closeButtonNode = orderFormNode.querySelector(formCloseButtonSelector);
 
   productArray.forEach((product) => {
     const buttonNode = product.querySelector(productButtonSelector);
-    buttonNode.addEventListener('click', (event) =>
-      handleOpenForm(event, product),
-    );
+    buttonNode.addEventListener('click', (event) => handleOpenForm(event, product));
   });
 
   overlayNode.addEventListener('click', hideOrderForm);
   closeButtonNode.addEventListener('click', hideOrderForm);
+
+  orderFormNode.onSuccess = () => {
+    setTimeout(hideOrderForm, 3000);
+  };
 }
 
 if (productNodeList.length > 0 && orderFormNode) {

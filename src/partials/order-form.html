@@ -4,9 +4,7 @@
   <div class="order-form__card">
     <div class="order-form__title" data-order-form-title>Запрос цены</div>
     <div class="order-form__description sender__description typography">
-      <p>
-        Заполните форму заказа ниже, и мы свяжемся с вами в течение двух дней.
-      </p>
+      <p>Заполните форму заказа ниже, и мы свяжемся с вами в течение двух дней.</p>
     </div>
 
     <form
@@ -50,13 +48,22 @@
           class="form__input input"
         />
       </div>
+      <div class="form__field form__field--hidden">
+        <label for="contact-us-vendor-code" class="form__label">Артикул</label>
+        <input id="contact-us-vendor-code" name="vendor-code" type="hidden" value="" data-order-form-vendor-code />
+      </div>
+      <div class="form__field form__field--hidden">
+        <label for="contact-us-product-title" class="form__label">Товар</label>
+        <input
+          id="contact-us-product-title"
+          name="product-title"
+          type="hidden"
+          value=""
+          data-order-form-product-title
+        />
+      </div>
       <div class="form__field">
-        <button
-          class="form__button button button--primary"
-          type="submit"
-          data-sender-submit-button
-          disabled
-        >
+        <button class="form__button button button--primary" type="submit" data-sender-submit-button disabled>
           <div class="button__loading-underlay loading-background"></div>
           <span data-order-form-button> запросить цену </span>
         </button>
@@ -68,29 +75,16 @@
             type="checkbox"
             value="1"
             id="privacy"
+            name="privacy"
             data-sender-privacy-accept
             required
           />
           <span class="checkbox__box">
             <span class="checkbox__tick"></span>
           </span>
-          <label for="privacy" class="checkbox__label"
-            >Даю согласие на обработку персональных данных</label
-          >
+          <label for="privacy" class="checkbox__label">Даю согласие на обработку персональных данных</label>
         </div>
       </div>
-      <input
-        name="vendor-code"
-        type="hidden"
-        value=""
-        data-order-form-vendor-code
-      />
-      <input
-        name="product-title"
-        type="hidden"
-        value=""
-        data-order-form-product-title
-      />
     </form>
     <div class="sender__message" data-sender-message></div>
   </div>

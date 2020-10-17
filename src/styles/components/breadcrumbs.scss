@@ -1,5 +1,11 @@
 @import '~@/styles/shared/globals.scss';
 
+.breadcrumbs-catalog {
+  @include from('xl') {
+    display: none;
+  }
+}
+
 .breadcrumbs {
   $this: &;
   padding-top: 20px;
