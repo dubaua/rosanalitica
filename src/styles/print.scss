@@ -1,0 +1,95 @@
+.print-header {
+  display: none;
+}
+
+@media print {
+  .catalog-menu,
+  .breadcrumbs,
+  .header,
+  .footer,
+  .button,
+  .catalog-special,
+  .dont-print {
+    display: none;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+
+  .link-to-print,
+  a.link-to-print {
+    & > * {
+      display: none;
+    }
+    &:after {
+      content: attr(data-src);
+    }
+  }
+
+  h2,
+  h3 {
+    break-after: avoid-page;
+  }
+
+  .product {
+    $this: &;
+
+    &__code {
+      color: inherit;
+      font-size: 20px;
+      &:before {
+        content: 'Артикул: ';
+      }
+    }
+
+    &__card-bottom {
+      display: block;
+      text-align: left;
+    }
+    &__price {
+      color: inherit;
+      #{$this}__old-price + #{$this}__new-price {
+        margin-top: 0;
+        margin-left: 1em;
+        font-size: 20px;
+        &:before {
+          content: 'Новая цена: ';
+        }
+      }
+    }
+
+    &__old-price {
+      text-decoration: line-through;
+      font-weight: normal;
+      font-size: 20px;
+      &:after {
+        display: none;
+      }
+      &:before {
+        content: 'Старая цена: ';
+      }
+    }
+
+    &__new-price {
+      display: inline-block;
+      font-weight: normal;
+      font-size: 20px;
+    }
+  }
+
+  .print-header {
+    display: flex;
+    &__logo {
+      flex-basis: 5cm;
+      min-width: 5cm;
+    }
+    &__contact {
+      flex-grow: 1;
+      margin-left: 1cm;
+      p {
+        font-size: 14px;
+        margin: 0 0 0.62em;
+      }
+    }
+  }
+}

@@ -6,6 +6,8 @@
   <body>
     <%= require('html-loader!@/partials/header.html') %>
 
+    <%= require('html-loader!@/partials/print-header.html') %>
+
     <main class="main">
       <section class="section section--narrow">
         <div class="container">
@@ -205,7 +207,7 @@
 
                     <div class="row">
                       <div class="col col-xxs-2 col-md-2 col-xl-4">
-                        <a href="" class="product__file" download>
+                        <a href="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" class="product__file link-to-print" data-src="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" download>
                           <svg class="product__file-icon">
                             <use xlink:href="#pdf" />
                           </svg>
@@ -216,7 +218,7 @@
                       </div>
 
                       <div class="col col-xxs-2 col-md-2 col-xl-4">
-                        <a href="" class="product__file" download>
+                        <a href="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" class="product__file link-to-print" data-src="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" download>
                           <svg class="product__file-icon">
                             <use xlink:href="#pdf" />
                           </svg>
@@ -227,7 +229,7 @@
                       </div>
 
                       <div class="col col-xxs-2 col-md-2 col-xl-4">
-                        <a href="" class="product__file" download>
+                        <a href="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" class="product__file link-to-print" data-src="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" download>
                           <svg class="product__file-icon">
                             <use xlink:href="#pdf" />
                           </svg>
@@ -238,7 +240,7 @@
                       </div>
 
                       <div class="col col-xxs-2 col-md-2 col-xl-4">
-                        <a href="" class="product__file" download>
+                        <a href="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" class="product__file link-to-print" data-src="http://rosanalitica.dubaua.ru/images/catalog/dummy.pdf" download>
                           <svg class="product__file-icon">
                             <use xlink:href="#pdf" />
                           </svg>
@@ -255,7 +257,7 @@
 
                     <div class="row">
                       <div class="col col-xxs-2 col-xl-6">
-                        <div class="product__video">
+                        <div class="product__video link-to-print" data-src="https://www.youtube.com/watch?v=XhJqIp8VL6Q">
                           <iframe
                             width="100%"
                             height="100%"
@@ -268,7 +270,7 @@
                       </div>
 
                       <div class="col col-xxs-2 col-xl-6">
-                        <div class="product__video">
+                        <div class="product__video link-to-print" data-src="https://www.youtube.com/watch?v=XhJqIp8VL6Q">
                           <iframe
                             width="100%"
                             height="100%"
@@ -281,7 +283,7 @@
                       </div>
 
                       <div class="col col-xxs-2 col-xl-6">
-                        <div class="product__video">
+                        <div class="product__video link-to-print" data-src="https://www.youtube.com/watch?v=XhJqIp8VL6Q">
                           <iframe
                             width="100%"
                             height="100%"
@@ -296,7 +298,7 @@
                   </div>
                 </div>
 
-                <div class="product__bottom">
+                <div class="product__bottom dont-print">
                   <div class="product__bottom-image">
                     <img
                       src="http://www.rosanalitica.dubaua.ru/images/catalog-preview-test.jpg"
@@ -328,9 +330,11 @@
                     </div>
                   </div>
                 </div>
-
-                <%= require('html-loader!@/partials/product-list-heading.html')
-                %> <%= require('html-loader!@/partials/product-list.html') %>
+                
+                <div class="catalog-special">
+                  <%= require('html-loader!@/partials/product-list-heading.html') %>
+                  <%= require('html-loader!@/partials/product-list.html') %>
+                </div>
               </div>
             </div>
           </div>
