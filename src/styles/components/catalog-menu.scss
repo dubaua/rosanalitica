@@ -68,8 +68,11 @@
     margin-top: 6px;
     margin-bottom: 16px;
 
-    list-style-type: disc;
-    padding-left: 22px;
+      #{$this}__item {
+        font-weight: $--font-weight-regular;
+        font-size: $--font-size-200;
+        line-height: $--font-line-height-large;
+        color: $--color-text-600;
 
     #{$this}__item {
       font-weight: $--font-weight-regular;
@@ -84,6 +87,7 @@
         padding: 0;
       }
     }
+  }
 
     a {
       color: $--color-text-600;
