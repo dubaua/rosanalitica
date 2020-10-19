@@ -11,12 +11,21 @@
       display: block;
       padding: 0.5em 0;
       color: $--color-text-contrast-600;
+
       &:before {
         margin-right: 0.62em;
         counter-increment: item;
         content: counter(item, decimal-leading-zero);
         color: $--color-text-brand;
         letter-spacing: $--font-letter-spacing-medium;
+      }
+
+      &:hover {
+        color: $--color-text-contrast-500;
+
+        &:before {
+          color: $--color-text-contrast-600;
+        }
       }
     }
   }

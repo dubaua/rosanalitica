@@ -40,6 +40,7 @@
     transition-duration: $--duration-500;
     transition-timing-function: $--timing-in-out-spring;
     transition-property: box-shadow;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0 0 20px rgba($--color-background-700, 0.8);
