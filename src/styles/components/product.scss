@@ -76,6 +76,7 @@
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
+      flex-grow: 1;
       padding: 14px 24px 28px 20px;
     }
   }
@@ -241,21 +242,21 @@
 
   &__print {
     display: none;
-    
+
     @include from('xl') {
       display: flex;
       align-items: center;
-      
+
       position: absolute;
       top: 20px;
       right: 22px;
       cursor: pointer;
-      
+
       border: none;
       border-radius: 0;
       box-shadow: none;
       background-color: transparent;
-      
+
       font-weight: 500;
       font-size: 14px;
       line-height: 1.3;
@@ -317,10 +318,21 @@
     color: $--color-text-brand;
   }
 
+  &__videos {
+    padding-bottom: 20px;
+  }
+
   &__video {
+    position: relative;
     width: 100%;
-    height: 55%;
+    padding-bottom: 55%;
     margin-bottom: 12px;
+
+    iframe {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
 
     @include from('xl') {
       height: 214px;
