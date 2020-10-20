@@ -16,12 +16,6 @@
     }
   }
 
-  &--no-title {
-    #{$this}__title {
-      display: none;
-    }
-  }
-
   &__title-back {
     display: none;
   }
@@ -265,14 +259,26 @@
     }
   }
 
-  &--header {
-    @include from('xl') {
+  @include from('xl') {
+    &--no-title {
+      #{$this}__title {
+        display: none;
+      }
+      #{$this}__list {
+        padding-top: 0;
+      }
+      #{$this}__inner-list {
+        padding-top: 6px;
+      }
+    }
+    &--header {
       background-color: $--color-background-contrast-600;
       #{$this}__title {
         padding-left: 50px;
       }
       #{$this}__list {
         background: none;
+        padding-top: 24px;
         & > #{$this}__item {
           & > #{$this}__category > a {
             padding-left: 50px;
@@ -292,6 +298,7 @@
       }
 
       #{$this}__inner-list {
+        padding-top: 24px;
         position: absolute;
         left: 42%;
         right: 0;
