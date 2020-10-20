@@ -1,9 +1,11 @@
 @import '~@/styles/shared/globals.scss';
 
 .input {
-  height: $--button-height;
   border: none;
   box-shadow: none;
+  border-radius: unset;
+  
+  height: $--button-height;
   padding: 10px 9px;
   font-weight: normal;
   font-size: 16px;
