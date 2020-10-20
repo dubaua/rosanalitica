@@ -4,20 +4,21 @@
   $this: &;
 
   $space-horizontal: 8px;
-  $space-vertical: 6px;
+  $space-vertical: 15px;
 
   position: relative;
 
   &__options {
     display: none;
     position: absolute;
-    margin: $space-vertical $space-horizontal * -1;
+    width: 100%;
   }
 
   &__selected {
     display: block;
-    margin: $space-vertical * -1 $space-horizontal * -1;
-    padding: $space-vertical $space-horizontal;
+    height: 100%;
+    box-sizing: border-box;
+    padding: $space-vertical 43px $space-vertical 50px;
   }
 
   &__item {
@@ -25,6 +26,7 @@
     padding: $space-vertical $space-horizontal;
     background-color: $--color-background-700;
     white-space: nowrap;
+    text-align: center;
 
     &:hover,
     &:focus {

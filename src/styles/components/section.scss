@@ -29,10 +29,6 @@
     }
   }
 
-  &--strong-bottom {
-    padding-bottom: 32px;
-  }
-
   @include from('xl') {
     &--highlight {
       background: $--color-background-700;
@@ -52,6 +48,7 @@
     }
 
     &--strong-bottom {
+      // add space before footer on desktop
       padding-bottom: 54px;
     }
   }

@@ -30,10 +30,9 @@
     min-height: 190px;
     margin: 16px 24px 16px 0;
     padding: 8px 16px;
-    @include from('lg') {
-      margin: 0;
-      min-height: 300px;
-    }
+    box-sizing: border-box;
+    width: calc(100% - 22px);
+
     background: $--color-background-700;
     border-radius: $--border-radius-card;
 
@@ -41,6 +40,12 @@
     transition-timing-function: $--timing-in-out-spring;
     transition-property: box-shadow;
     cursor: pointer;
+
+    @include from('lg') {
+      margin: 0;
+      min-height: 300px;
+      width: auto;
+    }
 
     &:hover {
       box-shadow: 0 0 20px rgba($--color-background-700, 0.8);
@@ -75,6 +80,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       color: $--color-text-contrast-600;
+      width: 100%;
+
+      @include from('lg') {
+        width: auto;
+      }
+
       &:hover {
         box-shadow: 0 0 20px rgba(0, 153, 204, 0.8);
       }
@@ -115,7 +126,9 @@
       max-height: 100%;
     }
     &--bottom {
-      top: auto;
+      @include from('lg') {
+        top: auto;
+      }
     }
   }
 

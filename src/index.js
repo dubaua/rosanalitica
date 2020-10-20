@@ -18,3 +18,4 @@ import '@/js/testimonialPopup.js';
 import '@/js/productType.js';
 import '@/js/orderForm.js';
 import '@/js/print.js';
+import '@/js/glueUpPrepositions.js';

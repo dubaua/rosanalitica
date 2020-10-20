@@ -1,6 +1,12 @@
 @import '~@/styles/shared/globals.scss';
 
 .companies {
+  margin-bottom: 22px;
+
+  @include from('xl') {
+    margin-bottom: 0;
+  }
+
   &__description {
     font-size: $--font-size-200;
     font-weight: $--font-weight-regular;
