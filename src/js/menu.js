@@ -8,6 +8,7 @@ const catalogMenuOpenButtonMobileNode = document.querySelector('[data-catalog-me
 const catalogMenuCloseButtonMobileNode = document.querySelector('[data-catalog-menu-close-button-mobile]');
 const catalogMenuOverlayNode = document.querySelector('[data-catalog-menu-overlay]');
 const catalogMenuPanelNode = catalogMenuOverlayNode.querySelector('[data-catalog-menu-panel]');
+insertCatalogLinkNode();
 const catalogMenuOpenOnHoverNodeList = document.querySelectorAll('[data-catalog-menu-open-hover]');
 const catalogMenuItemActiveClassname = 'catalog-menu__item--active';
 const catalogMenuPanelActiveClassname = 'header__catalog-menu-overlay--active';
@@ -107,3 +108,26 @@ function setDesktopPanelsSizes() {
 
 setDesktopPanelsSizes();
 window.addEventListener('resize', setDesktopPanelsSizes);
+
+// вставляем ссылку каталога
+function insertCatalogLinkNode() {
+  const headerHamburderSiteMenuNode = document.querySelector('.navigation--hamburger-menu');
+  const headerHamburderSiteMenuFirstLinkNode = headerHamburderSiteMenuNode.querySelector('.navigation__item');
+
+  const catalogLinkNode = document.querySelector(
+    '.navigation--header .navigation__item[data-catalog-menu-open-hover] a',
+  );
+
+  const newMenuItemNode = document.createElement('li');
+  newMenuItemNode.classList.add('navigation__item');
+  newMenuItemNode.dataset.catalogMenuOpenHover = '';
+  const newMenuLinkNode = document.createElement('a');
+  newMenuLinkNode.textContent = catalogLinkNode.textContent;
+  newMenuLinkNode.href = catalogLinkNode.href;
+  newMenuItemNode.appendChild(newMenuLinkNode);
+
+  headerHamburderSiteMenuNode.insertBefore(newMenuItemNode, headerHamburderSiteMenuFirstLinkNode);
+
+  const commentNode = document.createComment(' Ссылка на каталог добавлена с помощью javascript ');
+  headerHamburderSiteMenuNode.insertBefore(commentNode, newMenuItemNode);
+}
