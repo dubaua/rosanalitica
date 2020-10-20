@@ -111,9 +111,14 @@ ul {
   margin-top: $--header-height;
   padding-bottom: 46px;
 
+  max-width: 100%;
+  overflow-x: hidden;
+
   @include from('xl') {
     margin-top: $--header-height-xl;
     padding-bottom: 0;
+
+    overflow: unset;
 
     // screen height - header - footer
     min-height: calc(100vh - 100px - 212px);
