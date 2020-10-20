@@ -112,5 +112,7 @@ ul {
 
   @include from('xl') {
     margin-top: $--header-height-xl;
+    // screen height - header - footer
+    min-height: calc(100vh - 100px - 212px);
   }
 }
