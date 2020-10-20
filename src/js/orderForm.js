@@ -1,3 +1,5 @@
+import {disableScroll, enableScroll} from './disableScroll.js';
+
 // selectors
 const productSelector = '[data-product]';
 const productTitleSelector = '[data-product-title]';
@@ -23,9 +25,11 @@ let closeButtonNode = null;
 
 // functions
 function showOrderForm() {
+  disableScroll();
   orderFormNode.style.display = 'block';
 }
 function hideOrderForm() {
+  enableScroll();
   orderFormNode.style.display = 'none';
 }
 

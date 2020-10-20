@@ -14,10 +14,8 @@ typographyArray.forEach((typography) => {
   const typographyChildrenArray = Array.from(typographyNodeChildren);
 
   typographyChildrenArray.forEach((child) => {
-    console.log('child', child);
     const childInnerHTML = child.innerHTML;
     const newChildInnerHTML = glueUpPrepositions(childInnerHTML);
     child.innerHTML = newChildInnerHTML;
-    console.log(newChildInnerHTML);
   });
 });
