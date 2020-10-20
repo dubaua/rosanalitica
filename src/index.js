@@ -15,7 +15,6 @@ import '@/js/fileInput.js';
 import '@/js/map.js';
 import '@/js/sender.js';
 import '@/js/testimonialPopup.js';
-import '@/js/catalogMenu.js';
 import '@/js/productType.js';
 import '@/js/orderForm.js';
 import '@/js/print.js';

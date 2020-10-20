@@ -1,4 +1,4 @@
-<div class="catalog-menu catalog-menu--aside" catalog-menu>
+<div class="catalog-menu catalog-menu--aside" data-catalog-menu>
   <div class="catalog-menu__inner">
     <div class="catalog-menu__title">
       <a class="catalog-menu__title-back" href="/">
@@ -18,26 +18,31 @@
           </a>
         </div>
       </li>
-      <li class="catalog-menu__item">
+      <li class="catalog-menu__item" data-catalog-menu-item-id="12">
         <div class="catalog-menu__category">
           <a href="/category-list.html">
             <span>Специализированное оборудование</span>
           </a>
+          <button class="catalog-menu__toggle" data-catalog-menu-toggle-button="12">Открыть</button>
         </div>
+        <ul class="catalog-menu__inner-list" data-simplebar data-simplebar-auto-hide="false">
+          <li class="catalog-menu__item">
+            <div class="catalog-menu__category">
+              <a href="/category-list.html">
+                <span>Весовая техника</span>
+              </a>
+            </div>
+          </li>
+        </ul>
       </li>
-      <li class="catalog-menu__item">
+      <li class="catalog-menu__item" data-catalog-menu-item-id="13">
         <div class="catalog-menu__category">
           <a href="/category-list.html">
             <span>Лабораторное оборудование</span>
           </a>
           <button class="catalog-menu__toggle" data-catalog-menu-toggle-button="13">Открыть</button>
         </div>
-        <ul
-          class="catalog-menu__inner-list"
-          data-simplebar
-          data-simplebar-auto-hide="false"
-          data-catalog-menu-category-list="13"
-        >
+        <ul class="catalog-menu__inner-list" data-simplebar data-simplebar-auto-hide="false">
           <li class="catalog-menu__item">
             <div class="catalog-menu__category">
               <a href="/category-list.html">
