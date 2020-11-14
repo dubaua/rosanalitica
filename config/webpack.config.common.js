@@ -110,7 +110,13 @@ const webpackConfig = {
     ],
   },
   plugins: [
-    new MiniCSSExtractPlugin(),
+    new MiniCSSExtractPlugin(
+      isDev
+        ? undefined
+        : {
+          filename: 'css/[name].[hash].css',
+        },
+    ),
     ...pageHtmlWebpackPluginConfigArray,
     new SpriteLoaderPlugin(),
   ],
