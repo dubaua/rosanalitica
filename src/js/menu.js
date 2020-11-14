@@ -2,7 +2,7 @@ import { debounce } from 'throttle-debounce';
 import { toggleClassname } from './utils.js';
 
 const hamburger = document.querySelector('[data-hamburger]');
-const hamburgerMenu = document.querySelector('[data-hamburger-menu]');
+const hamburgerMenuNode = document.querySelector('[data-hamburger-menu]');
 const headerMain = document.querySelector('[data-header-main]');
 const catalogMenuNodeList = document.querySelectorAll('[data-catalog-menu]');
 const catalogMenuOpenButtonMobileNode = document.querySelector('[data-catalog-menu-open-button-mobile]');
@@ -17,16 +17,27 @@ const catalogMenuPanelNoTitleClassname = 'catalog-menu--no-title';
 const activeClass = 'is-active';
 
 if (hamburger) {
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
     const hadClassName = toggleClassname(hamburger, activeClass);
     if (hadClassName) {
-      hamburgerMenu.classList.remove(activeClass);
+      hamburgerMenuNode.classList.remove(activeClass);
       closeCatalogMenuPanel();
     } else {
-      hamburgerMenu.classList.add(activeClass);
+      hamburgerMenuNode.classList.add(activeClass);
     }
   });
 }
+
+hamburgerMenuNode.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener('click', () => {
+  hamburgerMenuNode.classList.remove(activeClass);
+  hamburger.classList.remove(activeClass);
+  closeCatalogMenuPanel();
+});
 
 function toggleCatalogCategory(catalogMenuNode, catalogMenuItemId) {
   const catalogMenuItemNodeList = catalogMenuNode.querySelectorAll('[data-catalog-menu-item-id');
@@ -109,11 +120,11 @@ for (let i = 0; i < catalogMenuOpenOnHoverNodeList.length; i++) {
 function setDesktopPanelsSizes() {
   if (window.innerWidth >= 1200) {
     const headerMainWidth = headerMain.offsetWidth;
-    hamburgerMenu.style.width = headerMainWidth + 'px';
+    hamburgerMenuNode.style.width = headerMainWidth + 'px';
     catalogMenuPanelNode.style.width = headerMainWidth + 'px';
-    catalogMenuPanelNode.style.height = hamburgerMenu.offsetHeight - 100 + 'px'; // 100 header desktop height
+    catalogMenuPanelNode.style.height = hamburgerMenuNode.offsetHeight - 100 + 'px'; // 100 header desktop height
   } else {
-    hamburgerMenu.style.width = null;
+    hamburgerMenuNode.style.width = null;
     catalogMenuPanelNode.style.width = null;
     catalogMenuPanelNode.style.height = null;
   }
