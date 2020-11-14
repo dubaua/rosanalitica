@@ -1,3 +1,4 @@
+import { debounce } from 'throttle-debounce';
 import { toggleClassname } from './utils.js';
 
 const hamburger = document.querySelector('[data-hamburger]');
@@ -68,6 +69,15 @@ function closeCatalogMenuPanel() {
   catalogMenuPanelNode.classList.remove(catalogMenuPanelNoTitleClassname);
 }
 
+const debouncedToogleCatalogMenuPanel = debounce(32, (nextState, isWithoutTitle) => {
+  console.log(nextState);
+  if (nextState) {
+    openCatalogMenuPanel(isWithoutTitle);
+  } else {
+    closeCatalogMenuPanel();
+  }
+});
+
 catalogMenuOpenButtonMobileNode.addEventListener('click', () => {
   openCatalogMenuPanel();
 });
@@ -76,19 +86,22 @@ catalogMenuCloseButtonMobileNode.addEventListener('click', () => {
   closeCatalogMenuPanel();
 });
 
-catalogMenuOverlayNode.addEventListener('mouseover', () => {
-  closeCatalogMenuPanel();
+catalogMenuPanelNode.addEventListener('mouseenter', () => {
+  debouncedToogleCatalogMenuPanel(true);
 });
 
-catalogMenuPanelNode.addEventListener('mouseover', (e) => {
-  e.stopPropagation();
+catalogMenuPanelNode.addEventListener('mouseleave', () => {
+  debouncedToogleCatalogMenuPanel(false);
 });
 
 for (let i = 0; i < catalogMenuOpenOnHoverNodeList.length; i++) {
   const catalogMenuOpenOnHoverNode = catalogMenuOpenOnHoverNodeList[i];
-  catalogMenuOpenOnHoverNode.addEventListener('mouseover', () => {
+  catalogMenuOpenOnHoverNode.addEventListener('mouseenter', () => {
     const isWithoutTitle = catalogMenuOpenOnHoverNode.dataset.catalogMenuOpenHover === 'no-title';
-    openCatalogMenuPanel(isWithoutTitle);
+    debouncedToogleCatalogMenuPanel(true, isWithoutTitle);
+  });
+  catalogMenuOpenOnHoverNode.addEventListener('mouseleave', () => {
+    debouncedToogleCatalogMenuPanel(false);
   });
 }
 
