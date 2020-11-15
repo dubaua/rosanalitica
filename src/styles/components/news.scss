@@ -62,10 +62,13 @@
     flex-flow: row wrap;
     margin: -2vh $--gutter * -0.5 2vh;
 
-    @include to('xl') {
-      &--scrollable {
+    &--scrollable {
+      margin: -3vw $--gutter * -0.5 -3vw;
+
+      @include to('xl') {
         width: 400vw;
         margin: 0 $--gutter * -0.5;
+
         @include from('sm') {
           width: 300vw;
         }
