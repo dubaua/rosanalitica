@@ -101,14 +101,38 @@
 
   &__inner-list {
     display: none;
-    height: 404px; // ??
+    height: 404px;
     padding: 6px 16px 16px 40px;
-    list-style-type: disc;
+    list-style-type: none;
 
     #{$this}__item {
+      position: relative;
       font-weight: $--font-weight-regular;
       font-size: 16px;
       line-height: 1.8;
+
+      &:before {
+        position: absolute;
+        content: '';
+        top: 0.7em;
+        left: -20px;
+
+        width: 5px;
+        height: 5px;
+        background-color: $--color-text;
+        border-radius: 50%;
+      }
+    }
+
+    #{$this}__inner-list {
+      padding-bottom: 4px;
+      font-style: italic;
+
+      #{$this}__item {
+        &:before {
+          display: none;
+        }
+      }
     }
   }
 
