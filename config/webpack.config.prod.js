@@ -37,9 +37,6 @@ const webpackConfig = merge(commonConfig, {
   },
   plugins: [
     new webpack.EnvironmentPlugin(environment),
-    new MiniCSSExtractPlugin({
-      filename: 'css/[name].[hash].css',
-    }),
     new webpack.HashedModuleIdsPlugin(),
   ],
 });
