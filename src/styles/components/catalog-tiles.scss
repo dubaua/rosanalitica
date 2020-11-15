@@ -25,7 +25,10 @@
 
   &__list {
     @include from('lg') {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 1fr 64px 1fr 64px 1fr 64px 1fr 64px 1fr 64px 1fr 64px 1fr 64px 1fr 64px 1fr 64px 1fr;
+      -ms-grid-rows: 1fr 24px 1fr 24px 1fr;
       grid-template-columns: repeat(10, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 64px;
@@ -101,24 +104,43 @@
 
     @include from('lg') {
       &--1 {
+        -ms-grid-column: 0;
+        -ms-grid-column-span: 7;
         grid-area: 1 / 1 / 2 / 5;
       }
       &--2 {
+        -ms-grid-column: 9;
+        -ms-grid-column-span: 5;
         grid-area: 1 / 5 / 2 / 8;
       }
       &--3 {
+        -ms-grid-column: 15;
+        -ms-grid-column-span: 5;
+        -ms-grid-row-span: 3;
         grid-area: 1 / 8 / 3 / 11;
       }
       &--4 {
+        -ms-grid-column: 0;
+        -ms-grid-column-span: 5;
+        -ms-grid-row: 3;
         grid-area: 2 / 1 / 3 / 4;
       }
       &--5 {
+        -ms-grid-column: 7;
+        -ms-grid-column-span: 7;
+        -ms-grid-row: 3;
         grid-area: 2 / 4 / 3 / 8;
       }
       &--6 {
+        -ms-grid-column: 0;
+        -ms-grid-column-span: 9;
+        -ms-grid-row: 5;
         grid-area: 3 / 1 / 4 / 6;
       }
       &--7 {
+        -ms-grid-column: 11;
+        -ms-grid-column-span: 9;
+        -ms-grid-row: 5;
         grid-area: 3 / 6 / 4 / 11;
       }
     }
