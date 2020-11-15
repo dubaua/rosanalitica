@@ -11,13 +11,17 @@
     margin: 0;
     margin-bottom: 10px;
     overflow: hidden;
-    
+
     width: 100%;
     padding-bottom: 70%;
     background-color: $--color-background-700;
 
     @include from('xl') {
       border-radius: 5px;
+    }
+
+    @media all and (-ms-high-contrast: none) {
+      overflow: hidden;
     }
   }
 
@@ -33,6 +37,13 @@
 
     object-fit: contain;
     object-position: center;
+
+    @media all and (-ms-high-contrast: none) {
+      display: block;
+      margin: auto;
+      width: auto;
+      max-width: 100%;
+    }
   }
 
   &__read-more {

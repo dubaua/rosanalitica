@@ -3,7 +3,7 @@
 .slider {
   position: relative;
   padding-bottom: 24px;
-  
+
   @include from('md') {
     padding-top: 60px;
     padding-bottom: 48px;
@@ -135,12 +135,22 @@
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
     }
+
+    @media all and (-ms-high-contrast: none) {
+      overflow: hidden;
+    }
+
     img {
       height: 100%;
       width: 100%;
 
       object-fit: contain;
       object-position: center;
+
+      @media all and (-ms-high-contrast: none) {
+        width: auto;
+        min-width: 100%;
+      }
     }
   }
 
@@ -151,7 +161,7 @@
 
     min-height: 250px;
     padding: 20px 38px 18px 20px;
-    
+
     @include from('md') {
       padding: 26px 30px 32px;
       height: 100%;

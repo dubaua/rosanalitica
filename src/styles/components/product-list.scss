@@ -70,6 +70,10 @@ $product-card: '.product-card';
       width: 100%;
       height: 169px;
 
+      @media all and (-ms-high-contrast: none) {
+        overflow: hidden;
+      }
+
       img {
         position: absolute;
         width: 100%;
@@ -77,6 +81,11 @@ $product-card: '.product-card';
 
         object-fit: contain;
         object-position: center;
+
+        @media all and (-ms-high-contrast: none) {
+          height: auto;
+          max-width: 100%;
+        }
       }
 
       &--card {

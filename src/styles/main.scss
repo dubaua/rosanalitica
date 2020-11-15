@@ -124,4 +124,8 @@ ul {
     // screen height - header - footer
     min-height: calc(100vh - 100px - 212px);
   }
+
+  @media all and (-ms-high-contrast: none) {
+    overflow-x: hidden !important;
+  }
 }

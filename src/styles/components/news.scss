@@ -42,6 +42,7 @@
     font-weight: $--font-weight-regular;
     line-height: $--font-line-height-xs;
     margin: 0;
+    max-width: 100%;
 
     @include from('xl') {
       font-size: $--font-size-750;
