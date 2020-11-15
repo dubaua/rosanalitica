@@ -18,14 +18,10 @@
 
   &__logo {
     display: block;
-    padding: 3vmax 0;
+    padding: 30px 0;
 
     @include from('xl') {
       padding: 0;
-      margin-right: 4.2vmax;
-    }
-    @include from('xxl') {
-      margin-right: 7.2vmax;
     }
   }
 
@@ -74,9 +70,9 @@
   &__catalog-menu-overlay {
     position: fixed;
     display: none;
-    top: calc(6vmax + 98px);
+    top: calc(#{$--header-height} + 50px);
     @include from('xl') {
-      top: $--header-height-xl;
+      top: $--header-height;
     }
     left: 0;
     right: 0;

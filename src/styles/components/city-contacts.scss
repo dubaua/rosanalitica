@@ -34,7 +34,7 @@
   }
 
   &--hamburger-menu {
-    margin-left: 1.5vmax;
+    margin-left: 2.5vw;
 
     @include from('xl') {
       margin-left: 0;
@@ -45,7 +45,7 @@
     #{$this}__contact {
       margin-top: 8px;
 
-      font-size: 3.5vmax;
+      font-size: 21px;
       font-weight: normal;
       color: $--color-text-brand;
 

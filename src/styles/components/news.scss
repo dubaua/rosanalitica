@@ -60,7 +60,7 @@
   &__list {
     display: flex;
     flex-flow: row wrap;
-    margin: -2vmax $--gutter * -0.5;
+    margin: -2vh $--gutter * -0.5 2vh;
 
     @include to('xl') {
       &--scrollable {
@@ -85,7 +85,7 @@
     &__list-scroller {
       overflow-x: scroll;
       width: calc(100% + #{$--page-padding-x-xs * 2});
-      margin: 0 $--page-padding-x-xs * -1 4vmax;
+      margin: 0 $--page-padding-x-xs * -1 70px;
     }
   }
 

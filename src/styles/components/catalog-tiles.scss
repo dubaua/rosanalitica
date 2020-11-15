@@ -4,6 +4,14 @@
   $this: &;
   counter-reset: item;
 
+  @include from('lg') {
+    margin-bottom: 40px;
+  }
+
+  @include from('xl') {
+    margin-bottom: 0;
+  }
+
   &__title {
     margin: 0 0 0.62em;
     font-size: $--font-size-1000;

@@ -3,6 +3,10 @@
 .catalog-special {
   margin-top: 58px;
 
+  @include from('lg') {
+    margin-top: 18px;
+  }
+
   @include from('xl') {
     margin-top: 56px;
   }

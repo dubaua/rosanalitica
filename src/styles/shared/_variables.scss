@@ -14,11 +14,11 @@ $--row: 'row';
 $--column: 'col';
 $--offset: 'offset';
 
-$--page-padding-x-xs: 2vmax;
-$--page-padding-x-xl: 5.5vmax;
+$--page-padding-x-xs: 3vw;
+$--page-padding-x-xl: 7vw;
 $--page-padding-y-xs: 40px;
 $--page-padding-y-lg: 80px;
-$--gutter: 1.5vmax;
+$--gutter: 1.5vw;
 
 $--gutter-xxs: $--gutter;
 $--gutter-xs: $--gutter;
@@ -169,8 +169,7 @@ $--delay: 50ms;
 $--color-background: $--color-text--contrast;
 $--color-background--contrast: $--color-text;
 
-$--header-height: calc(6vmax + 50px);
-$--header-height-xl: 100px;
+$--header-height: 100px;
 
 $--logo-width-xl: 157px;
 

@@ -115,9 +115,10 @@ ul {
   overflow-x: hidden;
 
   @include from('xl') {
-    margin-top: $--header-height-xl;
+    margin-top: $--header-height;
     padding-bottom: 0;
 
+    overflow: auto; // IE
     overflow: unset;
 
     // screen height - header - footer

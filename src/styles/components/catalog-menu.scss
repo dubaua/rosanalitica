@@ -151,9 +151,9 @@
     @include from('xl') {
       display: block;
       position: sticky;
-      top: $--header-height-xl;
+      top: $--header-height;
       margin-left: -$--page-padding-x-xl;
-      min-height: calc(100vh - #{$--header-height-xl});
+      min-height: calc(100vh - #{$--header-height});
       box-sizing: border-box;
       padding-bottom: 30px;
       background-color: $--color-background-700;
