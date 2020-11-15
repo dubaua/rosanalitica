@@ -56,7 +56,7 @@
 
   &__item {
     span {
-      display: block;
+      display: inline-block;
       padding-right: 60px;
     }
   }
@@ -148,6 +148,8 @@
 
   &--aside {
     display: none;
+    height: auto;
+
     @include from('xl') {
       display: block;
       position: sticky;
@@ -225,7 +227,8 @@
     }
 
     #{$this}__inner-list {
-      height: 404px;
+      height: auto;
+      max-height: 404px;
       padding-left: 22px;
       background: none;
       color: $--color-text-600;
