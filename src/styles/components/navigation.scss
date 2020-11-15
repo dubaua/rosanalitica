@@ -30,21 +30,10 @@
             background-color: $--color-background-contrast-600;
           }
         }
-        
+
         &--active {
           a {
-            position: relative;
-
-            &:after {
-              position: absolute;
-              content: '';
-              left: 0;
-              right: 0;
-              bottom: 0;
-
-              height: 4px;
-              background-color: $--color-background-contrast-300;
-            }
+            box-shadow: inset 0 -4px $--color-background-contrast-300;
           }
         }
       }
