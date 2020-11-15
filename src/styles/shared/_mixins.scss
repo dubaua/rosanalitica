@@ -65,3 +65,9 @@ $breakpoints: (
   padding: 0;
   border: 0;
 }
+
+@mixin ie-specific {
+  @media (-ms-high-contrast: none) {
+    @content;
+  }
+}
