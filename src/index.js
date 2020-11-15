@@ -1,7 +1,8 @@
+import 'core-js';
+
 import '@/styles/main.scss';
 import '@/sprite/index.js';
 
-import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 import 'normalize.css';
 
@@ -19,3 +20,4 @@ import '@/js/productType.js';
 import '@/js/orderForm.js';
 import '@/js/print.js';
 import '@/js/glueUpPrepositions.js';
+import '@/js/customScrollBar.js';

@@ -20,9 +20,6 @@ const webpackConfig = merge(commonConfig, {
     filename: 'js/[name].[hash].js',
   },
   optimization: {
-    // отключили чанки для более быстрой заливки
-    // приложение используется малым количеством пользователей
-    // и редко скачивается заново, поэтому чанки неэффективны
     runtimeChunk: false,
     minimize: true,
     minimizer: [

@@ -36,12 +36,6 @@ const webpackConfig = merge(commonConfig, {
     overlay: true,
     port: 8000,
     stats: 'errors-only',
-    proxy: {
-      '/umbraco/': {
-        target: 'https://prenta.shop/',
-        changeOrigin: true,
-      },
-    },
   },
 });
 

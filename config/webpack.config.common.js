@@ -41,7 +41,6 @@ const pageHtmlWebpackPluginConfigArray = pageNameArray.map((entryName) => {
 
 const webpackConfig = {
   entry: {
-    polyfill: '@babel/polyfill',
     main: helpers.root('src', 'index.js'),
   },
   resolve: {

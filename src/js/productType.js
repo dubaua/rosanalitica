@@ -22,17 +22,27 @@ function toggleProductType() {
     const togglerType = toggler.getAttribute('data-product-type');
 
     if (activeProductType === null) {
-      toggler.classList.toggle(togglerActiveClass, togglerType === 'card');
+      if (togglerType === 'card') {
+        toggler.classList.add(togglerActiveClass);
+      } else {
+        toggler.classList.remove(togglerActiveClass);
+      }
     } else {
-      toggler.classList.toggle(
-        togglerActiveClass,
-        togglerType === activeProductType,
-      );
+      if (togglerType === activeProductType) {
+        toggler.classList.add(togglerActiveClass);
+      } else {
+        toggler.classList.remove(togglerActiveClass);
+      }
     }
   });
 
-  productListNode.classList.toggle(productListCardClass, isCard);
-  productListNode.classList.toggle(productListCompactClass, !isCard);
+  if (isCard) {
+    productListNode.classList.add(productListCardClass);
+    productListNode.classList.remove(productListCompactClass);
+  } else {
+    productListNode.classList.remove(productListCardClass);
+    productListNode.classList.add(productListCompactClass);
+  }
 }
 
 function initProductTypeTogglers() {
