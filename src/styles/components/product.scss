@@ -28,7 +28,7 @@
     min-width: 100%;
     margin-left: -$--page-padding-x-xs;
     margin-right: -$--page-padding-x-xs;
-    padding: 16px 20px;
+    padding: 16px $--page-padding-x-xs;
 
     position: relative;
     background-color: $--color-background-500;
@@ -81,7 +81,7 @@
   }
 
   &__card-content {
-    padding: 0 20px 20px;
+    padding: 0 $--page-padding-x-xs 20px;
 
     @include from('md') {
       width: 500px; // IE fix
@@ -96,12 +96,8 @@
   }
 
   &__title {
-    margin: 0;
-    padding: 0 20px 16px;
-    margin-left: -20px;
-    margin-right: -20px;
-    max-width: 100%;
-
+    margin: 0 $--page-padding-x-xs * -1;
+    padding: 0 $--page-padding-x-xs 16px;
     font-weight: 300;
     font-size: 30px;
     line-height: 1;
@@ -217,7 +213,10 @@
 
   &__new-price {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 26px;
+    @include from('xl') {
+      font-size: 36px;
+    }
   }
 
   &__description {
@@ -355,7 +354,7 @@
     #{$this}__title {
       background-color: unset;
       padding: 0;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
     }
 
     @include from('xl') {
@@ -369,6 +368,10 @@
       #{$this}__title {
         margin-bottom: 26px;
       }
+    }
+
+    #{$this}__card-content {
+      padding: 16px 0 0;
     }
   }
 
