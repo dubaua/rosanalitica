@@ -24,10 +24,14 @@
     background-color: transparent;
     padding: 8px 0;
 
+    cursor: zoom-in;
+
     font-weight: 300;
     font-size: 22px;
     line-height: 1.3;
     border-bottom: 1px solid $--color-background-contrast-300;
+
+    transition: $--duration-200 $--timing-in-out-spring box-shadow;
 
     @include from('xl') {
       padding: 3px 0;
@@ -36,6 +40,11 @@
 
     &::placeholder {
       color: $--color-background-contrast-500;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 0 $--color-background-contrast-300;
     }
   }
 

@@ -6,6 +6,10 @@
   margin: 0;
   list-style: none;
 
+  &__contact a:hover {
+    text-decoration: underline;
+  }
+
   &--header {
     display: none;
 
@@ -98,12 +102,6 @@
       }
       &--city {
         font-weight: $--font-weight-bold;
-      }
-
-      a {
-        &:hover {
-          border-bottom: 1px solid;
-        }
       }
     }
   }

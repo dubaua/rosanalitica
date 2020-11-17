@@ -21,10 +21,9 @@
       }
 
       &:hover {
-        color: $--color-text-contrast-500;
-
-        &:before {
-          color: $--color-text-contrast-600;
+        color: $--color-text-brand;
+        span {
+          text-decoration: underline;
         }
       }
     }
