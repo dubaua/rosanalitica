@@ -232,6 +232,13 @@
             right: 40px;
             background-color: $--color-background-400;
           }
+
+          &:hover {
+            span {
+              text-decoration: underline;
+              color: $--color-text;
+            }
+          }
         }
       }
     }
