@@ -103,9 +103,6 @@ $product-card: '.product-card';
     }
 
     &__info {
-      @include from('xl') {
-        display: none;
-      }
     }
 
     &__description {
@@ -114,11 +111,15 @@ $product-card: '.product-card';
       font-size: 16px;
       line-height: 1.5;
       color: $--color-text-600;
-      padding-bottom: 20px;
-      border-bottom: 2px solid $--color-background-400;
+      padding-top: 20px;
+      border-top: 2px solid $--color-background-400;
 
       p {
         margin: 0;
+      }
+
+      @include from('xl') {
+        display: none;
       }
     }
 
@@ -128,6 +129,9 @@ $product-card: '.product-card';
       align-items: center;
       justify-content: space-between;
       text-align: center;
+
+      padding-top: 20px;
+      border-top: 2px solid $--color-background-400;
 
       @include from('xs') {
         flex-direction: row;
@@ -140,7 +144,11 @@ $product-card: '.product-card';
 
       #{$product-card}__old-price + #{$product-card}__new-price {
         margin-top: -6px;
-        font-size: 26px;
+        font-size: 22px;
+
+        @include from('xxl') {
+          font-size: 26px;
+        }
       }
     }
 
@@ -164,10 +172,19 @@ $product-card: '.product-card';
 
     &__new-price {
       font-weight: 500;
-      font-size: 36px;
+      font-size: 22px;
+
+      @include from('xxl') {
+        font-size: 30px;
+      }
     }
 
     &__button {
+      min-width: 170px;
+
+      @include from('xxl') {
+        min-width: 192px;
+      }
     }
 
     &__novelty {
@@ -190,7 +207,7 @@ $product-card: '.product-card';
 
     @include from('xl') {
       #{$product-card} {
-        min-height: 260px;
+        min-height: 336px;
 
         margin-left: 0;
         margin-right: 0;
@@ -211,7 +228,7 @@ $product-card: '.product-card';
             box-shadow: $--card-shadow;
           }
 
-          #{$product-card}__info {
+          #{$product-card}__description {
             display: block;
           }
 
