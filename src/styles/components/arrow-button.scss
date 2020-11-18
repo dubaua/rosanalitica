@@ -1,6 +1,8 @@
 @import '~@/styles/shared/globals.scss';
 
 .arrow-button {
+  $this: &;
+
   @include from(lg) {
     display: flex;
     align-items: center;
@@ -10,11 +12,16 @@
     width: 27px;
     height: 27px;
     border-radius: 3px;
-    background: #36b0db;
-    color: #ffffff;
+    background: $--color-background-brand;
+    color: $--color-text-contrast-600;
     @include from(lg) {
       width: 40px;
       height: 40px;
+    }
+  }
+  &:hover {
+    #{$this}__icon {
+      background: $--color-background-contrast-700;
     }
   }
   &__label {
@@ -23,7 +30,7 @@
       display: block;
       text-transform: lowercase;
       margin-left: 11px;
-      color: #1d1d1b;
+      color: $--color-text-600;
       font-size: $--font-size-200;
       line-height: $--font-line-height-small;
       letter-spacing: $--letter-spacing;

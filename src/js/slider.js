@@ -18,18 +18,16 @@ function initMainSlider() {
       prevEl: '.slider__navigation-button--prev',
       nextEl: '.slider__navigation-button--next',
     },
+
+    grabCursor: true,
   });
 }
 
 if (swiperContainer) {
   const slideNodeList = swiperContainer.querySelectorAll('.swiper-slide');
   const slideArray = Array.from(slideNodeList);
-  const sliderNavigation = document.querySelector(
-    '[data-main-slider-navigation]',
-  );
-  const sliderPagination = document.querySelector(
-    '[data-main-slider-pagination]',
-  );
+  const sliderNavigation = document.querySelector('[data-main-slider-navigation]');
+  const sliderPagination = document.querySelector('[data-main-slider-pagination]');
 
   if (slideArray.length > 1) {
     initMainSlider();

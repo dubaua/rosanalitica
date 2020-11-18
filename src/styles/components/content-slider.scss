@@ -43,7 +43,10 @@
     &--next {
       width: 39px;
       height: 44px;
-      color: $--color-background-brand;
+      color: $--color-text;
+      &:hover {
+        color: $--color-text-brand;
+      }
     }
   }
 

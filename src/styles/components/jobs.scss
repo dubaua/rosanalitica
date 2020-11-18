@@ -82,6 +82,12 @@
     @include from('xl') {
       height: auto;
     }
+
+    &:hover {
+      #{$jobs}__item-toggler-icon {
+        color: $--color-text-500;
+      }
+    }
   }
 
   &__item-title {
@@ -100,12 +106,6 @@
     border: none;
     box-shadow: none;
     cursor: pointer;
-
-    &:hover {
-      #{$jobs}__item-toggler-icon {
-        color: $--color-text-500;
-      }
-    }
   }
 
   &__item-toggler-icon {

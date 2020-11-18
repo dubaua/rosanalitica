@@ -97,6 +97,10 @@ catalogMenuCloseButtonMobileNode.addEventListener('click', () => {
   closeCatalogMenuPanel();
 });
 
+catalogMenuPanelNode.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
 catalogMenuPanelNode.addEventListener('mouseenter', () => {
   debouncedToogleCatalogMenuPanel(true);
 });

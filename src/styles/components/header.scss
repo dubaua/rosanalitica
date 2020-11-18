@@ -56,6 +56,10 @@
     background-color: $--color-background-contrast-300;
     border-radius: 50%;
 
+    &:hover {
+      background-color: $--color-background-contrast-400;
+    }
+
     transform: translateY(-50%);
 
     @include from('xl') {
@@ -64,6 +68,9 @@
 
     &.is-active {
       background-color: $--color-background-contrast-400;
+      &:hover {
+        background-color: $--color-background-contrast-300;
+      }
     }
   }
 

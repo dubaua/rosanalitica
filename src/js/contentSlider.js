@@ -35,6 +35,8 @@ function initContentSlider(contentSlider) {
         nextEl: '.content-slider__navigation-button--next',
       },
 
+      grabCursor: true,
+
       on: {
         slideChange() {
           updateCurrentSlide(this.realIndex + 1);
