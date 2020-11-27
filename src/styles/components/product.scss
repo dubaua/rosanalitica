@@ -371,7 +371,7 @@
     }
 
     #{$this}__card-content {
-      padding: 16px 0 0;
+      padding: 16px 3vw 16px 0;
     }
   }
 
@@ -382,14 +382,22 @@
     }
 
     @include from('xl') {
+      $image-width: 280px;
       position: relative;
-      min-width: 396px;
-      max-width: 396px;
-      width: 396px;
+      min-width: $image-width;
+      max-width: $image-width;
+      width: $image-width;
       padding-bottom: 186px;
       background-color: $--color-background-700;
 
       margin-right: 36px;
+    }
+
+    @include from('xxl') {
+      $image-width: 50%;
+      min-width: $image-width;
+      max-width: $image-width;
+      width: $image-width;
     }
 
     img {
