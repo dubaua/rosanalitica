@@ -1,11 +1,5 @@
 @import '~@/styles/shared/globals.scss';
 
-.breadcrumbs-catalog {
-  @include from('xl') {
-    display: none;
-  }
-}
-
 .breadcrumbs {
   $this: &;
   padding-top: 20px;
@@ -86,7 +80,11 @@
   }
 
   &--catalog {
+    margin-bottom: 0;
+
     #{$this}__inner {
+      margin-top: 0;
+      margin-bottom: 0;
       @include to('xl') {
         margin-left: 0;
       }

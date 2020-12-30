@@ -2,6 +2,11 @@
 
 $product-card: '.product-card';
 
+
+.breadcrumbs--catalog + .product-list {
+  margin-top: 32px;
+}
+
 .product-list {
   $this: &;
 
