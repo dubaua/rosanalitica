@@ -97,7 +97,10 @@
     color: $--color-text-600;
 
     @include from('xl') {
-      font-size: 30px;
+      font-size: 28px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
@@ -222,8 +225,7 @@
       display: none;
       min-height: 500px;
 
-      transition: transform $--duration-500 $--timing-in-out-cubic,
-        opacity $--duration-100 linear;
+      transition: transform $--duration-500 $--timing-in-out-cubic, opacity $--duration-100 linear;
     }
   }
 }
