@@ -283,6 +283,10 @@
         &:before {
           background-color: $--color-text-600;
         }
+
+        &--active {
+          font-weight: $--font-weight-bold;
+        }
       }
     }
 

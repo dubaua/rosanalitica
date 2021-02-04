@@ -3,6 +3,11 @@
 .product {
   $this: &;
 
+  margin-top: 24px;
+  @include from('xl') {
+    margin-top: 54px;
+  }
+
   &__card {
     min-width: 100%;
     margin-left: -$--page-padding-x-xs;
