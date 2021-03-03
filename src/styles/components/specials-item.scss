@@ -20,7 +20,7 @@
       border-radius: 5px;
     }
 
-    @media all and (-ms-high-contrast: none) {
+    @include ie-specific {
       overflow: hidden;
     }
   }
@@ -38,7 +38,7 @@
     object-fit: contain;
     object-position: center;
 
-    @media all and (-ms-high-contrast: none) {
+    @include ie-specific {
       display: block;
       margin: auto;
       width: auto;

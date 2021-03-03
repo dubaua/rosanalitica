@@ -189,6 +189,7 @@
 
     @include from('xl') {
       display: block;
+      position: fixed;
       position: sticky;
       top: $--header-height;
       margin-left: -$--page-padding-x-xl;

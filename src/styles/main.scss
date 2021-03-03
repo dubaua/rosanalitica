@@ -83,6 +83,10 @@ body {
   letter-spacing: $--letter-spacing;
   color: $--color-text;
   background-color: $--color-background-400;
+
+  @include ie-specific {
+    width: 100%;
+  }
 }
 
 a {
