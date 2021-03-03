@@ -40,7 +40,7 @@ document.addEventListener('click', () => {
 });
 
 function toggleCatalogCategory(catalogMenuNode, catalogMenuItemId) {
-  const catalogMenuItemNodeList = catalogMenuNode.querySelectorAll('[data-catalog-menu-item-id');
+  const catalogMenuItemNodeList = catalogMenuNode.querySelectorAll('[data-catalog-menu-top-level-item');
   for (let i = 0; i < catalogMenuItemNodeList.length; i++) {
     const catalogMenuItemNode = catalogMenuItemNodeList[i];
     if (catalogMenuItemNode.dataset.catalogMenuItemId === catalogMenuItemId) {
