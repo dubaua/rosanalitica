@@ -189,6 +189,7 @@
 
     @include from('xl') {
       display: block;
+      position: fixed;
       position: sticky;
       top: $--header-height;
       margin-left: -$--page-padding-x-xl;
@@ -196,6 +197,10 @@
       box-sizing: border-box;
       padding-bottom: 30px;
       background-color: $--color-background-700;
+
+      @include ie-specific {
+        width: 34.4vw;
+      }
     }
 
     #{$this}__title {

@@ -50,7 +50,7 @@
   &__desktop-image {
     display: none;
 
-    @media all and (-ms-high-contrast: none) {
+    @include ie-specific {
       overflow: hidden;
     }
 
@@ -71,7 +71,7 @@
         object-position: center;
       }
 
-      @media all and (-ms-high-contrast: none) {
+      @include ie-specific {
         height: auto;
         max-width: 100%;
         max-height: 100%;
@@ -382,7 +382,7 @@
 
   &__bottom-image {
     width: 100%;
-    @media all and (-ms-high-contrast: none) {
+    @include ie-specific {
       overflow: hidden;
     }
 
@@ -408,7 +408,7 @@
     img {
       width: 100%;
 
-      @media all and (-ms-high-contrast: none) {
+      @include ie-specific {
         width: 100%;
         height: auto;
         max-width: 100%;

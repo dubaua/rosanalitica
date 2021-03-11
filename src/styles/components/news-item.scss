@@ -63,7 +63,7 @@
       order: 3;
     }
 
-    @media all and (-ms-high-contrast: none) {
+    @include ie-specific {
       overflow: hidden;
     }
   }
@@ -81,7 +81,7 @@
     object-fit: cover;
     object-position: center;
 
-    @media all and (-ms-high-contrast: none) {
+    @include ie-specific {
       width: auto;
       min-width: 100%;
     }
