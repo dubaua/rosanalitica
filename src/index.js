@@ -8,6 +8,7 @@ import 'normalize.css';
 
 import 'swiper/swiper-bundle.css';
 
+import '@/js/customScrollBar.js';
 import '@/js/menu.js';
 import '@/js/slider.js';
 import '@/js/contentSlider.js';
@@ -20,4 +21,3 @@ import '@/js/productType.js';
 import '@/js/orderForm.js';
 import '@/js/print.js';
 import '@/js/glueUpPrepositions.js';
-import '@/js/customScrollBar.js';

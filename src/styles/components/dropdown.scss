@@ -23,6 +23,10 @@
     border: none;
     margin: 0;
     cursor: pointer;
+    &:hover,
+    &:active {
+      background-color: $--color-background-700;
+    }
   }
 
   &__item {

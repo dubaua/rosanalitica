@@ -4,5 +4,5 @@ const customScrollBarNodeList = document.querySelectorAll('[data-simplebar]');
 const customScrollBarNodeArray = Array.from(customScrollBarNodeList);
 
 customScrollBarNodeArray.forEach((node) => {
-  new SimpleBar(node);
+  node.simpleBarInstance = new SimpleBar(node);
 });

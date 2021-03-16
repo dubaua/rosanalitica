@@ -1,5 +1,5 @@
 import { debounce } from 'throttle-debounce';
-import { toggleClassname } from './utils.js';
+import { nextTick, toggleClassname } from './utils.js';
 
 const hamburger = document.querySelector('[data-hamburger]');
 const hamburgerMenuNode = document.querySelector('[data-hamburger-menu]');
@@ -81,7 +81,6 @@ function closeCatalogMenuPanel() {
 }
 
 const debouncedToogleCatalogMenuPanel = debounce(32, (nextState, isWithoutTitle) => {
-  console.log(nextState);
   if (nextState) {
     openCatalogMenuPanel(isWithoutTitle);
   } else {
@@ -134,7 +133,7 @@ function setDesktopPanelsSizes() {
   }
 }
 
-setDesktopPanelsSizes();
+nextTick(setDesktopPanelsSizes);
 window.addEventListener('resize', setDesktopPanelsSizes);
 
 // вставляем ссылку каталога
@@ -159,3 +158,23 @@ function insertCatalogLinkNode() {
   const commentNode = document.createComment(' Ссылка на каталог добавлена с помощью javascript ');
   headerHamburderSiteMenuNode.insertBefore(commentNode, newMenuItemNode);
 }
+
+function scrollToActiveLink() {
+  const activeParentNode = document.querySelector(
+    '.catalog-menu--aside .catalog-menu__item--active[data-catalog-menu-top-level-item]',
+  );
+  if (activeParentNode) {
+    const simplebarNode = activeParentNode.querySelector('[data-simplebar="init"]');
+    if (simplebarNode) {
+      const simpleBarInstance = simplebarNode.simpleBarInstance;
+      const scrollElement = simpleBarInstance.getScrollElement();
+      if (scrollElement) {
+        const activeNode = scrollElement.querySelector('.catalog-menu__item--active');
+        const offsetTop = activeNode.offsetTop;
+        scrollElement.scrollTo(0, offsetTop);
+      }
+    }
+  }
+}
+
+scrollToActiveLink();
