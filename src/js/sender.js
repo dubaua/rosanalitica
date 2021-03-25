@@ -34,8 +34,6 @@ for (let i = 0; i < senderNodeList.length; i++) {
 
     const formData = new FormData(senderFormNode);
 
-    formData.append('target', senderFormNode.dataset.senderForm);
-
     senderSubmitButtonNode.classList.add(buttonLoadingClassname);
     const headers = senderFormNode.encoding ? { 'Content-Type': senderFormNode.encoding } : null;
 
