@@ -74,6 +74,21 @@
     }
   }
 
+  &__search {
+    display: none;
+    @include from('md') {
+      display: block;
+    }
+    position: absolute;
+    right: calc(#{$--page-padding-x-xs} + 50px + 16px);
+    @include from('xl') {
+      right: calc(#{$--page-padding-x-xl} + 50px + 16px);
+    }
+    top: 50%;
+    z-index: 0;
+    transform: translateY(-50%);
+  }
+
   &__catalog-menu-overlay {
     position: fixed;
     display: none;

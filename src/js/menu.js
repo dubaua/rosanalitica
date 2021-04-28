@@ -15,6 +15,8 @@ const catalogMenuItemActiveClassname = 'catalog-menu__item--active';
 const catalogMenuPanelActiveClassname = 'header__catalog-menu-overlay--active';
 const catalogMenuPanelNoTitleClassname = 'catalog-menu--no-title';
 const activeClass = 'is-active';
+const searchSpoilerNode = document.querySelector('[data-search-spoiler]');
+const searchSpoilerInputNode = document.querySelector('[data-search-spoiler-input]');
 
 if (hamburger) {
   hamburger.addEventListener('click', (e) => {
@@ -178,3 +180,23 @@ function scrollToActiveLink() {
 }
 
 scrollToActiveLink();
+
+if (searchSpoilerNode && searchSpoilerInputNode) {
+  searchSpoilerInputNode.addEventListener('click', () => {
+    searchSpoilerInputNode.manualFocus = true;
+  });
+
+  searchSpoilerInputNode.addEventListener('blur', () => {
+    searchSpoilerInputNode.manualFocus = null;
+  });
+
+  searchSpoilerNode.addEventListener('mouseover', () => {
+    searchSpoilerInputNode.focus();
+  });
+
+  searchSpoilerNode.addEventListener('mouseleave', () => {
+    if (!searchSpoilerInputNode.manualFocus) {
+      searchSpoilerInputNode.blur();
+    }
+  });
+}
