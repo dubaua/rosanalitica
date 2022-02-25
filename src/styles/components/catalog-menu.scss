@@ -377,6 +377,9 @@
       #{$this}--header #{$this}__item:hover > #{$this}__inner-list {
         display: block;
       }
+      .simplebar-content {
+        position: relative;
+      }
     }
   }
 }
