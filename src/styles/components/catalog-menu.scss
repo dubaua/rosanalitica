@@ -367,6 +367,16 @@
         background-color: $--color-background-contrast-500;
         height: 100%;
       }
+      #{$this}__inner-list #{$this}__inner-list {
+        display: none;
+        z-index: 1;
+      }
+      #{$this}--header #{$this}__inner-list #{$this}__item {
+        position: static;
+      }
+      #{$this}--header #{$this}__item:hover > #{$this}__inner-list {
+        display: block;
+      }
     }
   }
 }
